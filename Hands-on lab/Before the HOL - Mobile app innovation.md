@@ -24,7 +24,7 @@
 
         iii. Windows 10 (Fall Creators Update recommended)
 
-        iv. Visual Studio 2017 (15.5.5 Required)
+        iv. Visual Studio 2017 (15.7.4 Required)
 
     -   Mac
 
@@ -61,46 +61,40 @@ Throughout this lab, you will utilize an Azure subscription, and a Microsoft acc
 
 4.  Select **Continue**.
 
-    ![On the Visual Studio Team services project creation page, contosoair is entered in the box next to .visualstudio.com under Host my projects at, Git is selected below Manage code using, and Continue is selected at the bottom of the page.](images/Setup/image4.png "Create a new app")
+    ![On the Visual Studio Team services project creation page, ContosoAir is entered in the box next to .visualstudio.com under Host my projects at, Git is selected below Manage code using, and Continue is selected at the bottom of the page.](images/Setup/image4.png "Create a new app")
 
 After a few minutes, your new account will be created, and a new project (MyFirstProject) will be automatically created. We won't use this project for the app, but you can just ignore it and leave it in your account.
 
 ### Task 3: Sign into Visual Studio App Center
 
-In addition to the Azure portal, you will utilize Visual Studio App Center for building and monitoring your mobile app. Please browse to <https://appcenter.ms>/apps and sign in with the same Microsoft account you used in the previous task. This will ensure that you can utilize things like data export between App Center and Application Insights in Azure.
+In addition to the Azure portal, you will utilize Visual Studio App Center for building and monitoring your mobile app. Please browse to <https://appcenter.ms/apps> and sign in with the same Microsoft account you used in the previous task. This will ensure that you can utilize things like data export between App Center and Application Insights in Azure.
 
-### Task 4: Update VS 2017 to 15.5.5
+### Task 4: Update VS 2017 to 15.7.4
 
 1.  Launch Visual Studio 2017
 
-2.  Select **Tools \> Extensions and Updates**
+2.  Select **Help \> Check for Updates**
 
-3.  Expand **Updates** in the left-hand menu, then select **Product Updates**.
+![In Visual Studio 2017, Help Menu is open Check for Updates is highlighted.](images/Setup/image5.png "Check for Updates Visual Studio 2017")
 
-4.  If you see an option for Visual Studio Update, select **Update**.
+3. If Current version is not at least 15.7.4, ensure Update version is at least 15.7.4, then select Update Now.
 
-5.  Follow the prompts to start the update to VS 2017 15.5.5 or greater.
     **WARNING**: This update process can take up to an hour to complete.
 
-![In Visual Studio 2017, Updates and Product Updates are selected on the left, Update is highlighted next to Visual Studio Update in the middle, and Current Version and New Version are highlighted on the right.](images/Setup/image5.png "Update Visual Studio 2017")
+![In Visual Studio 2017, Update screen is open and Update version: 15.7.4 is highlighted. Update Now button is clicked.](images/Setup/image5.2.png "Update Visual Studio 2017 to 15.7.4")
 
-6.  After the update is complete, you'll need to install the **Xamarin SDK Manager** extension.
+4.  After the update is complete, you'll need to be sure the **Mobile development with .NET** workload is installed.
 
-    -   Launch Visual Studio Installer. You can find the installer in the Windows Start menu.
+    -   Select **Tools \> Get Tools and Features**. 
         
-        ![Visual Studio Installer is highlighted in the Windows Start menu.](images/Setup/image6.png "Run the Visual Studio installer")
+        ![Visual Studio Tools menu is open and Get Tools and Features is highlighted.](images/Setup/image6.png "Open Tools - Get Tools and Features")
 
-    -   Select the **Modify** button.
+    -   In the **Workloads** tab check the box for the **Mobile development with .NET** workload.
         
-        ![The Modify button is highlighted under Visual Studio 2017 15.5.7 Installed.](images/Setup/image7.png "Select Modify")
+        ![The Workloads tab is open and the Mobile development with .NET checkbox is checked.](images/Setup/image7.png "Check the Mobile development workload checkbox")
+    
 
-    -   Select the **Individual components** tab.
-
-    -   Scroll down to the **Development Activities** section. Make sure the **Xamarin SDK Manager** box is checked, and then select the **Modify** button in the bottom right corner of the dialog to proceed.
-
-> ![Xamarin SDK Manager is highlighted in the Development Activities section.](images/Setup/image8.png "Verify that Xamarin SDK Manager is selected")
-
-e.  Once all updates are completed installing, restart your VM.
+5.  Once all updates are completed installing, restart Visual Studio.
 
 ### Task 5: Update Android SDKs
 
