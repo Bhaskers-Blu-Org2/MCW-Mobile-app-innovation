@@ -133,7 +133,7 @@ In the event that a piece of luggage has gone missing, due to the fact that its 
 
         iii. Windows 10 (Fall Creators Update recommended)
 
-        iv. Visual Studio 2017 (15.5.5 Required)
+        iv. Visual Studio 2017 (15.7.4 Required)
 
     -   Mac
 
@@ -303,7 +303,7 @@ App Center will now create a new instance of your app, including a new key that 
 
 ### Task 6: Connect iOS & Android apps in App Center to Team Services and configure/launch build
 
-1.  Navigate to <https://appcenter.ms/apps>, and locate the iOS app you created in the previous steps.
+1.  Navigate to <https://appcenter.ms/apps>, and select the iOS app you created in the previous steps.
 
 2.  Select the ![Build icon](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image26.png "Build icon") icon in the left-hand menu.
 
@@ -453,6 +453,8 @@ Now that you've created your cosmos instance, we'll want to create collections f
 
 7.  In the Add Collection form, provide the following:
 
+    -   **Use existing**: Checked
+
     -   **Database id**: bagDatabase
 
     -   **Collection id**: BagCollection
@@ -477,11 +479,11 @@ We are going to use Application Insights to monitor your backend project. In the
 
 2.  Select **+ Create a resource**.
 
-3.  Choose **Monitoring + Management**.
+3.  Choose **Management Tools**.
 
 4.  Choose **Application Insights**.
 
-    ![A red arrow points at + Create a resource on the left side of the Azure portal, Monitoring + Management is highlighted in the middle, and Application Insights is highlighted on the right.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image51.png "Select Application Insights")
+    ![A red arrow points at + Create a resource on the left side of the Azure portal,  Management Tools is highlighted in the middle, and Application Insights is highlighted on the right.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image51.png "Select Application Insights")
 
 5.  Give your instance a unique name, and choose your Azure subscription to create the instance in.
 
@@ -541,6 +543,8 @@ We are going to use Application Insights to monitor your backend project. In the
 
 5.  Make sure that your project compiles and launches. If prompted to download the Functions CLI Tools or .NET Framework, select **yes** for both options.
     ![The delta next to ContosoBaggage.Backend.Functions is highlighted.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image58.png "Select yes if prompted")
+
+6. Stop debugging the Azure Functions app using either **Shift + F5** or clicking the Stop debugging button.
 
 ### Task 6: Connect your Project to Application Insights
 
@@ -828,7 +832,7 @@ Create an IoT Hub for your simulated device app to connect to. The following ste
 
 1.  Sign in to the [Azure portal](https://portal.azure.com/).
 
-2.  Select **New \>** **Internet of Things \> IoT Hub**.
+2.  Select **Create a resource \>** **Internet of Things \> IoT Hub**.
 
     ![+ New is highlighted on the left side of the Azure portal, Internet of Things is selected and highlighted under Azure Marketplace in the middle, and IoT Hub is highlighted on the right.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image67.png "Select IoT Hub")
 
@@ -838,7 +842,7 @@ Create an IoT Hub for your simulated device app to connect to. The following ste
 
     -   **Important:** The IoT hub will be publicly discoverable as a DNS endpoint, so make sure to avoid any sensitive information while naming it.
 
-    -   **Pricing and scale tier**: For this tutorial, select the **F1 - Free** tier. For more information, see the [Pricing and scale tier](https://azure.microsoft.com/pricing/details/iot-hub/).
+    -   **Pricing and scale tier**: Located on the **Size and scale**tab , for this tutorial, select the **F1 - Free** tier. For more information, see the [Pricing and scale tier](https://azure.microsoft.com/pricing/details/iot-hub/).
 
     -   **Resource group**: Select the same resource group you have been using for this lab.
 
@@ -846,9 +850,13 @@ Create an IoT Hub for your simulated device app to connect to. The following ste
 
     -   **Pin to dashboard**: Check this option for easy access to your IoT hub from the dashboard.
 
-        ![The information above is entered in the IoT hub dialog box.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image68.png "Configure IoT hub settings")
+        ![The information above is entered in the IoT hub dialog box under the Basics tab.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image68.0.png "Configure IoT hub settings Basic Tab")
+
+        ![The information above is entered in the IoT hub dialog box under the Size and scale tab.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image68.1.png "Configure IoT hub settings Review and Create Tab")
 
 4.  Select **Create**. Your IoT hub might take a few minutes to create. You can monitor the progress in the **Notifications** pane.
+
+        ![The information above is entered in the IoT hub dialog box under the Review + create tab.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image68.2.png "Configure IoT hub settings Review plus Create Tab")
 
 5.  When your new IoT hub is ready, select its tile in the Azure portal to open its properties window. Now that you have created an IoT hub, locate the important information that you use to connect devices and applications to your IoT hub. Make a note of the **Hostname**, and then select **Shared access policies**.
 
@@ -917,7 +925,7 @@ Part 2: Function URL
 
 4.  Copy and paste that value into the base URL (line 17). Be sure to keep the {0} on the end of the string.
     ```
-    string \_baseUrl = \"https://your-function-url-here.azurewebsites.net{0}\";
+    string _baseUrl = \"https://your-function-url-here.azurewebsites.net{0}\";
     ```
 
 ### Task 4: Set up the program to scan the bags
@@ -949,7 +957,7 @@ static string myFlightNumber = "FL1234";
 
     ![Bag updates are displayed in the Console app after running the SimulatedDevice project.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image74.png "Run the SimulatedDevice project")
 
-3.  The **Usage** tile in the [Azure portal](https://portal.azure.com/) shows the number of messages sent to the IoT hub:
+3.  The **Usage** tile found in the **Overview** blade of the IoT Hub in the [Azure portal](https://portal.azure.com/) shows the number of messages sent to the IoT hub:
 
     ![This is a screenshot of the Usage tile.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image75.png "View the Usage tile")
 
