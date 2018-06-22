@@ -176,9 +176,9 @@ A robust DevOps chain is critical in being able to build, deploy, and monitor yo
 
     -   git remote remove origin
 
-    -   git remote add origin
-
-    -   <https://contosoair1234.visualstudio.com/_git/ContosoBaggage>git add -A
+    -   git remote add origin <https://contosoair1234.visualstudio.com/_git/ContosoBaggage>
+    
+    -   git add -A
 
     -   git commit -m "Initial commit"
 
@@ -1001,89 +1001,73 @@ Now that we've configured backend and populated it with data, we'll configure ou
 
 5.  Replace the contents of FlightListPage.xaml with the following:
     ```
+        
     <?xml version="1.0" encoding="UTF-8"?>
     <pages:BaseContentPage 
-        xmlns="http://xamarin.com/schemas/2014/forms" 
-        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        x:Class="ContosoBaggage.Pages.FlightDetailsPage"
-        xmlns:controls="clr-namespace:ContosoBaggage.Controls;assembly=ContosoBaggage"
-        xmlns:pages="clr-namespace:ContosoBaggage.Pages;assembly=ContosoBaggage"
-        xmlns:views="clr-namespace:ContosoBaggage.Views;assembly=ContosoBaggage"
-        xmlns:viewmodels="clr-namespace:ContosoBaggage.ViewModels;assembly=ContosoBaggage"
-        x:TypeArguments="viewmodels:FlightDetailsViewModel"
-        Title="{Binding Title}"
-        BackgroundColor="#EFEEF5">    
-        <pages:BaseContentPage.Content>
-            <Grid RowSpacing="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="130" />
-                    <RowDefinition Height="300" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <views:NavigationBar
-                    CanMoveBack="true"
-                    Title="Add Treasure"
-                    BackgroundColor="White"/>
-                <Image Source="header_other.jpg"
-                    Aspect="AspectFill"
-                    Grid.Row="1"/>
-                <BoxView BackgroundColor="{StaticResource gray}"
-                    Grid.Row="1"
-                    Opacity="0.3"/>
-                <StackLayout Orientation="Vertical"
-                    Padding="10, 10, 10, 10"
-                    Spacing="15"
-                    Grid.Row="1">                
-                    <Label x:Name="FlightNumberLabel"
-                        Text="{Binding FlightNumber}"
-                        TextColor="White"
-                        HorizontalTextAlignment="Center"
-                        FontSize="30"/>
-                    <Label x:Name="FlightsLabel"
-                        Text="{Binding TotalBagsOnFlight, StringFormat='{0} bags on flight'}"
-                        TextColor="White"
-                        HorizontalTextAlignment="Center"
-                        FontSize="Large"/>                
-                </StackLayout>            
-                <ActivityIndicator 
-                    Grid.Row="2"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"
-                    IsVisible="{Binding IsBusy}"
-                    IsRunning="{Binding IsBusy}"
-                    Color="{StaticResource gray}"/>
-                <controls:DataTemplatePresenter ItemTemplate="{StaticResource flightDetailsView}"
-                    IsVisible="{Binding IsBusy, Converter={StaticResource notConverter}}"
-                    Grid.Row="2">
-                    <controls:DataTemplatePresenter.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding FlightsCommand}"/>
-                    </controls:DataTemplatePresenter.GestureRecognizers>
-                </controls:DataTemplatePresenter>
-                <ListView x:Name="bagsListView"
-                    IsVisible="{Binding IsBusy, Converter={StaticResource notConverter}}"
-                    ItemsSource="{Binding BagsForFlight}"
-                    CachingStrategy="RetainElement"
-                    SeparatorVisibility="None"
-                    RowHeight="80"
-                    Grid.Row="3">
-                    <ListView.Behaviors>
-                        <controls:EventToCommandBehavior EventName="ItemTapped" 
-                            Command="{Binding BagSelectedCommand}" 
-                            EventArgsConverter="{StaticResource ItemTappedConverter}" />
-                    </ListView.Behaviors>                
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <controls:DataTemplatePresenter 
-                                ItemTemplate="{StaticResource bagDetailsView}"/>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>            
-            </Grid>
-        </pages:BaseContentPage.Content>
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ContosoBaggage.Pages.FlightListPage"
+    xmlns:controls="clr-namespace:ContosoBaggage.Controls;assembly=ContosoBaggage"
+    xmlns:pages="clr-namespace:ContosoBaggage.Pages;assembly=ContosoBaggage"
+    xmlns:views="clr-namespace:ContosoBaggage.Views;assembly=ContosoBaggage"
+    xmlns:viewmodels="clr-namespace:ContosoBaggage.ViewModels;assembly=ContosoBaggage"
+    x:TypeArguments="viewmodels:FlightListViewModel"
+    Title="{Binding Title}"
+    BackgroundColor="#EFEEF5">
+    <pages:BaseContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="120" />
+                <RowDefinition Height="1" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <views:NavigationBar
+                CanMoveBack="true"
+                Title="Add Treasure"
+                BackgroundColor="White"/>
+
+            <Image Source="header_other.jpg"
+                Aspect="AspectFill"
+                Grid.Row="1"/>
+            <BoxView BackgroundColor="{StaticResource gray}"
+                Grid.Row="1"
+                Opacity="0.3"/>
+            <ActivityIndicator 
+                Grid.Row="2"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                IsVisible="{Binding IsBusy}"
+                IsRunning="{Binding IsBusy}"
+                Color="{StaticResource gray}"/>
+            <ListView x:Name="FlightListView"
+                IsVisible="{Binding IsBusy, Converter={StaticResource notConverter}}"
+                ItemsSource="{Binding Flights}"
+                CachingStrategy="RetainElement"
+                SeparatorVisibility="None"
+                RowHeight="60"
+                Grid.Row="4">
+                <ListView.Behaviors>
+                    <controls:EventToCommandBehavior EventName="ItemTapped" 
+                        Command="{Binding FlightSelectedCommand}" 
+                        EventArgsConverter="{StaticResource ItemTappedConverter}" />
+                </ListView.Behaviors>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <controls:DataTemplatePresenter 
+                            ItemTemplate="{StaticResource flightDetailsView}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+    </pages:BaseContentPage.Content>
     </pages:BaseContentPage >
+
     ```
 
 ### Task 3: Create a Flight List View Model
@@ -1217,21 +1201,35 @@ Now that we've configured backend and populated it with data, we'll configure ou
 
 2.  Replace the implementation of the FlightListPage class with the following code:
     ```
-    public partial class FlightListPage : BaseContentPage<FlightListViewModel>, INavigableXamarinFormsPage
+    using ContosoBaggage.Controls;
+    using ContosoBaggage.ViewModels;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    namespace ContosoBaggage.Pages
     {
-        public FlightListPage()
+	    [XamlCompilation(XamlCompilationOptions.Compile)]
+        public partial class FlightListPage : BaseContentPage<FlightListViewModel>, INavigableXamarinFormsPage
         {
-            InitializeComponent();
-        }
+            public FlightListPage()
+            {
+                InitializeComponent();
+            }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
+            protected override void OnAppearing()
+            {
+                base.OnAppearing();
 
-            if (ViewModel.Flights.Count > 0 || ViewModel.IsBusy)
-                return;
+                if (ViewModel.Flights.Count > 0 || ViewModel.IsBusy)
+                    return;
 
-            ViewModel.GetFlightsCommand.Execute(null);
+                ViewModel.GetFlightsCommand.Execute(null);
+            }
         }
     }
 
