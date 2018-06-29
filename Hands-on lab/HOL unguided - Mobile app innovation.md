@@ -18,6 +18,7 @@ Information in this document, including URL and other Internet Web site referenc
 Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.
 
 The names of manufacturers, products, or URLs are provided for informational purposes only and Microsoft makes no representations and warranties, either expressed, implied, or statutory, regarding these manufacturers or the use of the products with any Microsoft technologies. The inclusion of a manufacturer or product does not imply endorsement of Microsoft of the manufacturer or product. Links may be provided to third party sites. Such sites are not under the control of Microsoft and Microsoft is not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites. Microsoft is not responsible for webcasting or any other form of transmission received from any linked site. Microsoft is providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement of Microsoft of the site or the products contained therein.
+
 © 2018 Microsoft Corporation. All rights reserved.
 
 Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
@@ -143,7 +144,7 @@ This package is designed to guide students through an implementation of an end-t
 
 ## Overview
 
-The Mobile app innovation hands-on lab is an exercise that will challenge you to implement an end-to-end scenario using a supplied sample that is based on Microsoft Azure and related services. The scenario will include implementing IoT Hub, App Center, Application Insights, Azure Functions, and Azure Cosmos DB. The hands-on lab can be implemented on your own, but it is highly recommended to pair up with other members at the workshop to model a real-world experience much closer and to allow each member to share their expertise for the overall solution.
+The Mobile app innovation hands-on lab is an exercise that will challenge you to implement an end-to-end scenario using a supplied sample that is based on Microsoft Azure and related services. The scenario will include implementing IoT Hub, App Center, Application Insights, Azure Functions, and Azure Cosmos DB. The hands-on lab can be implemented on your own, but it is highly recommended to pair up with other members at the workshop to more closely model a real-world experience and to allow each member to share their expertise for the overall solution.
 
 ## Solution architecture
 
@@ -153,9 +154,9 @@ Below is a diagram of the solution architecture you will build in this lab. Plea
 
 From a high-level, a customer arrives to the airport with a bag that needs to be checked. The customer is attended to by an employee of Contoso Air with a computer. The employee affixes an RFID tag to the luggage and associates it with the customer and flight information using a PowerApps application. The mobile application triggers this information to be stored in Cosmos DB via an HttpTrigger.
 
-The luggage is then placed on the luggage conveyor belt, where an RFID scanner scans the tag. The RFID scanner utilizes MQTT protocol to send a status message for the luggage to an IoT Hub. The IoT Hub is configured with a Service Bus Queue endpoint and corresponding filter that identifies the status message. Once matched, message is then forwarded to the Service Bus Queue. Having the messages sent to the Service Bus Queue ensures reliability as items will not be removed from the queue until processed. Listening to this queue is an Azure Function which is then triggered and stores the current location of the luggage into Cosmos DB.
+The luggage is then placed on the luggage conveyor belt, where an RFID scanner scans the tag. The RFID scanner utilizes MQTT protocol to send a status message for the luggage to an IoT Hub. The IoT Hub is configured with a Service Bus Queue endpoint and corresponding filter that identifies the status message. Once matched, message is then forwarded to the Service Bus Queue. Having the messages sent to the Service Bus Queue ensures reliability as items will not be removed from the queue until processed. Listening to this queue is an Azure Function, which is then triggered to store the current location of the luggage into Cosmos DB.
 
-The baggage handler then receives the luggage at the plane, as the luggage is loaded onto the plane, each one is scanned using a Xamarin-based mobile application where an Azure function is initiated via an HttpTrigger and the location of the luggage is updated as having been loaded on the plane. Once all luggage has been loaded onto the plane, the baggage handler application sends another message indicating all bags are loaded on the plane, this status is also sent along to Cosmos DB via an HttpTrigger. This is a great place to implement notifications for things such as a bag being loaded onto the wrong plane, or identifying bags that are missing from a flight.
+The baggage handler then receives the luggage at the plane. As the luggage is loaded onto the plane, each one is scanned using a Xamarin-based mobile application where an Azure function is initiated via an HttpTrigger, and the location of the luggage is updated as having been loaded on the plane. Once all luggage has been loaded onto the plane, the baggage handler application sends another message indicating that all bags are loaded on the plane. This status is also sent along to Cosmos DB via an HttpTrigger. This is a great place to implement notifications for things, such as a bag being loaded onto the wrong plane, or identifying bags that are missing from a flight.
 
 Meanwhile, the customer has boarded the flight, and as the cabin door is shut, they can access their Xamarin-based mobile application. Using information from their luggage receipt, the customer can see that their bag has made it safely on the flight.
 
@@ -179,23 +180,23 @@ In the event that a piece of luggage has gone missing, due to the fact that its 
 
 3.  Local machine configured with (**complete the day before the lab!**):
 
-    -   Windows
+  -   Windows
 
-        i.  Workstation with VT-X Support w/Hyper-V Disabled (under Programs and Features in Windows Settings)
+       -  Workstation with VT-X Support w/Hyper-V Disabled (under Programs and Features in Windows Settings)
 
-        ii. Intel HAXM Support installed
+       - Intel HAXM Support installed
 
-            1.  Instructions: <https://developer.xamarin.com/guides/android/getting_started/installation/android-emulator/hardware-acceleration/>
+         Instructions: <https://developer.xamarin.com/guides/android/getting_started/installation/android-emulator/hardware-acceleration/>
 
-        iii. Windows 10 (Fall Creators Update recommended)
+       - Windows 10 (Fall Creators Update recommended)
 
-        iv. Visual Studio 2017 (15.7.4 Required)
+       - Visual Studio 2017 (15.7.4 Required)
 
-    -   Mac
+   -   Mac
 
-        v.  Visual Studio for Mac (latest stable release)
+        -  Visual Studio for Mac (latest stable release)
 
-        vi. Xcode 9.2 (or current latest stable release)
+        - Xcode 9.2 (or current latest stable release)
 
 4.  Android SDKs (21, 22, 23, 24, 25, 26, 27)
 
@@ -215,25 +216,25 @@ Create a new project in the Visual Studio Team Services instance you created at 
 
 #### Tasks to complete
 
--   Create a new project named **ContosoBaggage**, selecting the **Git** version control option.
+-   Create a new project named **ContosoBaggage**, and select the **Git** version control option
 
 #### Exit criteria
 
--   You have a new project in which you can store your source code using git.
+-   You have a new project in which you can store your source code using git
 
 ### Task 2: Commit starter project to your VSTS project
 
 #### Tasks to complete
 
--   Download the starter code from <http://bit.ly/2F2JQTa>, and extract the project to a new folder.
+-   Download the starter code from <http://bit.ly/2F2JQTa>, and extract the project to a new folder
 
--   Add the new VSTS project git repository as a new origin, using PowerShell or your favorite git client.
+-   Add the new VSTS project git repository as a new origin, using PowerShell or your favorite git client
 
--   Add all files to the local git repository (git add -A).
+-   Add all files to the local git repository (git add -A)
 
--   Commit your changes to the local repository, adding a new commit message (git commit -m "Initial commit").
+-   Commit your changes to the local repository, adding a new commit message (git commit -m "Initial commit")
 
--   Push to the remote repository (git push -u origin --all).
+-   Push to the remote repository (git push -u origin --all)
 
 #### Exit criteria
 
@@ -243,7 +244,7 @@ Create a new project in the Visual Studio Team Services instance you created at 
 
 **Duration**: 25 minutes
 
-In this step, we'll explore how quick and easy it is to connect your mobile app to Visual Studio App Center. App Center provides best in class mobile app monitoring, along with a CI, and mobile app testing solution to ensure that any issues in your app are identified and resolved quickly.
+In this step, we'll explore how quick and easy it is to connect your mobile app to Visual Studio App Center. The App Center provides best in class mobile app monitoring, along with a CI, and mobile app testing solution to ensure that any issues in your app are identified and resolved quickly.
 
 ### Help references
 |    |            |
@@ -258,11 +259,11 @@ In this step, we'll explore how quick and easy it is to connect your mobile app 
 
 -   Browse to <https://appcenter.ms/apps>
 
--   Add a new iOS app, indicating the Xamarin platform.
+-   Add a new iOS app, indicating the Xamarin platform
 
 #### Exit criteria
 
--   You have a new iOS app with an identifying name, such as Contoso Baggage \[iOS\].
+-   You have a new iOS app with an identifying name, such as Contoso Baggage \[iOS\]
 
 ### Task 2: Connect iOS app to App Center
 
@@ -270,19 +271,19 @@ Add the App Secret key to the ContosoBaggage.iOS Xamarin project in Visual Studi
 
 #### Tasks to complete
 
--   In App Center, select the iOS app you created.
+-   In App Center, select the iOS app you created
 
--   Scroll down the Getting Started page to locate and copy the App Secret key.
+-   Scroll down the Getting Started page to locate and copy the App Secret key
 
--   Open the ContosoBaggage solution in Visual Studio.
+-   Open the ContosoBaggage solution in Visual Studio
 
--   Open the **AppDelegate.cs** file within the **ContosoBaggage.iOS** project.
+-   Open the **AppDelegate.cs** file within the **ContosoBaggage.iOS** project
 
--   Locate the **FinishedLaunching()** method, and paste your App Secret key as a parameter to the AppCenter.Start method.
+-   Locate the **FinishedLaunching()** method, and paste your App Secret key as a parameter to the AppCenter.Start method
 
 #### Exit criteria
 
--   You replaced the existing sample App Secret key within the AppDelegate class of the ContosoBaggage.iOS project, with the key generated for your new iOS app in App Center.
+-   You replaced the existing sample App Secret key within the AppDelegate class of the ContosoBaggage.iOS project with the key generated for your new iOS app in App Center.
 
 ### Task 3: Create a new Android / Xamarin app
 
@@ -290,11 +291,11 @@ Add the App Secret key to the ContosoBaggage.iOS Xamarin project in Visual Studi
 
 -   Browse to <https://appcenter.ms/apps>
 
--   Add a new Android app, indicating the Xamarin platform.
+-   Add a new Android app, indicating the Xamarin platform
 
 #### Exit criteria
 
--   You have a new Android app with an identifying name, such as Contoso Baggage \[Android\].
+-   You have a new Android app with an identifying name, such as Contoso Baggage \[Android\]
 
 ### Task 4: Connect Xamarin.Android app to App Center
 
@@ -302,19 +303,19 @@ Add the App Secret key to the ContosoBaggage.Droid Xamarin project in Visual Stu
 
 #### Tasks to complete
 
--   In App Center, select the Android app you created.
+-   In App Center, select the Android app you created
 
--   Scroll down the Getting Started page to locate and copy the App Secret key.
+-   Scroll down the Getting Started page to locate and copy the App Secret key
 
--   Open the ContosoBaggage solution in Visual Studio.
+-   Open the ContosoBaggage solution in Visual Studio
 
--   Open the **MainActivity.cs** file within the **ContosoBaggage.Droid** project.
+-   Open the **MainActivity.cs** file within the **ContosoBaggage.Droid** project
 
--   Locate the **OnCreate()** method, and paste your App Secret key as a parameter to the AppCenter.Start method.
+-   Locate the **OnCreate()** method, and paste your App Secret key as a parameter to the AppCenter.Start method
 
 #### Exit criteria
 
--   You replaced the existing sample App Secret key within the MainActivity class of the ContosoBaggage.Android project, with the key generated for your new Android app in App Center.
+-   You replaced the existing sample App Secret key within the MainActivity class of the ContosoBaggage.Android project with the key generated for your new Android app in App Center.
 
 ### Task 5: Commit your changes to Visual Studio Team Services
 
@@ -322,13 +323,13 @@ Update the git repository in your VSTS app with the changes you just made to you
 
 #### Tasks to complete
 
--   Using the Team Explorer in Visual Studio, enter comments for your commit, then commit all changes.
+-   Using the Team Explorer in Visual Studio, enter comments for your commit, and then commit all changes
 
--   Sync your changes to the git repository in VSTS.
+-   Sync your changes to the git repository in VSTS
 
 #### Exit criteria
 
--   You can see your updated code changes in your VSTS project.
+-   You can see your updated code changes in your VSTS project
 
 ### Task 6: Connect iOS & Android apps in App Center to Team Services and configure/launch build
 
@@ -336,35 +337,35 @@ Link your iOS and Android apps in App Center to your Visual Studio Team Services
 
 #### Tasks to complete
 
--   Open your iOS app in App Center and link your ContosoBaggage VSTS project to it within the Build configuration.
+-   Open your iOS app in App Center and link your ContosoBaggage VSTS project to it within the Build configuration
 
--   Configure build on the master branch.
+-   Configure build on the master branch
 
--   Select the **ContosoBaggage.iOS.csproj** file as the project within the build configuration.
+-   Select the **ContosoBaggage.iOS.csproj** file as the project within the build configuration
 
--   Repeat the same steps to configure the build settings for the Android project, while pointing to the ContosoBaggage.Droid.csproj project file in its build configuration.
+-   Repeat the same steps to configure the build settings for the Android project, while pointing to the ContosoBaggage.Droid.csproj project file in its build configuration
 
 #### Exit criteria
 
--   Both iOS and Android apps successfully build from the latest changes in your VSTS project git repository.
+-   Both iOS and Android apps successfully build from the latest changes in your VSTS project git repository
 
 ### Task 7: Enable Telemetry (App Insights in App Center)
 
-One of the most powerful features of Visual Studio App Center, is the ability to connect your analytics data into Application Insights for further slicing and dicing of your data.
+One of the most powerful features of Visual Studio App Center is the ability to connect your analytics data into Application Insights for further slicing and dicing of your data.
 
 #### Tasks to complete
 
--   Select your profile in App Center and go to Account Settings.
+-   Select your profile in App Center and go to Account Settings
 
--   Attach your Azure subscription, if it is not already.
+-   Attach your Azure subscription, if it is not already
 
--   Assign both iOS and Android apps to your Azure subscription.
+-   Assign both iOS and Android apps to your Azure subscription
 
--   Connect Application Insights to your apps, exporting to your linked Azure subscription.
+-   Connect Application Insights to your apps, exporting to your linked Azure subscription
 
 #### Exit criteria
 
--   Both iOS and Android apps are assigned to your Azure subscription, and both are configured to send telemetry data to Application Insights.
+-   Both iOS and Android apps are assigned to your Azure subscription, and both are configured to send telemetry data to Application Insights
 
 ## Exercise 3: Configure Azure Cosmos DB and Azure functions
 
@@ -384,11 +385,11 @@ Now that we've configured source control, crash reporting, and build steps for o
 
 #### Tasks to complete
 
--   Create a new Azure Cosmos DB instance, using the SQL API.
+-   Create a new Azure Cosmos DB instance, using the SQL API
 
 #### Exit criteria
 
--   Your new Azure Cosmos DB instance is provisioned, and you have copied the URI and PRIMARY KEY values from the Read-write Keys tab within the Keys blade.
+-   Your new Azure Cosmos DB instance is provisioned, and you have copied the URI and PRIMARY KEY values from the Read-write Keys tab within the Keys blade
 
 ### Task 2: Create collections in your Cosmos DB instance
 
@@ -402,7 +403,7 @@ Now that you've created your cosmos instance, we'll want to create collections f
 
 #### Exit criteria
 
--   You have two new collections added to your Cosmos DB instance, as seen in the Data Explorer.
+-   You have two new collections added to your Cosmos DB instance, as seen in the Data Explorer
 
 ### Task 3: Create a new Application Insights instance
 
@@ -410,29 +411,29 @@ We are going to use Application Insights to monitor your backend project. In the
 
 #### Tasks to complete
 
--   Create a new Application Insights instance in the portal, selecting ASP.NET web application as the application type.
+-   Create a new Application Insights instance in the portal, and select ASP.NET web application as the application type.
 
 #### Exit criteria
 
--   You have a new Application Insights instance, and have copied its Instrumentation Key for later.
+-   You have a new Application Insights instance, and have copied its Instrumentation Key for later
 
 ### Task 4: Create a new Azure Function App
 
 #### Tasks to complete
 
--   Create a new Function App, adding it to the resource group you have been using for this lab.
+-   Create a new Function App, and add it to the resource group you have been using for this lab
 
 #### Exit criteria
 
--   You have a new Function App that you will deploy to from Visual Studio.
+-   You have a new Function App that you will deploy to from Visual Studio
 
 ### Task 5: Connect your function project to Cosmos DB
 
 #### Tasks to complete
 
--   In Visual Studio, open the **ContosoBaggage.Backend.Functions.sln** solution from the src/Backend folder where you extracted the lab files.
+-   In Visual Studio, open the **ContosoBaggage.Backend.Functions.sln** solution from the src/Backend folder where you extracted the lab files
 
--   Paste the URI value you copied from the Cosmos DB Read-write Keys tab as the value of **Url** within the **Cosmos** class in **Keys.cs**.
+-   Paste the URI value you copied from the Cosmos DB Read-write Keys tab as the value of **Url** within the **Cosmos** class in **Keys.cs**
 
 #### Exit criteria
 
@@ -442,15 +443,15 @@ We are going to use Application Insights to monitor your backend project. In the
 
 #### Tasks to complete
 
--   Paste the Application Insights Instrumentation Key you copied earlier, as the value of??**Key** within the **Analytics** class??in **Keys.cs**.
+-   Paste the Application Insights Instrumentation Key you copied earlier, as the value of??**Key** within the **Analytics** class??in **Keys.cs**
 
 #### Exit criteria
 
--   Your project has been configured to send telemetry to Application Insights.
+-   Your project has been configured to send telemetry to Application Insights
 
 ### Task 7: Add functions to your app
 
-In this task, you will add three new functions to your Function App in Visual Studio.
+In this task, you will add three new functions to your Function App in Visual Studio
 
 #### Tasks to complete
 
@@ -640,19 +641,19 @@ In this task, you will add three new functions to your Function App in Visual St
 
 #### Exit criteria
 
--   You can successfully compile the solution.
+-   You can successfully compile the solution
 
 ### Task 8: Deploy your app to Azure
 
 #### Tasks to complete
 
--   Publish your Functions project to your existing Azure Function App in Azure.
+-   Publish your Functions project to your existing Azure Function App in Azure
 
 -   Modify the publish profile settings to use the Debug \| Any CPU configuration. This allows you to attach a remote debugger for development only. This should not be set for production deployments.
 
 #### Exit criteria
 
--   After publishing, copy the site URL and verify the function is running by pasting it in a new browser window or creating a GET request in Postman. There will be no data yet since we haven't populated the databases, but this will at least confirm that your project is deployed successfully and running in Azure with no errors.
+-   After publishing, copy the site URL and verify the function is running by pasting it in a new browser window or creating a GET request in Postman. There will be no data since we haven't populated the databases, but this will at least confirm that your project is deployed successfully and running in Azure with no errors.
 
 ## Exercise 4: Setup IoT hub
 
@@ -660,27 +661,27 @@ In this task, you will add three new functions to your Function App in Visual St
 
 Azure IoT Hub is a fully managed Azure service. This service enables reliable and secure bi-directional communications between millions of Internet of Things (IoT) devices and a solution back end. One of the biggest challenges that IoT projects face is how to reliably and securely connect devices to the solution back end. To address this challenge, IoT Hub:
 
--   Offers reliable device-to-cloud and cloud-to-device hyper-scale messaging.
+-   Offers reliable device-to-cloud and cloud-to-device hyper-scale messaging
 
--   Enables secure communications using per-device security credentials and access control.
+-   Enables secure communications using per-device security credentials and access control
 
--   Includes device libraries for the most popular languages and platforms.
+-   Includes device libraries for the most popular languages and platforms
 
 This tutorial shows you how to:
 
--   Use the Azure portal to create an IoT hub.
+-   Use the Azure portal to create an IoT hub
 
--   Create a device identity in your IoT hub.
+-   Create a device identity in your IoT hub
 
 -   Create a simulated RFID device sends messages to your IoT Hub
 
 In this task you will find three projects:
 
--   **CreateDeviceIdentity**, which creates a device identity and associated security key to connect your device app.
+-   **CreateDeviceIdentity**, which creates a device identity and associated security key to connect your device app
 
--   **SimulatedDevice**, which connects to your IoT hub with the device identity created earlier, and sends a telemetry message every second by using the MQTT protocol.
+-   **SimulatedDevice**, which connects to your IoT hub with the device identity created earlier, and sends a telemetry message every second by using the MQTT protocol
 
--   **Telemetry**, which if you opt in Microsoft will get usage about how you use IoT Hub.
+-   **Telemetry**, which if you opt in, Microsoft will get usage about how you use IoT Hub
 
 ### Help references
 |    |            |
@@ -692,21 +693,21 @@ In this task you will find three projects:
 
 ### Task 1: Create the IoT hub in Azure
 
-Create an IoT Hub for your simulated device app to connect to.
+Create an IoT Hub for your simulated device app to connect to
 
 #### Tasks to complete
 
--   Create an IoT Hub instance from within Azure.
+-   Create an IoT Hub instance from within Azure
 
--   Select the **F1 -- Free** tier for this lab.
+-   Select the **F1 -- Free** tier for this lab
 
--   Copy the Hostname value.
+-   Copy the Hostname value
 
--   Copy the IoT Hub connection string from the iothubowner shared access policy.
+-   Copy the IoT Hub connection string from the iothubowner shared access policy
 
 #### Exit criteria
 
--   You have now created your IoT hub, and you have the host name and IoT Hub connection string that you need to complete the rest of this tutorial.
+-   You have now created your IoT hub, and you have the host name and IoT Hub connection string that you need to complete the rest of this tutorial
 
 ### Task 2: Create a device identity
 
@@ -714,9 +715,9 @@ In this task, you will create a .NET console app that creates a device identity 
 
 #### Tasks to complete
 
--   In Visual Studio, open the **IoTHubGetStarted.sln** solution from the src/IoTSimulator folder where you extracted the lab files.
+-   In Visual Studio, open the **IoTHubGetStarted.sln** solution from the src/IoTSimulator folder where you extracted the lab files
 
--   Update the **ConnectionString** variable within the Program.cs file of the **CreateDeviceIdentity** project with your IoT Hub connection string you copied in the previous task.
+-   Update the **ConnectionString** variable within the Program.cs file of the **CreateDeviceIdentity** project with your IoT Hub connection string you copied in the previous task
 
 #### Exit criteria
 
@@ -726,19 +727,19 @@ In this task, you will create a .NET console app that creates a device identity 
 
 #### Tasks to complete
 
--   Open the **Keys.cs** file within the **SimulatedDevice** project.
+-   Open the **Keys.cs** file within the **SimulatedDevice** project
 
--   Paste the URI value you copied from the Cosmos DB Read-write Keys tab as the value of **Url** within the **Cosmos** class in **Keys.cs**.
+-   Paste the URI value you copied from the Cosmos DB Read-write Keys tab as the value of **Url** within the **Cosmos** class in **Keys.cs**
 
--   Paste the Application Insights Instrumentation Key you copied earlier, as the value of??**Key** within the **Analytics** class??in **Keys.cs**.
+-   Paste the Application Insights Instrumentation Key you copied earlier, as the value of??**Key** within the **Analytics** class??in **Keys.cs**
 
--   Expand the Services folder and open **FlightService.cs**.
+-   Expand the Services folder and open **FlightService.cs**
 
 -   Copy your Function App URL and paste the value into the base URL (line 17). Be sure to keep the {0} on the end of the string.
 
 #### Exit criteria
 
--   Your simulated device project is configured to access Cosmos DB and send data to your Azure Functions.
+-   Your simulated device project is configured to access Cosmos DB and send data to your Azure Functions
 
 ### Task 4: Set up the program to scan the bags
 
@@ -746,19 +747,19 @@ In this task, you will create a .NET console app that creates a device identity 
 
 -   In the IoTHubGetStarted Visual Studio project, open **Program.cs** within the **SimulatedDevice** project. Update the **Program** class with the following:
 
-    -   Substitute {iot hub hostname} with the IoT hub host name you retrieved in the \"Create an IoT hub\" section.
+    -   Substitute {iot hub hostname} with the IoT hub host name you retrieved in the \"Create an IoT hub\" section
 
-    -   Substitute {device key} with the device key you retrieved in the \"Create a device identity\" section.
+    -   Substitute {device key} with the device key you retrieved in the \"Create a device identity\" section
 
 #### Exit criteria
 
--   The SimulatedDevice project is configured to send data to your IoT Hub instance on behalf of the simulated device identity you created earlier.
+-   The SimulatedDevice project is configured to send data to your IoT Hub instance on behalf of the simulated device identity you created earlier
 
 ### Task 5: Run the program to scan the bags
 
 #### Tasks to complete
 
--   Around line 35 enter in the Flight that you would like to update the bags for
+-   Around line 35, enter in the Flight that you would like to update the bags for
 
 ```
 static string myFlightNumber = "FL1234";
@@ -784,15 +785,15 @@ Now that we've configured backend and populated it with data, we'll configure ou
 
 #### Tasks to complete
 
--   Open the **ContosoBaggage.sln** solution from your /src/ContosoBaggage folder of your project.
+-   Open the **ContosoBaggage.sln** solution from your /src/ContosoBaggage folder of your project
 
--   Open FlightService.cs under the Services folder of the ContosoBaggage project.
+-   Open FlightService.cs under the Services folder of the ContosoBaggage project
 
--   Update the \_baseUrl with your Function App URL. Make sure to preserve the {0} at the end of the URL.
+-   Update the \_baseUrl with your Function App URL. Make sure to preserve the {0} at the end of the URL
 
 #### Exit criteria
 
--   Your mobile app is configured to connect to your Azure Functions.
+-   Your mobile app is configured to connect to your Azure Functions
 
 ### Task 2: Create a Fight List page
 
@@ -872,13 +873,13 @@ Now that we've configured backend and populated it with data, we'll configure ou
 
 #### Exit criteria
 
--   You have a new Flight List page ready to be connected to the Flight List view model you will create next.
+-   You have a new Flight List page ready to be connected to the Flight List view model you will create next
 
 ### Task 3: Create a Flight List view model
 
 #### Tasks to complete
 
--   Add a new class named FlightListViewModel.cs to the ViewModels folder of the ContosoBaggage project.
+-   Add a new class named FlightListViewModel.cs to the ViewModels folder of the ContosoBaggage project
 
 -   Replace the contents of the file with this code:
     ```
@@ -997,13 +998,13 @@ Now that we've configured backend and populated it with data, we'll configure ou
 
 #### Exit criteria
 
--   You have a new Flight List view model.
+-   You have a new Flight List view model
 
 ### Task 4: Connect the view model to the page
 
 #### Tasks to complete
 
--   Open the FlightListPage.xaml.cs file.
+-   Open the FlightListPage.xaml.cs file
 
 -   Replace the implementation of the FlightListPage class with the following code:
     ```
@@ -1043,31 +1044,31 @@ Now that we've configured backend and populated it with data, we'll configure ou
 
 #### Exit criteria
 
--   Your Flight List page and view model are now linked.
+-   Your Flight List page and view model are now linked
 
 ### Task 5: Add Flight List page to the navigation service
 
 #### Tasks to complete
 
--   Open the **NavigationService.cs** within the Navigation folder of the ContosoBaggage project.
+-   Open the **NavigationService.cs** within the Navigation folder of the ContosoBaggage project
 
--   Find the **GetPage** method and uncomment the **return new FlightListPage();** line.
+-   Find the **GetPage** method and uncomment the **return new FlightListPage();** line
 
 #### Exit criteria
 
--   You can navigate to your new Flight List page from within the app.
+-   You can navigate to your new Flight List page from within the app
 
 ### Task 1: Run the app and verify that it successfully retrieves flight data
 
 #### Tasks to complete
 
--   Set either the iOS or Android app as your StartUp project, whichever you plan to debug.
+-   Set either the iOS or Android app as your StartUp project, whichever you plan to debug
 
--   Launch the app within a simulator.
+-   Launch the app within a simulator
 
 #### Exit criteria
 
--   You are able to successfully launch the mobile app within a simulator and view your baggage information.
+-   You are able to successfully launch the mobile app within a simulator and view your baggage information
 
     ![This is a screenshot of the app running on a smartphone.](images/Hands-onlabunguided-Mobileappinnovationimages/media/image14.png "App screenshot")
 
@@ -1079,8 +1080,8 @@ In this exercise, attendees will deprovision any Azure resources that were creat
 
 ### Task 1: Delete the resource group in which you placed your Azure resources.
 
-1.  From the Portal, navigate to the blade of your Resource Group and select **Delete** in the command bar at the top.
+1.  From the Portal, navigate to the blade of your Resource Group and select **Delete** in the command bar at the top
 
-2.  Confirm the deletion by re-typing the resource group name and selecting Delete.
+2.  Confirm the deletion by re-typing the resource group name and selecting Delete
 
 You should follow all steps provided *after* attending the hands-on lab.
