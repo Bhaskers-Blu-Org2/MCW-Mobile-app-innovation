@@ -130,7 +130,7 @@ In the event that a piece of luggage has gone missing, due to the fact that its 
 
         -  Intel HAXM Support installed
 
-        Instructions: <https://developer.xamarin.com/guides/android/getting_started/installation/android-emulator/hardware-acceleration/>
+           Instructions: <https://developer.xamarin.com/guides/android/getting_started/installation/android-emulator/hardware-acceleration/>
 
         - Windows 10 (Fall Creators Update recommended)
 
