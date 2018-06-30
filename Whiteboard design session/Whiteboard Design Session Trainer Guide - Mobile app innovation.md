@@ -18,6 +18,7 @@ Information in this document, including URL and other Internet Web site referenc
 Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.
 
 The names of manufacturers, products, or URLs are provided for informational purposes only and Microsoft makes no representations and warranties, either expressed, implied, or statutory, regarding these manufacturers or the use of the products with any Microsoft technologies. The inclusion of a manufacturer or product does not imply endorsement of Microsoft of the manufacturer or product. Links may be provided to third party sites. Such sites are not under the control of Microsoft and Microsoft is not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites. Microsoft is not responsible for webcasting or any other form of transmission received from any linked site. Microsoft is providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement of Microsoft of the site or the products contained therein.
+
 © 2018 Microsoft Corporation. All rights reserved.
 
 Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
@@ -62,25 +63,25 @@ Thank you for taking time to support the whiteboard design sessions as a trainer
 
 An amazing trainer:
 
--   Creates a safe environment in which learning can take place.
+-   Creates a safe environment in which learning can take place
 
--   Stimulates the participant's thinking.
+-   Stimulates the participant's thinking
 
--   Involves the participant in the learning process.
+-   Involves the participant in the learning process
 
--   Manages the learning process (on time, on topic, and adjusting to benefit participants).
+-   Manages the learning process (on time, on topic, and adjusting to benefit participants)
 
--   Ensures individual participant accountability.
+-   Ensures individual participant accountability
 
--   Ties it all together for the participant.
+-   Ties it all together for the participant
 
--   Provides insight and experience to the learning process.
+-   Provides insight and experience to the learning process
 
--   Effectively leads the whiteboard design session discussion.
+-   Effectively leads the whiteboard design session discussion
 
--   Monitors quality and appropriateness of participant deliverables.
+-   Monitors quality and appropriateness of participant deliverables
 
--   Effectively leads the feedback process.
+-   Effectively leads the feedback process
 
 ## Whiteboard design session flow
 
@@ -98,7 +99,7 @@ Outcome: Analyze your customer's needs
 
 **Step 2: Design a proof of concept solution (60 minutes)**
 
-Outcome: Prepare to present a solution for your target customer audience
+Outcome: Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format 
 
 -   Determine your target customer audience
 
@@ -126,15 +127,15 @@ Review preferred solution
 
 Before conducting your first whiteboard design session:
 
--   Read the Attendee guide (including the case study) and Trainer guide.
+-   Read the Attendee guide (including the case study) and Trainer guide
 
--   Become familiar with all key points and activities.
+-   Become familiar with all key points and activities
 
--   Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions.
+-   Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions
 
--   Prior to the whiteboard design session, discuss the case study to pick up more ideas.
+-   Prior to the whiteboard design session, discuss the case study to pick up more ideas
 
--   Make notes for later.
+-   Make notes for later
 
 ## During the whiteboard design session: Tips for an effective whiteboard design session
 
@@ -144,7 +145,7 @@ Before conducting your first whiteboard design session:
 
 When participants are doing activities, you can **look ahead to refresh your memory**.
 
--   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing.
+-   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing
 
 -   **Add examples, points, and stories** from your own experience. Think about stories you can share that help you make your points clearly and effectively.
 
@@ -154,7 +155,7 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 **Involve your participants.** Talk and share your knowledge but always involve your participants, even while you are the one speaking.
 
-**Ask questions** and get them to share to fully involve your group in the learning process.
+**Ask questions** and get them to share to fully involve your group in the learning process
 
 **Ask first**, whenever possible. Before launching into a topic, learn your audience's opinions about it and experiences with it. Asking first enables you to assess their level of knowledge and experience, and leaves them more open to what you are presenting.
 
@@ -181,19 +182,22 @@ This package is designed to guide attendees through an implementation of an end-
 **Outcome** 
 
 Analyze your customer’s needs.
-Time frame: 15 minutes 
+
+Timeframe: 15 minutes
+
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
+
 1.  Meet your table participants and trainer 
 2.  Read all of the directions for steps 1–3 in the student guide 
 3.  As a table team, review the following customer case study
 
 ### Customer situation
 
-Contoso Air, founded in 1932, is a leader in the air travel industry, with service to more than 70 different countries/regions around the globe. Contoso is currently modernizing their entire ticketing and operations platform. With a global workforce in over 70 countries/regions, there is a need to access data with extremely low latency thus requiring replication across geographical regions. Furthermore, employees are becoming increasingly mobile and digital savvy. They expect to be able to have access to their data in real time from any type of the common mobile platforms: be it UWP, iOS, or Android. Contoso\'s competitors are smaller and nimbler, as such they have been able to transform digitally much faster and provide employees and customers with a better experience.
+Contoso Air, founded in 1932, is a leader in the air travel industry, with service to more than 70 different countries/regions around the globe. Contoso is currently modernizing their entire ticketing and operations platform. With a global workforce in over 70 countries/regions, there is a need to access data with extremely low latency thus requiring replication across geographical regions. Furthermore, employees are becoming increasingly mobile and digital savvy. They expect to be able to have access to their data in real time from any type of the common mobile platforms: be it UWP, iOS, or Android. Contoso's competitors are smaller and nimbler, as such they have been able to transform digitally much faster and provide employees and customers with a better experience.
 
-Over time, Contoso hopes to be able to shift to a 100% cloud infrastructure, but they have an extensive number of on-premises legacy systems which are extremely costly to upgrade. They are interested in leveraging Azure to help securely expose specific information housed in those legacy systems accessible to other applications. This will also enable their global workforce to tailor their own application experiences in order to perform their jobs accurately and effectively. For this, they will require both a broadly available, highly scalable cloud that also offers hybrid capabilities to bridge to their on-premises infrastructure.
+Over time, Contoso hopes to be able to shift to a 100% cloud infrastructure, but they have an extensive number of on-premises legacy systems which are extremely costly to upgrade. They are interested in using Azure to help securely expose specific information housed in those legacy systems accessible to other applications. This will also enable their global workforce to tailor their own application experiences in order to perform their jobs accurately and effectively. For this, they will require both a broadly available, highly scalable cloud that also offers hybrid capabilities to bridge to their on-premises infrastructure.
 
-Contoso has already recently migrated email, file sharing, collaboration, chat, and VoIP systems into the cloud by leveraging the services provided in Office 365. As such, they have already set up federated AD, as well as other Microsoft 365 services (including the Microsoft Graph) which are all available for integration. They have various resources spread across three Azure regions.
+Contoso has already recently migrated email, file sharing, collaboration, chat, and VoIP systems into the cloud by taking advantage of the services provided in Office 365. As such, they have already set up federated AD, as well as other Microsoft 365 services (including the Microsoft Graph) which are all available for integration. They have various resources spread across three Azure regions.
 
 To remain competitive and improve their customer satisfaction ratings, Contoso Air wishes to modernize their baggage handling and tracking process. This includes the introduction of RFID luggage tags, equipping baggage handlers with mobile devices to perform luggage scans, a customer luggage tracking mobile application, and adding IoT enabled RFID antennas and scanners throughout the baggage handling process. Employees and customers alike will be able to track the exact position of a piece of luggage from the time that it leaves its owner's hands to the time that it returns to them at the baggage claim.
 
@@ -221,9 +225,9 @@ By implementing this system, Contoso will be able to improve their metrics as it
 
 ### Customer objections
 
-1.  Contoso Air is worried about potential security-related disruptions to the system.
+1.  Contoso Air is worried about potential security-related disruptions to the system
 
-2.  There is concern over Azure's ability to communicate reliably with IoT RFID scanners.
+2.  There is concern over Azure's ability to communicate reliably with IoT RFID scanners
 
 3.  Is Xamarin the right solution for the customer mobile applications?
 
@@ -242,11 +246,12 @@ By implementing this system, Contoso will be able to improve their metrics as it
 **Outcome** 
 Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format. 
 
-Time frame: 60 minutes
+Timeframe: 60 minutes
 
 **Business needs**
 
-Directions: With all participants at your table, answer the following questions and list the answers on a flip chart. 
+Directions: With all participants at your table, answer the following questions and list the answers on a flip chart.
+
 1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers? 
 2.  What customer business needs do you need to address with your solution?
 
@@ -275,17 +280,17 @@ Directions: With all participants at your table, respond to the following questi
 
 2.  Define the messages that need to be ingested:
 
-    -   Define the structure of the message sent from an employee checking in a bag for a customer.
+    -   Define the structure of the message sent from an employee checking in a bag for a customer
 
-    -   Define the structure of the message sent form the RFID scanners.
+    -   Define the structure of the message sent form the RFID scanners
 
-    -   Define the structure of the message sent from the baggage handler loading a bag into the plane.
+    -   Define the structure of the message sent from the baggage handler loading a bag into the plane
 
-    -   Define the structure of the message sent from the baggage handler indicating that the last bag has been loaded into the plane.
+    -   Define the structure of the message sent from the baggage handler, indicating that the last bag has been loaded into the plane
 
-    -   Define the structure of the message sent from the baggage handler unloading a bag from the plane.
+    -   Define the structure of the message sent from the baggage handler unloading a bag from the plane
 
-    -   Define the structure of the message sent from the baggage handler indicating that the last bag has been unloaded from the plane.
+    -   Define the structure of the message sent from the baggage handler, indicating that the last bag has been unloaded from the plane
 
 3.  What is the anticipated volume in messages expected from the RFID IoT solution that Contoso Air will need to support given their employee and customer base?
 
@@ -293,7 +298,7 @@ Directions: With all participants at your table, respond to the following questi
 
 5.  What protocol would they use in sending data to the service(s) used for message ingestion?
 
-6.  Define any endpoint(s) used for message ingestion.
+6.  Define any endpoint(s) used for message ingestion
 
 *Data Processing*
 
@@ -327,9 +332,9 @@ Directions: With all participants at your table, respond to the following questi
 
 Directions: With all participants at your table: 
 
-1.  Identify any customer needs that are not addressed with the proposed solution. 
-2.  Identify the benefits of your solution. 
-3.  Determine how you will respond to the customer’s objections. 
+1.  Identify any customer needs that are not addressed with the proposed solution
+2.  Identify the benefits of your solution
+3.  Determine how you will respond to the customer’s objections
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
@@ -339,24 +344,24 @@ Prepare a 15-minute chalk-talk style presentation to the customer.
  
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
-Time frame: 30 minutes
+Timeframe: 30 minutes
 
 **Presentation** 
 
 Directions:
-1.  Pair with another table.
-2.  One table is the Microsoft team and the other table is the customer.
-3.  The Microsoft team presents their proposed solution to the customer.
-4.  The customer makes one of the objections from the list of objections.
-5.  The Microsoft team responds to the objection.
-6.  The customer team gives feedback to the Microsoft team. 
-7.  Tables switch roles and repeat Steps 2–6.
+1.  Pair with another table
+2.  One table is the Microsoft team and the other table is the customer
+3.  The Microsoft team presents their proposed solution to the customer
+4.  The customer makes one of the objections from the list of objections
+5.  The Microsoft team responds to the objection
+6.  The customer team gives feedback to the Microsoft team 
+7.  Tables switch roles and repeat Steps 2–6
 
 ## Wrap-up 
 
-Time frame: 15 minutes
+Timeframe: 15 minutes
 
--   Tables reconvene with the larger group to hear a SME share the preferred solution for the case study.
+-   Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
 ## Additional references
 |    |            |
@@ -383,49 +388,43 @@ Time frame: 15 minutes
 
 ## Step 1: Review the customer case study
 
--   Check in with your table participants to introduce yourself as the trainer.
+-   Check in with your table participants to introduce yourself as the trainer
 
 -   Ask, "What questions do you have about the customer case study?"
 
--   Briefly review the steps and time frames of the whiteboard design session.
+-   Briefly review the steps and time frames of the whiteboard design session
 
--   Ready, set, go! Let the table participants begin.
+-   Ready, set, go! Let the table participants begin
 
 ## Step 2: Design a proof of concept solution
 
--   Check in with your tables to ensure that they are transitioning from step to step on time.
+-   Check in with your tables to ensure that they are transitioning from step to step on time
 
--   Provide some feedback on their responses to the business needs and design.
+-   Provide some feedback on their responses to the business needs and design
 
-    -   Try asking questions first that will lead the participants to discover the answers on their own.
+    -   Try asking questions first that will lead the participants to discover the answers on their own
 
--   Provide feedback for their responses to the customer's objections.
+-   Provide feedback for their responses to the customer's objections
 
-    -   Try asking questions first that will lead the participants to discover the answers on their own.
+    -   Try asking questions first that will lead the participants to discover the answers on their own
 
 ## Step 3: Present the solution
 
--   Determine which table will be paired with your table before Step 3 begins.
+-   Determine which table will be paired with your table before Step 3 begins
 
--   For the first round, assign one table as the Microsoft team and the other table as the customer.
+-   For the first round, assign one table as the presenting team and the other table as the customer
 
--   Have the Microsoft team present their solution to the customer team.
+-   Have the presenting team present their solution to the customer team 
 
-    -   Have the customer team provide one objection for the Microsoft team to respond to.
+    -   Have the customer team provide one objection for the presenting team to respond to
+    
+    -   The presentation, objections, and feedback should take no longer than 15 minutes
 
-    -   The presentation and objections should be no longer than 10-minutes.
-
-<!-- -->
-
--   Have participants on the customer team give feedback to the Microsoft team.
-
-    -   The feedback should be no longer than 5 minutes.
-
-    -   If needed, the trainer may also provide feedback.
+    -   If needed, the trainer may also provide feedback
 
 ## Wrap-up
 
--   Have the table participants reconvene with the larger session group to hear a SME share the following preferred solution.
+-   Have the table participants reconvene with the larger session group to hear the facilitator/SME share the following preferred solution.
 
 ## Preferred target audience
 
@@ -484,9 +483,9 @@ The primary audience is the business and technology decision makers. Usually we 
     JSON format as it is currently the most popular format for modern IoT and Web Systems.
     ```
 
-2.  Define the messages that need to be ingested.
+2.  Define the messages that need to be ingested
 
-    -   Define the structure of the message sent from an employee checking in a bag for a customer.
+    -   Define the structure of the message sent from an employee checking in a bag for a customer
     ```
         {
 
@@ -509,7 +508,7 @@ The primary audience is the business and technology decision makers. Usually we 
         }
     ```
 
-    -   Define the structure of the message sent from the RFID scanners.
+    -   Define the structure of the message sent from the RFID scanners
     ```
         {
         "baggageId": "value",
@@ -539,7 +538,7 @@ The primary audience is the business and technology decision makers. Usually we 
         }
     ```
 
-    -   Define the structure of the message sent from the baggage handler loading a bag into the plane.
+    -   Define the structure of the message sent from the baggage handler loading a bag into the plane
     ```
         {
 
@@ -570,7 +569,7 @@ The primary audience is the business and technology decision makers. Usually we 
         }
     ```
 
-    -   Define the structure of the message sent from the baggage handler indicating that the last bag has been loaded into the plane.
+    -   Define the structure of the message sent from the baggage handler indicating that the last bag has been loaded into the plane
     ```
         {
 
@@ -589,7 +588,7 @@ The primary audience is the business and technology decision makers. Usually we 
         }
     ```
 
-    -   Define the structure of the message sent from the baggage handler unloading a bag from the plane.
+    -   Define the structure of the message sent from the baggage handler unloading a bag from the plane
     ```
         {
 
@@ -620,7 +619,7 @@ The primary audience is the business and technology decision makers. Usually we 
         }
     ```
 
-    -   Define the structure of the message sent from the baggage handler indicating that the last bag has been unloaded from the plane.
+    -   Define the structure of the message sent from the baggage handler indicating that the last bag has been unloaded from the plane
     ```
         {
 
@@ -639,7 +638,7 @@ The primary audience is the business and technology decision makers. Usually we 
         }
     ```
 
-    -   Define the structure of the message sent from the RFID scanner indicating that a bag has been scanned onto a carousel.
+    -   Define the structure of the message sent from the RFID scanner indicating that a bag has been scanned onto a carousel
     ```
         {
 
@@ -740,7 +739,7 @@ The primary audience is the business and technology decision makers. Usually we 
 
 1.  Contoso Air is worried about potential security-related disruptions to the system.
 
-    Throughout the design of this solution, security has been at the forefront of the decisions. All communication between environments, devices and regions are performed over secured channels. TLS/SSL from RFID channels, Active Directory and client credentials from employee applications, as well as SSL and a JWT-token based security in the Xamarin-based mobile application.
+    Throughout the design of this solution, security has been at the forefront of the decisions. All communication between environments, devices, and regions are performed over secured channels. TLS/SSL from RFID channels, Active Directory and client credentials from employee applications, as well as SSL and a JWT-token based security in the Xamarin-based mobile application.
 
 2.  There is concern over Azure's ability to communicate reliably with IoT RFID scanners.
 
