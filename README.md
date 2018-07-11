@@ -1,5 +1,16 @@
 # Mobile app innovation
 
+Introduction to follow.
+
+## Target audience
+TBD
+
+## Abstract
+
+### Workshop
+TBD
+
+### Whiteboard design session 
 This package is designed to guide attendees through an implementation of an end-to-end mobile baggage tracking system for a customer in the airline industry. Attendees will design an IoT solution simulating data emitted from RFID tags attached to airline passengers' checked luggage, and mobile applications to allow employees and customers to track those bags from any device. Upon completion of the session, attendees will better understand how to:
 
 -   Set up an IoT Hub, and register RFID devices
@@ -12,20 +23,7 @@ This package is designed to guide attendees through an implementation of an end-
 
 -   Configure VSTS CI/CD pipelines
 
-
-## Target audience
-TBD
-
-## Abstract
-TBD
-
-### Workshop
-TBD
-
-### Whiteboard design session *(this will go in the readme and in the WDS document)*
-TBD
-
-### Hands-on lab *(this will go in the readme and in the HOL document)*
+### Hands-on lab 
 TBD
 
 ## Azure services and related products
