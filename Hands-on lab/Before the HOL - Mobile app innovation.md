@@ -112,7 +112,7 @@ In addition to the Azure portal, you will utilize Visual Studio App Center for b
 
 4.  After the update is complete, you'll need to be sure both the **Mobile development with .NET** and **Azure development** workloads are installed
 
-    -   Select **Tools \> Get Tools and Features**.
+    -   Select **Tools \> Get Tools and Features**
         
         ![Visual Studio Tools menu is open and Get Tools and Features is highlighted.](images/Setup/image6.png "Open Tools - Get Tools and Features")
 
@@ -120,7 +120,8 @@ In addition to the Azure portal, you will utilize Visual Studio App Center for b
         
         ![The Workloads tab is open and the Mobile development with .NET checkbox is checked.](images/Setup/image7.png "Check the Mobile development workload checkbox")
     
-    -   The **Azure development** workload is located in the **Web and Cloud** section.
+    -   The **Azure development** workload is located in the **Web and Cloud** section
+    
         ![The Workloads tab is open and the Azure development checkbox is checked.](images/Setup/image7.0.png "Check the Azure development workload checkbox")
 
 5.  Once all updates are completed installing, restart Visual Studio
