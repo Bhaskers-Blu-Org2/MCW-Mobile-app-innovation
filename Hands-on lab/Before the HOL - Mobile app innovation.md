@@ -23,7 +23,20 @@ The names of manufacturers, products, or URLs are provided for informational pur
 
 Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.# Mobile app innovation setup
 
-# Mobile app innovation before the hands-on lab setup guide 
+# Mobile app innovation before the hands-on lab setup guide
+
+<!-- TOC -->
+
+- [Mobile app innovation before the hands-on lab setup guide](#mobile-app-innovation-before-the-hands-on-lab-setup-guide)
+    - [Requirements](#requirements)
+    - [Before the hands-on lab](#before-the-hands-on-lab)
+        - [Task 1: Create an account, and sign into the Azure portal](#task-1-create-an-account-and-sign-into-the-azure-portal)
+        - [Task 2: Sign into Visual Studio Team Services, and create a new account](#task-2-sign-into-visual-studio-team-services-and-create-a-new-account)
+        - [Task 3: Sign into Visual Studio App Center](#task-3-sign-into-visual-studio-app-center)
+        - [Task 4: Update VS 2017 to 15.7.4](#task-4-update-vs-2017-to-1574)
+        - [Task 5: Update Android SDKs](#task-5-update-android-sdks)
+
+<!-- /TOC -->
 
 ## Requirements
 
