@@ -74,17 +74,9 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 ## Abstract and learning objectives 
 
-This package is designed to guide students through an implementation of an end-to-end mobile baggage tracking system for a customer in the airline industry. Students will design an IoT solution simulating data emitted from RFID tags attached to airline passengers' checked luggage, and mobile applications to allow employees and customers to track those bags from any device. Upon completion of the session, students will better understand how to:
+In this hands-on lab, you will implement the steps to build an IoT solution for an end-to-end mobile baggage tracking system, that leverages cloud services and cross-platform mobile development.
 
--   Set up an IoT Hub, and register RFID devices
-
--   Consider the steps required to migrate legacy systems to the Azure platform
-
--   Connect on-premise applications to Azure using PowerApps Data Gateway
-
--   Use Azure Functions to send and receive data from Cosmos DB
-
--   Configure VSTS CI/CD pipelines
+At the end of this hands-on lab, you will be better able to leverage Azure services to implement an IoT solution that includes, RFID tracking, mobile apps, and a continuous integration pipeline for developers.
 
 ## Overview
 
