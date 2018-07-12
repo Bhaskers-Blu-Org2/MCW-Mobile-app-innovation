@@ -165,17 +165,9 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 ## Abstract and learning objectives
 
-This package is designed to guide attendees through an implementation of an end-to-end mobile baggage tracking system for a customer in the airline industry. Attendees will design an IoT solution simulating data emitted from RFID tags attached to airline passengers' checked luggage, and mobile applications to allow employees and customers to track those bags from any device. Upon completion of the session, attendees will better understand how to:
+In this whiteboard design session, you will work with a group to design an IoT solution using data emitted from RFID tags attached to airline passengers' checked luggage, and mobile applications to allow employees and customers to track those bags from any device.
 
--   Set up an IoT Hub, and register RFID devices
-
--   Consider the steps required to migrate legacy systems to the Azure platform
-
--   Connect on-premises applications to Azure using PowerApps Data Gateway
-
--   Use Azure Functions to send and receive data from Cosmos DB
-
--   Configure VSTS CI/CD pipelines
+At the end of this whiteboard design session, you will be better able to design an IoT solution, including mobile apps, by leveraging cloud services.
 
 ## Step 1: Review the customer case study 
 
