@@ -132,7 +132,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 In this hands-on lab, you will implement the steps to build an IoT solution for an end-to-end mobile baggage tracking system, that leverages cloud services and cross-platform mobile development.
 
-At the end of this hands-on lab, you will be better able to leverage Azure services to implement an IoT solution that includes, RFID tracking, mobile apps, and a continuous integration pipeline for developers.
+At the end of this hands-on lab, you will discover how to leverage Azure services to implement an IoT solution that includes, RFID tracking, mobile apps, and a continuous integration pipeline for developers.
 
 ## Overview
 
