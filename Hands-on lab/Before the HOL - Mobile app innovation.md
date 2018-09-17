@@ -31,7 +31,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Requirements](#requirements)
     - [Before the hands-on lab](#before-the-hands-on-lab)
         - [Task 1: Create an account, and sign into the Azure portal](#task-1-create-an-account-and-sign-into-the-azure-portal)
-        - [Task 2: Sign into Visual Studio Team Services, and create a new account](#task-2-sign-into-visual-studio-team-services-and-create-a-new-account)
+        - [Task 2: Sign into Azure DevOps, and create a new account](#task-2-sign-into-azure-devops-and-create-a-new-account)
         - [Task 3: Sign into Visual Studio App Center](#task-3-sign-into-visual-studio-app-center)
         - [Task 4: Update VS 2017 to 15.7.4](#task-4-update-vs-2017-to-1574)
         - [Task 5: Update Android SDKs](#task-5-update-android-sdks)
@@ -40,11 +40,11 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Requirements
 
-1.  Using the same Microsft.com account:
+1.  Using the same Microsoft.com account:
 
     -   Azure Subscription
 
-    -   Visual Studio Team Services Subscription
+    -   Azure DevOps Subscription
 
     -   Account in Mobile Center
 
@@ -83,17 +83,17 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 **Duration**: 60 minutes
 
-Completing this lab will require accounts for Azure, Visual Studio Team Services, and Visual Studio App Center, as well as an up-to-date installation of Visual Studio on Windows 10. In this exercise, we will walk through the steps needed for each of these tasks and set up your environment to complete this lab.
+Completing this lab will require accounts for Azure, Azure DevOps, and Visual Studio App Center, as well as an up-to-date installation of Visual Studio on Windows 10. In this exercise, we will walk through the steps needed for each of these tasks and set up your environment to complete this lab.
 
 ### Task 1: Create an account, and sign into the Azure portal
 
 Throughout this lab, you will utilize an Azure subscription, and a Microsoft account. If you do not already have an Azure subscription, please follow the instructions at <https://azure.microsoft.com/en-us/free/> to set up your account. If you already have an account in <https://portal.azure.com>, then you can continue to the next task.
 
-### Task 2: Sign into Visual Studio Team Services, and create a new account
+### Task 2: Sign into Azure DevOps, and create a new account
 
-1.  Browse to <https://visualstudio.com>, and sign in with the Microsoft account used to access the Azure Portal in the previous step
+1.  Browse to <https://azure.microsoft.com/en-us/services/devops/>, and sign in with the Microsoft account used to access the Azure Portal in the previous step
 
-2.  If you have not already created an account in Visual Studio Team services, select the button to create a new app
+2.  If you have not already created an account in Azure DevOps, select the button to create a new app
 
     ![Create new account icon](media/b4-image3.png "Create new account icon")
     
@@ -101,7 +101,7 @@ Throughout this lab, you will utilize an Azure subscription, and a Microsoft acc
 
 4.  Select **Continue**
 
-    ![On the Visual Studio Team services project creation page, ContosoAir is entered in the box next to .visualstudio.com under Host my projects at, Git is selected below Manage code using, and Continue is selected at the bottom of the page.](media/b4-image4.png "Create a new app")
+    ![On the Azure DevOps project creation page, ContosoAir is entered in the box next to .visualstudio.com under Host my projects at, Git is selected below Manage code using, and Continue is selected at the bottom of the page.](media/b4-image4.png "Create a new app")
 
 After a few minutes, your new account will be created, and a new project (MyFirstProject) will be automatically created. We won't use this project for the app, but you can just ignore it and leave it in your account.
 
