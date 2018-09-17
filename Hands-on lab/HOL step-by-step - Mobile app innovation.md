@@ -10,7 +10,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-June 2018
+September 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -86,7 +86,7 @@ The Mobile app innovation hands-on lab is an exercise that will challenge you to
 
 Below is a diagram of the solution architecture you will build in this lab. Please study this carefully so you understand the whole of the solution as you are working on the various components.
 
-![Icons that are connected by arrows comprise this diagram, which is divided into three groups: Internal, Cloud, and Public. Azure Active Directory separates the Internal and Cloud groups, and SSL/JWT separates the Cloud and Public groups. At this time, we are unable to capture all of the information in the window. Future versions of this course should address this.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image2.png "Solution architecture diagram")
+![Icons that are connected by arrows comprise this diagram, which is divided into three groups: Internal, Cloud, and Public. Azure Active Directory separates the Internal and Cloud groups, and SSL/JWT separates the Cloud and Public groups. At this time, we are unable to capture all of the information in the window. Future versions of this course should address this.](media/image2.png "Solution architecture diagram")
 
 From a high-level, a customer arrives to the airport with a bag that needs to be checked. The customer is attended to by an employee of Contoso Air with a computer. The employee affixes an RFID tag to the luggage and associates it with the customer and flight information using a PowerApps application. The mobile application triggers this information to be stored in Cosmos DB via an HttpTrigger.
 
@@ -153,13 +153,13 @@ A robust DevOps chain is critical in being able to build, deploy, and monitor yo
 
 2.  On the right-hand side of the main landing page, choose the **New Project** button
 
-    ![The New Project button is highlighted on the right side of the main landing page in your Visual Studio Team services instance.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image12.png "Create a new project")
+    ![The New Project button is highlighted on the right side of the main landing page in your Visual Studio Team services instance.](media/image12.png "Create a new project")
 
 3.  Name the project **ContosoBaggage**, and make sure that **Git** is selected for the **Version** **control**, and **Agile** for the **Work item process** (as shown in the image below)
 
 4.  Select **Create** to create your new project
 
-    ![The information above is entered in the Create new project dialog box.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image13.png "Configure ContosoBaggage project settings")
+    ![The information above is entered in the Create new project dialog box.](media/image13.png "Configure ContosoBaggage project settings")
 
 ### Task 2: Commit starter project to your VSTS project 
 
@@ -191,7 +191,7 @@ If the above fails with a message like "Please tell me who you are", then execut
 
 3.  Select the **Generate Git credentials** button, and enter a username/password
 
-![The Code tab is highlighted in your Team Services project, Clone is highlighted below it, and Generate Git credentials is highlighted in the submenu.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image14.png "Create git credentials")
+![The Code tab is highlighted in your Team Services project, Clone is highlighted below it, and Generate Git credentials is highlighted in the submenu.](media/image14.png "Create git credentials")
 
 After these steps, you now have a working code base connected to your Visual Studio Team Services project, which will serve as the foundation of your DevOps strategy throughout this lab.
 
@@ -207,10 +207,10 @@ In this step, we'll explore how quick and easy it is to connect your mobile app 
 
 2.  In the top right corner, select **Add New**, and **Add new app**
     
-    ![Add New is selected, and Add new app is highlighted in the submenu.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image15.png "Select Add new app")
+    ![Add New is selected, and Add new app is highlighted in the submenu.](media/image15.png "Select Add new app")
 **Note:** If this is your first app in App Center, you may not see this option. Instead, select **Add new app** in the middle of the welcome screen.
 
-![Add new app is selected on the welcome screen.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image16.png "Add a new app")
+![Add new app is selected on the welcome screen.](media/image16.png "Add a new app")
 
 3.  Enter:
 
@@ -222,7 +222,7 @@ In this step, we'll explore how quick and easy it is to connect your mobile app 
 
     -   Select the **Add new app** button
 
-    ![The information above is entered in the Add new app dialog box, and Add new app is selected at the bottom.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image17.png "Configure Add new app settings")
+    ![The information above is entered in the Add new app dialog box, and Add new app is selected at the bottom.](media/image17.png "Configure Add new app settings")
 
 App Center will now create a new instance of your app, including a new key that you'll include in your iOS app.
 
@@ -230,7 +230,7 @@ App Center will now create a new instance of your app, including a new key that 
 
 1.  In the App Center portal, choose the app that you created in the previous task. On the **Getting Started** page scroll about half way down until you find the sample demonstrating how to include the App Secret key. Highlight and copy the key (shown in the image below).
 
-![The key in the sample demonstrating how to include the App Secret key is highlighted on the Getting Started page.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image18.png "Copy the key")
+![The key in the sample demonstrating how to include the App Secret key is highlighted on the Getting Started page.](media/image18.png "Copy the key")
 
 2.  Open the ContosoBaggage Visual Studio solution located in the following directory: **\[%Extracted Lab Files%\]\\src\\ContosoBaggage\\ContosoBaggage.sln**
 
@@ -240,7 +240,7 @@ App Center will now create a new instance of your app, including a new key that 
 
 5.  Save your changes
 
-![In the ContosoBaggage Visual Studio solution, an arrow points at AppDelegate.cs in the solution tree on the left, and the key that you previously copied is highlighted in the FinishedLaunching() method.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image19.png "Paste the secret key in the FinishedLaunching() method")
+![In the ContosoBaggage Visual Studio solution, an arrow points at AppDelegate.cs in the solution tree on the left, and the key that you previously copied is highlighted in the FinishedLaunching() method.](media/image19.png "Paste the secret key in the FinishedLaunching() method")
 
 ### Task 3: Create new Android / Xamarin app in Mobile
 
@@ -248,7 +248,7 @@ App Center will now create a new instance of your app, including a new key that 
 
 2.  In the top right corner, select **Add New**, and **Add new app**
 
-    ![Add New is selected, and Add new app is highlighted in the submenu.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image15.png "Select Add new app")
+    ![Add New is selected, and Add new app is highlighted in the submenu.](media/image15.png "Select Add new app")
 
 3.  Enter:
 
@@ -260,13 +260,13 @@ App Center will now create a new instance of your app, including a new key that 
 
     -   Select the **Add new app** button
 
-![The information above is entered in the Add new app dialog box.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image20.png "Configure Add new app settings")
+![The information above is entered in the Add new app dialog box.](media/image20.png "Configure Add new app settings")
 
 ### Task 4: Connect Xamarin.Android app to Mobile Center
 
 1.  In the App Center portal, choose the app that you created in the previous task. On the **Getting Started** page scroll about half way down until you find the sample demonstrating how to include the App Secret key. Highlight, and copy the key (show in the image below).
 
-    ![The key in the sample demonstrating how to include the App Secret key is highlighted on the Getting Started page.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image21.png "Copy the key")
+    ![The key in the sample demonstrating how to include the App Secret key is highlighted on the Getting Started page.](media/image21.png "Copy the key")
 
 2.  In Visual Studio, browse to the **ContosoBaggage.Droid** project in the solution tree, and open the **MainActivity.cs** file
 
@@ -274,7 +274,7 @@ App Center will now create a new instance of your app, including a new key that 
 
 4.  Save your changes
 
-    ![In the ContosoBaggage.Droid Visual Studio solution, an arrow points at MainActivity.cs in the solution tree on the left, and the key that you previously copied is highlighted in the OnCreate() method.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image22.png "Paste the secret key in the OnCreate() method")
+    ![In the ContosoBaggage.Droid Visual Studio solution, an arrow points at MainActivity.cs in the solution tree on the left, and the key that you previously copied is highlighted in the OnCreate() method.](media/image22.png "Paste the secret key in the OnCreate() method")
 
 ### Task 5: Commit your changes to Visual Studio Team Services
 
@@ -284,49 +284,49 @@ App Center will now create a new instance of your app, including a new key that 
 
 3.  Enter in comments for your commit, then select **Commit All**
 
-    ![MainActivity.cs is highlighted under Changes in Visual Studio Team Services.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image23.png "Commit your changes ")
+    ![MainActivity.cs is highlighted under Changes in Visual Studio Team Services.](media/image23.png "Commit your changes ")
 
 4.  Select **Sync** to push your changes to Visual Studio Team Services
     
-    ![The Sync link is highlighted Visual Studio Team Services.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image24.png "Select Sync")
+    ![The Sync link is highlighted Visual Studio Team Services.](media/image24.png "Select Sync")
 
 5.  Select the **Sync** button under Synchronization to finish synchronizing your changes
     
-    ![The Sync button is highlighted under Synchronization in Visual Studio Team Services.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image25.png "Select Sync")
+    ![The Sync button is highlighted under Synchronization in Visual Studio Team Services.](media/image25.png "Select Sync")
 
 ### Task 6: Connect iOS & Android apps in App Center to Team Services and configure/launch build
 
 1.  Navigate to <https://appcenter.ms/apps>, and select the iOS app you created in the previous steps
 
-2.  Select the ![Build icon](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image26.png "Build icon") icon in the left-hand menu
+2.  Select the ![Build icon](media/image26.png "Build icon") icon in the left-hand menu
 
 3.  Select **Visual Studio Team Services**
     
-    ![Visual Studio Team Services is highlighted under Select a service in App Center.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image27.png "Select Visual Studio Team Services")
+    ![Visual Studio Team Services is highlighted under Select a service in App Center.](media/image27.png "Select Visual Studio Team Services")
 
 4.  When prompted whether to grant Code (read, write, and manage) permissions to App Center, select **Accept**
     
-    ![Accept is highlighted at the bottom of the prompt to grant Code (read, write, and manage) permissions to App Center.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image28.png "Grant Code permissions to App Center")
+    ![Accept is highlighted at the bottom of the prompt to grant Code (read, write, and manage) permissions to App Center.](media/image28.png "Grant Code permissions to App Center")
 
 5.  In the resulting dialog, enter **ContosoBaggage** to reduce the list of projects. Locate your projects and select it.
 
-    ![ContosoBaggage is highlighted in the search box in the VSTS Select project dialog box, and ContosoBaggage is highlighted in the search results.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image29.png "Locate and select your project")
+    ![ContosoBaggage is highlighted in the search box in the VSTS Select project dialog box, and ContosoBaggage is highlighted in the search results.](media/image29.png "Locate and select your project")
 
 6.  Select the **ContosoBaggage** repository
 
-    ![ContosoBaggage is highlighted in the Select repository dialog box.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image30.png "Select your repository")
+    ![ContosoBaggage is highlighted in the Select repository dialog box.](media/image30.png "Select your repository")
 
 7.  After a quick delay, you should see a list of branches from your repository. Select the **master** branch
 
-    ![A red arrow points at master in the list of branches from your repository.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image31.png "Select the master branch")
+    ![A red arrow points at master in the list of branches from your repository.](media/image31.png "Select the master branch")
 
 8.  Select the **Configure build** button
 
-    ![The Configure build button is highlighted next to Last Commit.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image32.png "Select Configure build")
+    ![The Configure build button is highlighted next to Last Commit.](media/image32.png "Select Configure build")
 
 9.  On the **Build configuration** page, select the **ContosoBaggage.iOS.csproj** project and leave all other defaults
 
-    ![The ContosoBaggage.iOS.csproj project is highlighted on the Build configuration page.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image33.png "Select the ContosoBaggage.iOS.csproj project")
+    ![The ContosoBaggage.iOS.csproj project is highlighted on the Build configuration page.](media/image33.png "Select the ContosoBaggage.iOS.csproj project")
 
 10. Select **Save & Build**
 
@@ -334,7 +334,7 @@ App Center will now create a new instance of your app, including a new key that 
 
 11. Repeat steps 1 -- 7 for your Android app, and then choose the **ContosoBaggage.Droid.csproj** from your **Project** dropdown
 
-    ![The ContosoBaggage.Droid.csproj project is highlighted on the Build configuration page.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image34.png "Select the ContosoBaggage.Droid.csproj project")
+    ![The ContosoBaggage.Droid.csproj project is highlighted on the Build configuration page.](media/image34.png "Select the ContosoBaggage.Droid.csproj project")
 
 As with the iOS app, the Android app requires a java keystore in order to sign/test/distribute your app. We will not complete this step, but please visit <https://developer.xamarin.com> for details on how to generate a keystore to include in your build.
 
@@ -344,47 +344,47 @@ One of the most powerful features of Visual Studio App Center is the ability to 
 
 1.  In App Center, locate your profile avatar in the bottom left hand corner. Select it, then choose **Account Settings**.
 
-    ![Account Settings is selected under your profile avatar in App Center.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image35.png "Select Account Settings")
+    ![Account Settings is selected under your profile avatar in App Center.](media/image35.png "Select Account Settings")
 
 2.  Choose the **Azure** page to see if you already have an Azure Subscription attached to your account. If you do, you can skip ahead to Step 5. Otherwise, continue with the next step to attach an Azure Subscription.
 
-    ![A red arrow points at Azure under Settings on the left side of the Azure page.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image36.png "Verify if you have an Azure subscription")
+    ![A red arrow points at Azure under Settings on the left side of the Azure page.](media/image36.png "Verify if you have an Azure subscription")
 
 3.  Select the **+** button in the Subscriptions box, and sign in with your Azure Account when prompted
 
-    ![The plus sign (+) button is selected in the Subscriptions box.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image37.png "Select the plus sign (+) button")
+    ![The plus sign (+) button is selected in the Subscriptions box.](media/image37.png "Select the plus sign (+) button")
 
 4.  Choose one of your available Azure subscriptions, and select **Connect**
 
-    ![Microsoft Azure Internal Consumption is highlighted under Select a subscription in Visual Studio App Center, and Connect is selected at the bottom.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image38.png "Choose an available Azure subscription")
+    ![Microsoft Azure Internal Consumption is highlighted under Select a subscription in Visual Studio App Center, and Connect is selected at the bottom.](media/image38.png "Choose an available Azure subscription")
 
 5.  Once connected to your app, select the **Azure Subscription**, and choose **Assign to apps**
 
-    ![The Assign to apps button is selected next to the Microsoft Azure Internal Consumption subscription.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image39.png "Select Assign to apps")
+    ![The Assign to apps button is selected next to the Microsoft Azure Internal Consumption subscription.](media/image39.png "Select Assign to apps")
 
 6.  Search for **Contoso Baggage**, and add the iOS app. Then select **Assign to apps** again and attach the subscription to your Android app.
 
-    ![Contoso Baggage for iOS and Contoso Baggage for Android are displayed under Assigned Apps.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image40.png "Add the Contoso Baggage iOS app")
+    ![Contoso Baggage for iOS and Contoso Baggage for Android are displayed under Assigned Apps.](media/image40.png "Add the Contoso Baggage iOS app")
 
 7.  Navigate back to the App Center home page
 
-8.  Select the iOS app. On the app page, select the ![Settings icon](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image41.png "Settings icon") option from the left-hand menu.
+8.  Select the iOS app. On the app page, select the ![Settings icon](media/image41.png "Settings icon") option from the left-hand menu.
 
 9.  Choose **Export**
 
-    ![Export image](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image42.png "Export image")
+    ![Export image](media/image42.png "Export image")
 
 10. Select **+ New Export**
 
-    ![+ New Export is highlighted in the Export dialog box.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image43.png "Select + New Export")
+    ![+ New Export is highlighted in the Export dialog box.](media/image43.png "Select + New Export")
 
 11. Choose **Application Insights**, and select **Set up standard export**
 
-    ![Application Insights and Set up standard export are selected and highlighted in the Data export dialog box.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image44.png "Select Set up standard export")
+    ![Application Insights and Set up standard export are selected and highlighted in the Data export dialog box.](media/image44.png "Select Set up standard export")
 
 12. When prompted, select **Add to subscription**
 
-    ![Add to subscription is selected in the prompt.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image45.png "Select Add to subscription")
+    ![Add to subscription is selected in the prompt.](media/image45.png "Select Add to subscription")
 
     This will now connect your app to Application Insights, and funnel your analytic data into Application Insights for further post processing, using things like the powerful kusto querying language, and creating dashboards, etc.
 
@@ -402,7 +402,7 @@ Now that we've configured source control, crash reporting, and build steps for o
 
 2.  In the top left, select **Create Resource \> Databases \>** **Azure Cosmos DB**
 
-    ![Databases is selected under Azure Marketplace on the Azure portal, and Azure Cosmos DB is highlighted on the right.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image46.png "Select Azure Cosmos DB")
+    ![Databases is selected under Azure Marketplace on the Azure portal, and Azure Cosmos DB is highlighted on the right.](media/image46.png "Select Azure Cosmos DB")
 
 3.  Complete the new resource
 
@@ -414,7 +414,7 @@ Now that we've configured source control, crash reporting, and build steps for o
 
 4.  Select **Create** to create the Cosmos DB instance
 
-    ![The information above is entered in the Azure Cosmos DB dialog box.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image47.png "Configure Azure Cosmos DB settings")
+    ![The information above is entered in the Azure Cosmos DB dialog box.](media/image47.png "Configure Azure Cosmos DB settings")
 
 5.  It can take a few minutes before this process completes
 
@@ -438,7 +438,7 @@ Now that you've created your cosmos instance, we'll want to create collections f
 
     -   **Throughput**: 500
 
-        ![The information above is entered in the Add Collection dialog box.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image48.png "Configure Add Collection settings")
+        ![The information above is entered in the Add Collection dialog box.](media/image48.png "Configure Add Collection settings")
 
 5.  Select **OK**
 
@@ -456,11 +456,11 @@ Now that you've created your cosmos instance, we'll want to create collections f
 
     -   **Throughput**: 500
 
-        ![The information above is entered in the Add Collection dialog box.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image49.png "Configure Add Collection settings")
+        ![The information above is entered in the Add Collection dialog box.](media/image49.png "Configure Add Collection settings")
 
 8.  Select **OK**
 
-    ![Data Explorer is highlighted on the left side of the Azure portal, and on the right, New Collection is highlighted at the top, and FlightCollection and BagCollection are highlighted under the bagDatabase collection.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image50.png "View the Cosmos DB instance")
+    ![Data Explorer is highlighted on the left side of the Azure portal, and on the right, New Collection is highlighted at the top, and FlightCollection and BagCollection are highlighted under the bagDatabase collection.](media/image50.png "View the Cosmos DB instance")
 
 Our Cosmos DB instance is now configured and ready for us to use. We'll come back to this in a little bit when we set up our Functions app to read/write data from the collections.
 
@@ -476,7 +476,7 @@ We are going to use Application Insights to monitor your backend project. In the
 
 4.  Choose **Application Insights**
 
-    ![A red arrow points at + Create a resource on the left side of the Azure portal,  Management Tools is highlighted in the middle, and Application Insights is highlighted on the right.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image51.png "Select Application Insights")
+    ![A red arrow points at + Create a resource on the left side of the Azure portal,  Management Tools is highlighted in the middle, and Application Insights is highlighted on the right.](media/image51.png "Select Application Insights")
 
 5.  Give your instance a unique name, and choose your Azure subscription to create the instance in.
 
@@ -484,7 +484,7 @@ We are going to use Application Insights to monitor your backend project. In the
 
 7.  Choose the same **resource group** you used for your Cosmos DB instance
 
-    ![The information above is entered in the Application Insights dialog box.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image52.png "Configure Application Insights settings")
+    ![The information above is entered in the Application Insights dialog box.](media/image52.png "Configure Application Insights settings")
 
 8.  Select **Create** to create your new instance
 
@@ -494,7 +494,7 @@ We are going to use Application Insights to monitor your backend project. In the
 
 2.  In the top left, select **Create Resource \> Compute \>** **Function App**
     
-    ![A red arrow points at + Create a resource on the left side of the Azure portal, Compute is highlighted in the middle, and Function App is highlighted on the right.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image53.png "Select Function App")
+    ![A red arrow points at + Create a resource on the left side of the Azure portal, Compute is highlighted in the middle, and Function App is highlighted on the right.](media/image53.png "Select Function App")
 
 3.  Enter in a name for the app (e.g.**myfunctionsapp** - this must be unique but don't worry, the portal will tell you if it's not)
 
@@ -502,7 +502,7 @@ We are going to use Application Insights to monitor your backend project. In the
 
 5.  Complete the new resource
     
-    ![The App name, Subscription, and Resource Group boxes are highlighted under Function App on the right side of the Azure portal.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image54.png "View Function App settings")
+    ![The App name, Subscription, and Resource Group boxes are highlighted under Function App on the right side of the Azure portal.](media/image54.png "View Function App settings")
 
 6.  Leave the rest of the settings as default
 
@@ -512,11 +512,11 @@ We are going to use Application Insights to monitor your backend project. In the
 
 9.  It can take a few minutes before this process completes, but you should see some notifications updating you on status
 
-    ![This is a screenshot of a notification indicating that deployment is in progress.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image55.png "View the deployment notifications")
+    ![This is a screenshot of a notification indicating that deployment is in progress.](media/image55.png "View the deployment notifications")
 
 10. You can always view all incoming notifications by clicking on the Alert icon in the top toolbar
 
-    ![A red arrow points at the Alert icon in the top toolbar.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image56.png "Click the alert icon")
+    ![A red arrow points at the Alert icon in the top toolbar.](media/image56.png "Click the alert icon")
 
 ### Task 5: Connect your Function project to Cosmos DB
 
@@ -532,10 +532,10 @@ We are going to use Application Insights to monitor your backend project. In the
 
     -   In the Read-write Keys tab, copy the Primary Key and paste it as the value of **Key** within the **Cosmos** class in **Keys.cs**
 
-        ![Keys is highlighted under Settings on the left side of the Azure portal, and on the right, the URI and Primary Key boxes are highlighted on the Read-write Keys tab.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image57.png "Copy and paste the Primary Key value ")
+        ![Keys is highlighted under Settings on the left side of the Azure portal, and on the right, the URI and Primary Key boxes are highlighted on the Read-write Keys tab.](media/image57.png "Copy and paste the Primary Key value ")
 
 5.  Make sure that your project compiles and launches. If prompted to download the Functions CLI Tools or .NET Framework, select **yes** for both options
-    ![The delta next to ContosoBaggage.Backend.Functions is highlighted.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image58.png "Select yes if prompted")
+    ![The delta next to ContosoBaggage.Backend.Functions is highlighted.](media/image58.png "Select yes if prompted")
 
 6. Stop debugging the Azure Functions app by using either **Shift + F5** or selecting the Stop debugging button
 
@@ -544,7 +544,7 @@ We are going to use Application Insights to monitor your backend project. In the
 1.  Browse to <https://portal.azure.com>, and locate your Application Insights instance
 
 2.  On the Overview blade, copy the Instrumentation Key
-    ![The Instrumentation Key value is highlighted on the Overview blade, and the Click to copy button is selected.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image59.png "Copy the Instrumentation Key")
+    ![The Instrumentation Key value is highlighted on the Overview blade, and the Click to copy button is selected.](media/image59.png "Copy the Instrumentation Key")
 
 3.  Paste the Instrumentation Key as the value of **Key** within the **Analytics** class in **Keys.cs**
 
@@ -556,12 +556,12 @@ We are going to use Application Insights to monitor your backend project. In the
 
 3.  Choose Azure Function, then name the class GetBaggageForFlight.cs
 
-> ![Azure Function is selected in the Add New Item - ContosoBaggage.Backend.Functions dialog box.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image60.png "Select Azure Function")
+> ![Azure Function is selected in the Add New Item - ContosoBaggage.Backend.Functions dialog box.](media/image60.png "Select Azure Function")
 
 4.  Select **Add**
 
 5.  In the New Azure Function dialog window, select **Http trigger**, then set the Access rights to **Anonymous**.
-    ![Http trigger is selected and highlighted on the left side of the New Azure Function dialog box, and the Anonymous value and the Access rights box are highlighted on the right.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image61.png "Set the Access rights to Anonymous")
+    ![Http trigger is selected and highlighted on the left side of the New Azure Function dialog box, and the Anonymous value and the Access rights box are highlighted on the right.](media/image61.png "Set the Access rights to Anonymous")
 
 6.  Select **OK**
 
@@ -763,7 +763,7 @@ We are going to use Application Insights to monitor your backend project. In the
 
 4.  Select the **Create Profile** button
 
-    ![Three red arrows point at Azure Function App, Select Existing, and Create Profile in your Functions project window, and Publish is selected on the left.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image62.png "Publish your app and create a profile")
+    ![Three red arrows point at Azure Function App, Select Existing, and Create Profile in your Functions project window, and Publish is selected on the left.](media/image62.png "Publish your app and create a profile")
 
 5.  Select your Azure Subscription from the dropdown
 
@@ -771,17 +771,17 @@ We are going to use Application Insights to monitor your backend project. In the
 
 7.  Select **OK**
 
-    ![A red arrow points at MyFunctionsApp in the App Service dialog box.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image63.png "Select the Function App that you created")
+    ![A red arrow points at MyFunctionsApp in the App Service dialog box.](media/image63.png "Select the Function App that you created")
 
 If you plan to attach a remote debugger, you'll need to perform one additional step here to make sure your code is compiled with Debug symbols. Do not complete these steps for production workloads. These are only appropriate for development.
 
 1.  Select **Settings**
 
-    ![A red arrow points at Settings in the Publish dialog box.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image64.png "Select Settings")
+    ![A red arrow points at Settings in the Publish dialog box.](media/image64.png "Select Settings")
 
 2.  Change the Configuration to **Debug** and select **Save**
 
-    ![Debug \| Any CPU is highlighted in the Configuration box in the Profile Settings dialog box, and Save is selected on the bottom.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image65.png "Change the Configuration ")
+    ![Debug \| Any CPU is highlighted in the Configuration box in the Profile Settings dialog box, and Save is selected on the bottom.](media/image65.png "Change the Configuration ")
 
 3.  Select the **Publish** button
 
@@ -789,7 +789,7 @@ If you get a warning indicating the version remotely doesn\'t match the local ve
 
 4.  Copy the site URL and verify the function is running by using Postman to send that same GET request against the remote instance (e.g. http://myfunctionsapp.azurewebsites.net/api/GetFlights). Verify that you get a successful response (i.e. status code 200 OK). There will be no data since we haven't populated the databases, but this will at least confirm that your project is deployed successfully and running in Azure with no errors. If you don't have Postman installed, you can simply browse to the path in a new browser window. You should see an output displaying an XML tag similar to the following: \<ArrayOfFlight xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.datacontract.org/2004/07/ContosoBaggage.Common.Models\"/\>
 
-    ![The Site URL value is highlighted under Summary in the Publish dialog box.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image66.png "Verify that the function is running")
+    ![The Site URL value is highlighted under Summary in the Publish dialog box.](media/image66.png "Verify that the function is running")
 
 ## Exercise 4: Set up IoT hub 
 
@@ -827,7 +827,7 @@ Create an IoT Hub for your simulated device app to connect to. The following ste
 
 2.  Select **Create a resource \>** **Internet of Things \> IoT Hub**
 
-    ![+ New is highlighted on the left side of the Azure portal, Internet of Things is selected and highlighted under Azure Marketplace in the middle, and IoT Hub is highlighted on the right.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image67.png "Select IoT Hub")
+    ![+ New is highlighted on the left side of the Azure portal, Internet of Things is selected and highlighted under Azure Marketplace in the middle, and IoT Hub is highlighted on the right.](media/image67.png "Select IoT Hub")
 
 3.  In the **IoT hub** pane, enter the following information for your IoT hub:
 
@@ -843,21 +843,21 @@ Create an IoT Hub for your simulated device app to connect to. The following ste
 
     -   **Pin to dashboard**: Check this option for easy access to your IoT hub from the dashboard
 
-        ![The information above is entered in the IoT hub dialog box under the Basics tab.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image68.0.png "Configure IoT hub settings Basic Tab")
+        ![The information above is entered in the IoT hub dialog box under the Basics tab.](media/image68.0.png "Configure IoT hub settings Basic Tab")
 
-        ![The information above is entered in the IoT hub dialog box under the Size and scale tab.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image68.1.png "Configure IoT hub settings Review and Create Tab")
+        ![The information above is entered in the IoT hub dialog box under the Size and scale tab.](media/image68.1.png "Configure IoT hub settings Review and Create Tab")
 
 4.  Select **Create**. Your IoT hub might take a few minutes to create. You can monitor the progress in the **Notifications** pane.
 
-        ![The information above is entered in the IoT hub dialog box under the Review + create tab.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image68.2.png "Configure IoT hub settings Review plus Create Tab")
+        ![The information above is entered in the IoT hub dialog box under the Review + create tab.](media/image68.2.png "Configure IoT hub settings Review plus Create Tab")
 
 5.  When your new IoT hub is ready, select its tile in the Azure portal to open its properties window. Now that you have created an IoT hub, locate the important information that you use to connect devices and applications to your IoT hub. Make a note of the **Hostname**, and then select **Shared access policies**.
 
-    ![Overview is selected on the left, and the Hostname value for your IoT hub is highlighted.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image69.png "Note the Hostname")
+    ![Overview is selected on the left, and the Hostname value for your IoT hub is highlighted.](media/image69.png "Note the Hostname")
 
 6.  In **Shared access policies**, select the **iothubowner** policy, and then make note of the IoT Hub connection string in the **iothubowner** window. For more information, see [Access control](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security) in the \"IoT Hub developer guide."
 
-    ![In Shared access policies, Shared access policies is selected on the left, iothubowner is selected and highlighted under Policy in the middle, and the Connection string---primary key box and value are highlighted on the right.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image70.png "Note the IoT Hub connection string")
+    ![In Shared access policies, Shared access policies is selected on the left, iothubowner is selected and highlighted under Policy in the middle, and the Connection string---primary key box and value are highlighted on the right.](media/image70.png "Note the IoT Hub connection string")
 
 You have now created your IoT hub, and you have the host name and IoT Hub connection string that you will need to complete the rest of this tutorial.
 
@@ -871,11 +871,11 @@ In this task, you will create a .NET console app that creates a device identity 
 
 3.  Locate the **ConnectionString** variable on line 13, and paste your IoTHub connection string for the iothubowner policy you copied in the previous task
 
-    ![The ConnectionString variable is highlighted in the Program.cs window on the left, and a red arrow points at Program.cs in the Solution Explorer pane on the right.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image71.png "Paste the IoTHub connection string")
+    ![The ConnectionString variable is highlighted in the Program.cs window on the left, and a red arrow points at Program.cs in the Solution Explorer pane on the right.](media/image71.png "Paste the IoTHub connection string")
 
 4.  Save your changes and run the CreateDeviceIdentity program, then make a note of the device key.
 
-    ![The device key is highlighted in the Command Prompt window.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image72.png "Note the device key")
+    ![The device key is highlighted in the Command Prompt window.](media/image72.png "Note the device key")
 
 **Note:**
 
@@ -895,13 +895,13 @@ Part 1: Database and Application Insights Keys
 
     -   In the Read-write Keys tab, copy the Primary Key and paste it as the value of **Key** within the Cosmos class in **Keys.cs**
         
-        ![Keys is highlighted under Settings on the left side of the Azure portal, and on the right, the URI and Primary Key boxes are highlighted on the Read-write Keys tab.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image57.png "Copy and paste the Primary Key value")
+        ![Keys is highlighted under Settings on the left side of the Azure portal, and on the right, the URI and Primary Key boxes are highlighted on the Read-write Keys tab.](media/image57.png "Copy and paste the Primary Key value")
 
 4.  Browse to <https://portal.azure.com>, and locate your Application Insights instance
 
 5.  On the Overview blade, copy the Instrumentation Key
     
-    ![The Instrumentation Key value is highlighted on the Overview blade, and the Click to copy button is selected.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image59.png "Copy the Instrumentation Key")
+    ![The Instrumentation Key value is highlighted on the Overview blade, and the Click to copy button is selected.](media/image59.png "Copy the Instrumentation Key")
 
 -   Paste the Instrumentation Key as the value of **Key** within the **Analytics** class in **Keys.cs**
 
@@ -914,7 +914,7 @@ Part 2: Function URL
 2.  Browse to <https://portal.azure.com>, and locate your Azure Functions instance
 
 3.  In the Overview blade, locate the URL of your function
-    ![AppInnovationBackend is highlighted on the left in the Azure Functions instance, and the URL value is highlighted on the right.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image73.png "Locate your function ?s URL")
+    ![AppInnovationBackend is highlighted on the left in the Azure Functions instance, and the URL value is highlighted on the right.](media/image73.png "Locate your function ?s URL")
 
 4.  Copy and paste that value into the base URL (line 17). Be sure to keep the {0} on the end of the string.
     ```
@@ -948,11 +948,11 @@ static string myFlightNumber = "FL1234";
 
 2.  Run the **SimulatedDevice** project. You should see the bags updating in the Console app. The backend might take a few minutes to set up.
 
-    ![Bag updates are displayed in the Console app after running the SimulatedDevice project.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image74.png "Run the SimulatedDevice project")
+    ![Bag updates are displayed in the Console app after running the SimulatedDevice project.](media/image74.png "Run the SimulatedDevice project")
 
 3.  The **Usage** tile found in the **Overview** blade of the IoT Hub in the [Azure portal](https://portal.azure.com/) shows the number of messages sent to the IoT hub:
 
-    ![This is a screenshot of the Usage tile.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image75.png "View the Usage tile")
+    ![This is a screenshot of the Usage tile.](media/image75.png "View the Usage tile")
 
 ## Exercise 5: Connect the mobile app to the backend
 
@@ -966,7 +966,7 @@ Now that we've configured the backend and populated it with data, we'll configur
 
 2.  On the Overview blade, locate the URL for your function app. Copy the URL.
 
-    ![AppInnovationBackend is highlighted on the left in the Azure Functions instance, and the URL value is highlighted on the right.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image76.png "Locate your function ?s URL")
+    ![AppInnovationBackend is highlighted on the left in the Azure Functions instance, and the URL value is highlighted on the right.](media/image76.png "Locate your function ?s URL")
 
 3.  Open the **ContosoBaggage.sln** solution from your /src/ContosoBaggage folder of your project
 
@@ -976,7 +976,7 @@ Now that we've configured the backend and populated it with data, we'll configur
 
 6.  Paste the URL that you copied in Step 2 above into the \_**baseUrl** variable. Make sure to preserve the {0} at the end of the URL. The code later on uses **string.Format()** to add a specific function call.
     
-    ![The \_baseUrl variable's value is highlighted in the FlightService.cs file.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image77.png "Paste the URL")
+    ![The \_baseUrl variable's value is highlighted in the FlightService.cs file.](media/image77.png "Paste the URL")
 
 ### Task 2: Create a Flight List page
 
@@ -984,11 +984,11 @@ Now that we've configured the backend and populated it with data, we'll configur
 
 2.  Right-click the folder, then choose **Add \> New Item**
 
-    ![The Pages folder is selected in Solution Explorer on the left, and New Item is highlighted in the Add submenu of the shortcut menu.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image78.png "Add a new item")
+    ![The Pages folder is selected in Solution Explorer on the left, and New Item is highlighted in the Add submenu of the shortcut menu.](media/image78.png "Add a new item")
 
 3.  Choose **Xamarin.Forms \> Content Page** and name the page **FlightListPage.xaml**
 
-![Xamarin.Forms is highlighted on the left side of the Add New Item -- ContosoBaggage project, Content Page is highlighted on the right, and FlightListPage.xaml is highlighted in the Name box below.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image79.png "Name the page FlightListPage.xaml")
+![Xamarin.Forms is highlighted on the left side of the Add New Item -- ContosoBaggage project, Content Page is highlighted on the right, and FlightListPage.xaml is highlighted in the Name box below.](media/image79.png "Name the page FlightListPage.xaml")
 
 4.  Select **Add**
 
@@ -1069,7 +1069,7 @@ Now that we've configured the backend and populated it with data, we'll configur
 
 2.  Choose C\# Class file, and name it **FlightListViewModel.cs**
 
-    ![Class is selected and highlighted in the Add New Item -- ContosoBaggage project, and FlightListViewModel.cs is highlighted in the Name box below.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image80.png "Name the C# Class file")
+    ![Class is selected and highlighted in the Add New Item -- ContosoBaggage project, and FlightListViewModel.cs is highlighted in the Name box below.](media/image80.png "Name the C# Class file")
 
 3.  Replace the contents of the file with this code:
     ```
@@ -1190,7 +1190,7 @@ Now that we've configured the backend and populated it with data, we'll configur
 
 1.  Browse to the Pages folder of ContosoBaggage. Expand the **FlightListPage.xaml** to reveal **FlightListPage.xaml.cs**
 
-    ![FlightListPage.xaml.cs is selected and highlighted under FlightListPage.xaml in the Pages folder of ContosoBaggage.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image81.png "Reveal FlightListPage.xaml.cs")
+    ![FlightListPage.xaml.cs is selected and highlighted under FlightListPage.xaml in the Pages folder of ContosoBaggage.](media/image81.png "Reveal FlightListPage.xaml.cs")
 
 2.  Replace the implementation of the FlightListPage class with the following code:
     ```
@@ -1232,7 +1232,7 @@ Now that we've configured the backend and populated it with data, we'll configur
 
 1.  Browse to the Navigation folder of ContosoBaggage. Open **NavigationService.cs**.
 
-    ![NavigationService.cs is selected and highlighted in the Navigation folder of ContosoBaggage.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image82.png "Open NavigationService.cs")
+    ![NavigationService.cs is selected and highlighted in the Navigation folder of ContosoBaggage.](media/image82.png "Open NavigationService.cs")
 
 2.  Find the **GetPage** method and uncomment the **return new FlightListPage();** line. Final result should be:
     ```
@@ -1269,11 +1269,11 @@ Now that we've configured the backend and populated it with data, we'll configur
 
     -   Check **Deploy** next to the project
 
-        ![The Deploy check box is highlighted next to the ContosoBaggage.Droid project in Configure Manager.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image83.png "Deploy the project")
+        ![The Deploy check box is highlighted next to the ContosoBaggage.Droid project in Configure Manager.](media/image83.png "Deploy the project")
 
-        ![Start Debugging is highlighted in the Debug menu of the app that you are debugging.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image84.png "Start debugging")
+        ![Start Debugging is highlighted in the Debug menu of the app that you are debugging.](media/image84.png "Start debugging")
 
-        ![This is a screenshot of the app running on a smartphone.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image85.png "App screenshot")
+        ![This is a screenshot of the app running on a smartphone.](media/image85.png "App screenshot")
 
 ## After the hands-on lab 
 

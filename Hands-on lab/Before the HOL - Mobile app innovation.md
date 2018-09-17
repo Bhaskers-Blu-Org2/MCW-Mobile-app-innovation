@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-June 2018
+September 2018
 </div>
 
 
@@ -95,13 +95,13 @@ Throughout this lab, you will utilize an Azure subscription, and a Microsoft acc
 
 2.  If you have not already created an account in Visual Studio Team services, select the button to create a new app
 
-    ![Create new account icon](images/Setup/image3.png "Create new account icon")
+    ![Create new account icon](media/b4-image3.png "Create new account icon")
     
 3.  Choose a name for your project (it will need to be unique), and choose "Git" as the source control mechanism
 
 4.  Select **Continue**
 
-    ![On the Visual Studio Team services project creation page, ContosoAir is entered in the box next to .visualstudio.com under Host my projects at, Git is selected below Manage code using, and Continue is selected at the bottom of the page.](images/Setup/image4.png "Create a new app")
+    ![On the Visual Studio Team services project creation page, ContosoAir is entered in the box next to .visualstudio.com under Host my projects at, Git is selected below Manage code using, and Continue is selected at the bottom of the page.](media/b4-image4.png "Create a new app")
 
 After a few minutes, your new account will be created, and a new project (MyFirstProject) will be automatically created. We won't use this project for the app, but you can just ignore it and leave it in your account.
 
@@ -115,27 +115,27 @@ In addition to the Azure portal, you will utilize Visual Studio App Center for b
 
 2.  Select **Help \> Check for Updates**
 
-![In Visual Studio 2017, Help Menu is open Check for Updates is highlighted.](images/Setup/image5.png "Check for Updates Visual Studio 2017")
+![In Visual Studio 2017, Help Menu is open Check for Updates is highlighted.](media/b4-image5.png "Check for Updates Visual Studio 2017")
 
 3. If Current version is not at least 15.7.4, ensure Update version is at least 15.7.4, then select Update Now
 
     **WARNING**: This update process can take up to an hour to complete.
 
-![In Visual Studio 2017, Update screen is open and Update version: 15.7.4 is highlighted. Update Now button is clicked.](images/Setup/image5.2.png "Update Visual Studio 2017 to 15.7.4")
+![In Visual Studio 2017, Update screen is open and Update version: 15.7.4 is highlighted. Update Now button is clicked.](media/b4-image5.2.png "Update Visual Studio 2017 to 15.7.4")
 
 4.  After the update is complete, you'll need to be sure both the **Mobile development with .NET** and **Azure development** workloads are installed
 
     -   Select **Tools \> Get Tools and Features**
         
-        ![Visual Studio Tools menu is open and Get Tools and Features is highlighted.](images/Setup/image6.png "Open Tools - Get Tools and Features")
+        ![Visual Studio Tools menu is open and Get Tools and Features is highlighted.](media/b4-image6.png "Open Tools - Get Tools and Features")
 
     -   In the **Workloads** tab check the boxes for the **Mobile development with .NET** and **Azure development** workloads
         
-        ![The Workloads tab is open and the Mobile development with .NET checkbox is checked.](images/Setup/image7.png "Check the Mobile development workload checkbox")
+        ![The Workloads tab is open and the Mobile development with .NET checkbox is checked.](media/b4-image7.png "Check the Mobile development workload checkbox")
     
     -   The **Azure development** workload is located in the **Web and Cloud** section
     
-        ![The Workloads tab is open and the Azure development checkbox is checked.](images/Setup/image7.0.png "Check the Azure development workload checkbox")
+        ![The Workloads tab is open and the Azure development checkbox is checked.](media/b4-image7.0.png "Check the Azure development workload checkbox")
 
 5.  Once all updates are completed installing, restart Visual Studio
 
@@ -153,17 +153,17 @@ To complete these exercises, you will need to make sure you have all the correct
 
 4.  Select **Apply Changes** to download and install the selected API levels
 
-    ![Each of the Android SDK platforms from 5.0 (Lollipop) -- 8.0 (Oreo) are selected on the Platform tab of the Android SDKs and Tools dialog box.](images/Setup/image9.png "Select the Android SDK platforms")
+    ![Each of the Android SDK platforms from 5.0 (Lollipop) -- 8.0 (Oreo) are selected on the Platform tab of the Android SDKs and Tools dialog box.](media/b4-image9.png "Select the Android SDK platforms")
 
 5.  Choose the **Tools** tab
 
 6.  Make sure that a version 27.0.x of Android SDK Platform-Tools and Android SDK Build-Tools are installed
 
-    ![Android SDK Platform-Tools and Android SDK Build-Tools are selected on the Tools tab of the Android SDKs and Tools dialog box.](images/Setup/image10.png "Verify that Android SDK Tools and Android SDK Build Tools are selected")
+    ![Android SDK Platform-Tools and Android SDK Build-Tools are selected on the Tools tab of the Android SDKs and Tools dialog box.](media/b4-image10.png "Verify that Android SDK Tools and Android SDK Build Tools are selected")
 
 7.  If the available Android SDK Platform-Tools version is less than 27.0.x, select the **Updates Available** button on the bottom-left corner of the dialog
 
-    ![Android SDK Platform-Tools and Android SDK Build-Tools are selected on the Tools tab of the Android SDKs and Tools dialog box, Version 25.0.3 is highlighted next to Android SDK Platform-Tools, and the Updates Available button is highlighted at the bottom.](images/Setup/image11.png "Update the Android SDK Platform-Tools version if necessary")
+    ![Android SDK Platform-Tools and Android SDK Build-Tools are selected on the Tools tab of the Android SDKs and Tools dialog box, Version 25.0.3 is highlighted next to Android SDK Platform-Tools, and the Updates Available button is highlighted at the bottom.](media/b4-image11.png "Update the Android SDK Platform-Tools version if necessary")
 
 8.  After installing the updates, you may need to re-select the **Android SDK Build Tools** and **Platform-Tools**
 
