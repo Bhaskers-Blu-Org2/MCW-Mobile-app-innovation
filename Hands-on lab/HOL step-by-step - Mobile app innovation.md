@@ -32,15 +32,15 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
     - [Overview](#overview)
     - [Solution architecture](#solution-architecture)
     - [Requirements](#requirements)
-    - [Exercise 1: Set up your project in Visual Studio Team Services](#exercise-1-set-up-your-project-in-visual-studio-team-services)
-        - [Task 1: Create your project in Visual Studio Team Services](#task-1-create-your-project-in-visual-studio-team-services)
-        - [Task 2: Commit starter project to your VSTS project](#task-2-commit-starter-project-to-your-vsts-project)
+    - [Exercise 1: Set up your project in Azure DevOps](#exercise-1-set-up-your-project-in-azure-devops)
+        - [Task 1: Create your project in Azure DevOps](#task-1-create-your-project-in-azure-devops)
+        - [Task 2: Commit starter project to your Azure DevOps project](#task-2-commit-starter-project-to-your-azure-devops-project)
     - [Exercise 2: Configure Visual Studio App Center](#exercise-2-configure-visual-studio-app-center)
         - [Task 1: Create a new iOS / Xamarin app](#task-1-create-a-new-ios--xamarin-app)
         - [Task 2: Connect iOS app to App Center](#task-2-connect-ios-app-to-app-center)
         - [Task 3: Create new Android / Xamarin app in Mobile](#task-3-create-new-android--xamarin-app-in-mobile)
         - [Task 4: Connect Xamarin.Android app to Mobile Center](#task-4-connect-xamarinandroid-app-to-mobile-center)
-        - [Task 5: Commit your changes to Visual Studio Team Services](#task-5-commit-your-changes-to-visual-studio-team-services)
+        - [Task 5: Commit your changes to Azure DevOps](#task-5-commit-your-changes-to-azure-devops)
         - [Task 6: Connect iOS & Android apps in App Center to Team Services and configure/launch build](#task-6-connect-ios--android-apps-in-app-center-to-team-services-and-configurelaunch-build)
         - [Task 7: Enable Telemetry (App Insights in App Center)](#task-7-enable-telemetry-app-insights-in-app-center)
     - [Exercise 3: Configure Azure Cosmos DB and Azure functions](#exercise-3-configure-azure-cosmos-db-and-azure-functions)
@@ -106,7 +106,7 @@ In the event that a piece of luggage has gone missing, due to the fact that its 
 
     -   Azure Subscription
 
-    -   Visual Studio Team Services Subscription
+    -   Azure DevOps Subscription
 
     -   Account in Mobile Center
 
@@ -141,36 +141,36 @@ In the event that a piece of luggage has gone missing, due to the fact that its 
     -   <https://www.microsoft.com/net/download/windows>
 
 
-## Exercise 1: Set up your project in Visual Studio Team Services
+## Exercise 1: Set up your project in Azure DevOps
 
 **Duration**: 15 minutes
 
 A robust DevOps chain is critical in being able to build, deploy, and monitor your app in the wild. This starts with strong source control and a structured project management solution.
 
-### Task 1: Create your project in Visual Studio Team Services
+### Task 1: Create your project in Azure DevOps
 
-1.  Return to the instance of Visual Studio Team services you created at the start of this lab (e.g. <https://contosoair1234.visualstudio.com>)
+1.  Browse to <https://azure.microsoft.com/en-us/services/devops/>, and sign in with the Microsoft account used in the Before the Hands-on lab setup.
 
 2.  On the right-hand side of the main landing page, choose the **New Project** button
 
-    ![The New Project button is highlighted on the right side of the main landing page in your Visual Studio Team services instance.](media/image12.png "Create a new project")
-
-3.  Name the project **ContosoBaggage**, and make sure that **Git** is selected for the **Version** **control**, and **Agile** for the **Work item process** (as shown in the image below)
+    ![The New Project button is highlighted on the right side of the main landing page in your Azure DevOps instance.](media/azure-dev-ops-create-new-project.png "Create a new project")
+    
+3.  Name the project **ContosoBaggage**, and make sure that **Git** is selected for the **Version** **control**, **Private** for the **Visibility**, and **Agile** for the **Work item process** (as shown in the image below)
 
 4.  Select **Create** to create your new project
 
-    ![The information above is entered in the Create new project dialog box.](media/image13.png "Configure ContosoBaggage project settings")
+    ![The information above is entered in the Create new project dialog box.](media/contoso-baggage-project-settings.png "Configure ContosoBaggage project settings")
 
-### Task 2: Commit starter project to your VSTS project 
+### Task 2: Commit starter project to your Azure DevOps project 
 
 1.  Download the starter code from <http://bit.ly/2F2JQTa>, and extract the project to a new folder
 
-2.  Execute the following commands in PowerShell (or your favorite git client) to redirect the repository to your Team Services project:
+2.  Execute the following commands in PowerShell (or your favorite git client) to redirect the repository to your Azure DevOps project:
 
     -   git remote remove origin
 
-    -   git remote add origin <https://contosoair1234.visualstudio.com/_git/ContosoBaggage>
-    
+    -   git remote add origin https://YOURACCOUNT@dev.azure.com/YOURACCOUNT/ContosoBaggage/_git/ContosoBaggage
+
     -   git add -A
 
     -   git commit -m "Initial commit"
@@ -183,9 +183,9 @@ If the above fails with a message like "Please tell me who you are", then execut
 
     -   git push -u origin --all
 
-**Note**: Make sure to replace the URL in the sample above with the URL to your Git repository. If you are logged into Windows using the same Microsoft account that you're using in Azure and Visual Studio Team Services, then the code will upload. If not, you may be prompted for credentials. If you need to create git credentials:
+**Note**: Make sure to replace the URL in the sample above with the URL to your Git repository. If you are logged into Windows using the same Microsoft account that you're using in Azure and Azure DevOps, then the code will upload. If not, you may be prompted for credentials. If you need to create git credentials:
 
-1.  Browse to the **Code** tab in your Team Services project
+1.  Browse to the **Code** tab in your Azure DevOps project
 
 2.  Select the **Clone** button in the upper right hand corner of the code page
 
@@ -193,7 +193,7 @@ If the above fails with a message like "Please tell me who you are", then execut
 
 ![The Code tab is highlighted in your Team Services project, Clone is highlighted below it, and Generate Git credentials is highlighted in the submenu.](media/image14.png "Create git credentials")
 
-After these steps, you now have a working code base connected to your Visual Studio Team Services project, which will serve as the foundation of your DevOps strategy throughout this lab.
+After these steps, you now have a working code base connected to your Azure DevOps project, which will serve as the foundation of your DevOps strategy throughout this lab.
 
 ## Exercise 2: Configure Visual Studio App Center
 
@@ -276,7 +276,7 @@ App Center will now create a new instance of your app, including a new key that 
 
     ![In the ContosoBaggage.Droid Visual Studio solution, an arrow points at MainActivity.cs in the solution tree on the left, and the key that you previously copied is highlighted in the OnCreate() method.](media/image22.png "Paste the secret key in the OnCreate() method")
 
-### Task 5: Commit your changes to Visual Studio Team Services
+### Task 5: Commit your changes to Azure DevOps
 
 1.  In Visual Studio, choose **View \> Team Explorer**
 
@@ -284,15 +284,15 @@ App Center will now create a new instance of your app, including a new key that 
 
 3.  Enter in comments for your commit, then select **Commit All**
 
-    ![MainActivity.cs is highlighted under Changes in Visual Studio Team Services.](media/image23.png "Commit your changes ")
+    ![MainActivity.cs is highlighted under Changes in Azure DevOps.](media/image23.png "Commit your changes ")
 
-4.  Select **Sync** to push your changes to Visual Studio Team Services
+4.  Select **Sync** to push your changes to Azure DevOps
     
-    ![The Sync link is highlighted Visual Studio Team Services.](media/image24.png "Select Sync")
+    ![The Sync link is highlighted Azure DevOps.](media/image24.png "Select Sync")
 
 5.  Select the **Sync** button under Synchronization to finish synchronizing your changes
     
-    ![The Sync button is highlighted under Synchronization in Visual Studio Team Services.](media/image25.png "Select Sync")
+    ![The Sync button is highlighted under Synchronization in Azure DevOps.](media/image25.png "Select Sync")
 
 ### Task 6: Connect iOS & Android apps in App Center to Team Services and configure/launch build
 
@@ -300,9 +300,9 @@ App Center will now create a new instance of your app, including a new key that 
 
 2.  Select the ![Build icon](media/image26.png "Build icon") icon in the left-hand menu
 
-3.  Select **Visual Studio Team Services**
+3.  Select **Azure DevOps**
     
-    ![Visual Studio Team Services is highlighted under Select a service in App Center.](media/image27.png "Select Visual Studio Team Services")
+    ![Azure DevOps is highlighted under Select a service in App Center.](media/app-center-build-ios.png "Select Azure DevOps")
 
 4.  When prompted whether to grant Code (read, write, and manage) permissions to App Center, select **Accept**
     
@@ -310,7 +310,7 @@ App Center will now create a new instance of your app, including a new key that 
 
 5.  In the resulting dialog, enter **ContosoBaggage** to reduce the list of projects. Locate your projects and select it.
 
-    ![ContosoBaggage is highlighted in the search box in the VSTS Select project dialog box, and ContosoBaggage is highlighted in the search results.](media/image29.png "Locate and select your project")
+    ![ContosoBaggage is highlighted in the search box in the Azure DevOps Select project dialog box, and ContosoBaggage is highlighted in the search results.](media/search-for-contoso-project.png "Locate and select your project")
 
 6.  Select the **ContosoBaggage** repository
 
@@ -484,7 +484,7 @@ We are going to use Application Insights to monitor your backend project. In the
 
 7.  Choose the same **resource group** you used for your Cosmos DB instance
 
-    ![The information above is entered in the Application Insights dialog box.](media/image52.png "Configure Application Insights settings")
+    ![The information above is entered in the Application Insights dialog box.](media/configure-new-app-insights.png "Configure Application Insights settings")
 
 8.  Select **Create** to create your new instance
 
@@ -543,8 +543,9 @@ We are going to use Application Insights to monitor your backend project. In the
 
 1.  Browse to <https://portal.azure.com>, and locate your Application Insights instance
 
-2.  On the Overview blade, copy the Instrumentation Key
-    ![The Instrumentation Key value is highlighted on the Overview blade, and the Click to copy button is selected.](media/image59.png "Copy the Instrumentation Key")
+2.  On the Properties blade, copy the Instrumentation Key
+    
+    ![The Instrumentation Key value is highlighted on the Properties blade, and the Click to copy button is selected.](media/app-insights-instrumentation-key.png "Copy the Instrumentation Key")
 
 3.  Paste the Instrumentation Key as the value of **Key** within the **Analytics** class in **Keys.cs**
 
@@ -775,9 +776,9 @@ We are going to use Application Insights to monitor your backend project. In the
 
 If you plan to attach a remote debugger, you'll need to perform one additional step here to make sure your code is compiled with Debug symbols. Do not complete these steps for production workloads. These are only appropriate for development.
 
-1.  Select **Settings**
-
-    ![A red arrow points at Settings in the Publish dialog box.](media/image64.png "Select Settings")
+1.  Select **Manage Profile Settings**
+    
+    ![Manage Profile Settings in the Publish dialog box is highlighted.](media/function-publish-profile-settings.png "Select Manage Profile Settings")
 
 2.  Change the Configuration to **Debug** and select **Save**
 
@@ -849,7 +850,7 @@ Create an IoT Hub for your simulated device app to connect to. The following ste
 
 4.  Select **Create**. Your IoT hub might take a few minutes to create. You can monitor the progress in the **Notifications** pane.
 
-        ![The information above is entered in the IoT hub dialog box under the Review + create tab.](media/image68.2.png "Configure IoT hub settings Review plus Create Tab")
+    ![The information above is entered in the IoT hub dialog box under the Review + create tab.](media/image68.2.png "Configure IoT hub settings Review plus Create Tab")
 
 5.  When your new IoT hub is ready, select its tile in the Azure portal to open its properties window. Now that you have created an IoT hub, locate the important information that you use to connect devices and applications to your IoT hub. Make a note of the **Hostname**, and then select **Shared access policies**.
 
@@ -899,9 +900,9 @@ Part 1: Database and Application Insights Keys
 
 4.  Browse to <https://portal.azure.com>, and locate your Application Insights instance
 
-5.  On the Overview blade, copy the Instrumentation Key
+5.  On the Properties blade, copy the Instrumentation Key
     
-    ![The Instrumentation Key value is highlighted on the Overview blade, and the Click to copy button is selected.](media/image59.png "Copy the Instrumentation Key")
+   ![The Instrumentation Key value is highlighted on the Properties blade, and the Click to copy button is selected.](media/app-insights-instrumentation-key.png "Copy the Instrumentation Key")
 
 -   Paste the Instrumentation Key as the value of **Key** within the **Analytics** class in **Keys.cs**
 
@@ -914,11 +915,11 @@ Part 2: Function URL
 2.  Browse to <https://portal.azure.com>, and locate your Azure Functions instance
 
 3.  In the Overview blade, locate the URL of your function
-    ![AppInnovationBackend is highlighted on the left in the Azure Functions instance, and the URL value is highlighted on the right.](media/image73.png "Locate your function ?s URL")
+    ![AppInnovationBackend is highlighted on the left in the Azure Functions instance, and the URL value is highlighted on the right.](media/image73.png "Locate your function's URL")
 
 4.  Copy and paste that value into the base URL (line 17). Be sure to keep the {0} on the end of the string.
     ```
-    string _baseUrl = \"https://your-function-url-here.azurewebsites.net{0}\";
+    string _baseUrl = "https://your-function-url-here.azurewebsites.net{0}";
     ```
 
 ### Task 4: Set up the program to scan the bags

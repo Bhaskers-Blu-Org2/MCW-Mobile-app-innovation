@@ -93,17 +93,11 @@ Throughout this lab, you will utilize an Azure subscription, and a Microsoft acc
 
 1.  Browse to <https://azure.microsoft.com/en-us/services/devops/>, and sign in with the Microsoft account used to access the Azure Portal in the previous step
 
-2.  If you have not already created an account in Azure DevOps, select the button to create a new app
+2.  If you have not already created an account in Azure DevOps, select the button to create a new account
 
-    ![Create new account icon](media/b4-image3.png "Create new account icon")
-    
-3.  Choose a name for your project (it will need to be unique), and choose "Git" as the source control mechanism
-
-4.  Select **Continue**
-
-    ![On the Azure DevOps project creation page, ContosoAir is entered in the box next to .visualstudio.com under Host my projects at, Git is selected below Manage code using, and Continue is selected at the bottom of the page.](media/b4-image4.png "Create a new app")
-
-After a few minutes, your new account will be created, and a new project (MyFirstProject) will be automatically created. We won't use this project for the app, but you can just ignore it and leave it in your account.
+    ![Azure DevOps Start free button is highlighted](media/create-azure-devops-account.png "Create new account button")
+        
+Your new account will be created. You will return to Azure DevOps later in the lab to create a new project.
 
 ### Task 3: Sign into Visual Studio App Center
 
