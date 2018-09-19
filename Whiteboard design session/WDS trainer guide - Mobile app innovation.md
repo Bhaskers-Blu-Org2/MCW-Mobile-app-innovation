@@ -372,7 +372,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | Azure Functions | <https://docs.microsoft.com/en-us/azure/azure-functions/> |
 | Azure Active Directory | <https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications> |
 | Visual Studio App Center | <https://docs.microsoft.com/en-us/appcenter/> |
-| Visual Studio Team Services | <https://docs.microsoft.com/en-us/vsts/> |
+| Azure DevOps | <https://docs.microsoft.com/en-us/azure/devops/> |
 | Azure App Service / Xamarin | <https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users> <https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-dotnet-backend-how-to-use-server-sdk#how-to-work-with-authentication> |
 | Cosmos DB | <https://docs.microsoft.com/en-us/azure/cosmos-db/online-backup-and-restore> |
 
@@ -710,11 +710,11 @@ The primary audience is the business and technology decision makers. Usually we 
 
 1.  Which Azure service do you recommend using for housing application source code?
 
-    Visual Studio Team Services (VSTS)
+    Azure DevOps
 
 2.  What Azure services do you recommend for automated builds, testing, and deployment?
 
-    VSTS and Visual Studio App Center for the Xamarin Application. Visual Studio App Center provides a centralized conglomeration of services focusing on critical mobile development activities. These services include source control, automated builds/continuous integration, testing, distribution, persistent data storage, authentication (including AAD), crash reporting, and analytics.
+    Azure DevOps and Visual Studio App Center for the Xamarin Application. Visual Studio App Center provides a centralized conglomeration of services focusing on critical mobile development activities. These services include source control, automated builds/continuous integration, testing, distribution, persistent data storage, authentication (including AAD), crash reporting, and analytics.
 
 3.  Which Azure service would you use to store application secrets, such as certificates or connection strings so that they aren't readily available in client application source control?
 
