@@ -49,7 +49,7 @@ In this whiteboard design session, you will work with a group to design an IoT s
 
 At the end of this whiteboard design session, you will be better able to design an IoT solution, including mobile apps, by leveraging cloud services.
 
-## Step 1: Review the customer case study 
+## Step 1: Review the customer case study
 
 **Outcome** 
 
@@ -57,11 +57,11 @@ Analyze your customer’s needs.
 
 Timeframe: 15 minutes
 
-Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
+Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
 
-1.  Meet your table participants and trainer 
-2.  Read all of the directions for steps 1–3 in the student guide 
-3.  As a table team, review the following customer case study
+1.  Meet your table participants and trainer.
+2.  Read all of the directions for steps 1–3 in the student guide.
+3.  As a table team, review the following customer case study.
 
 ### Customer situation
 
@@ -79,27 +79,27 @@ By implementing this system, Contoso will be able to improve their metrics as it
 
 ### Customer needs
 
-1.  Low-latency data replication across geographical regions
+1.  Low-latency data replication across geographical regions.
 
-2.  Client applications for web, iOS, Android, and UWP
+2.  Client applications for web, iOS, Android, and UWP.
 
-3.  Real-time location data for baggage
+3.  Real-time location data for baggage.
 
-4.  RFID labels, antennas, scanners, and employee mobile application
+4.  RFID labels, antennas, scanners, and employee mobile application.
 
-5.  The ability to quickly innovate on new mobile application features with high quality
+5.  The ability to quickly innovate on new mobile application features with high quality.
 
--   Automated Build, Test, and Deployment
+    - Automated Build, Test, and Deployment
 
--   Crash/Analytics
+    - Crash/Analytics
 
--   cDashboarding
+    - cDashboarding
 
 ### Customer objections
 
-1.  Contoso Air is worried about potential security-related disruptions to the system
+1.  Contoso Air is worried about potential security-related disruptions to the system.
 
-2.  There is concern over Azure's ability to communicate reliably with IoT RFID scanners
+2.  There is concern over Azure's ability to communicate reliably with IoT RFID scanners.
 
 3.  Is Xamarin the right solution for the customer mobile applications?
 
@@ -109,7 +109,7 @@ By implementing this system, Contoso will be able to improve their metrics as it
 
 6.  The new system may require querying data from on-premises data sources, how do you bridge that gap?
 
-### Infographic of common scenarios 
+### Infographic of common scenarios
 
 ![This data flow diagram illustrates how Microsoft Azure services like IoT Hub, Data Lake, and SQL Data Warehouse enable 'big data' solutions that can the handle high velocity data that is typical of IoT. Components in this diagram interact with each other between end users and the enterprise, and the components are organized in eight groups that flow in the following order: On Premises, Ingest, Stream Processing, Batch Storage, Speed Serving, Batch Processing, Batch View Serving, and Analytics Clients. At this time, we are unable to capture all of the information in the window. Future versions of this course should address this.](images/WhiteboardDesignSessionTrainerGuide-Mobileappinnovationimages/media/image2.png "Common Internet of Things (IoT) scenarios infographic")
 
@@ -117,7 +117,7 @@ By implementing this system, Contoso will be able to improve their metrics as it
 
 **Outcome** 
 
-Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format. 
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 60 minutes
 
@@ -125,10 +125,10 @@ Timeframe: 60 minutes
 
 Directions: With all participants at your table, answer the following questions and list the answers on a flip chart.
 
-1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers? 
+1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
 2.  What customer business needs do you need to address with your solution?
 
-**Design** 
+**Design**
 Directions: With all participants at your table, respond to the following questions on a flip chart.
 
 *High-level architecture*
@@ -153,17 +153,17 @@ Directions: With all participants at your table, respond to the following questi
 
 2.  Define the messages that need to be ingested:
 
-    -   Define the structure of the message sent from an employee checking in a bag for a customer
+    -   Define the structure of the message sent from an employee checking in a bag for a customer.
 
-    -   Define the structure of the message sent form the RFID scanners
+    -   Define the structure of the message sent form the RFID scanners.
 
-    -   Define the structure of the message sent from the baggage handler loading a bag into the plane
+    -   Define the structure of the message sent from the baggage handler loading a bag into the plane.
 
-    -   Define the structure of the message sent from the baggage handler, indicating that the last bag has been loaded into the plane
+    -   Define the structure of the message sent from the baggage handler, indicating that the last bag has been loaded into the plane.
 
-    -   Define the structure of the message sent from the baggage handler unloading a bag from the plane
+    -   Define the structure of the message sent from the baggage handler unloading a bag from the plane.
 
-    -   Define the structure of the message sent from the baggage handler, indicating that the last bag has been unloaded from the plane
+    -   Define the structure of the message sent from the baggage handler, indicating that the last bag has been unloaded from the plane.
 
 3.  What is the anticipated volume in messages expected from the RFID IoT solution that Contoso Air will need to support given their employee and customer base?
 
@@ -171,7 +171,7 @@ Directions: With all participants at your table, respond to the following questi
 
 5.  What protocol would they use in sending data to the service(s) used for message ingestion?
 
-6.  Define any endpoint(s) used for message ingestion
+6.  Define any endpoint(s) used for message ingestion.
 
 *Data Processing*
 
@@ -203,18 +203,18 @@ Directions: With all participants at your table, respond to the following questi
 
 **Prepare**
 
-Directions: With all participants at your table: 
+Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution
-2.  Identify the benefits of your solution
-3.  Determine how you will respond to the customer’s objections
+1.  Identify any customer needs that are not addressed with the proposed solution.
+2.  Identify the benefits of your solution.
+3.  Determine how you will respond to the customer’s objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
 ## Step 3: Present the solution
 
 **Outcome**
- 
+
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 30 minutes
@@ -222,15 +222,15 @@ Timeframe: 30 minutes
 **Presentation** 
 
 Directions:
-1.  Pair with another table
-2.  One table is the Microsoft team and the other table is the customer
-3.  The Microsoft team presents their proposed solution to the customer
-4.  The customer makes one of the objections from the list of objections
-5.  The Microsoft team responds to the objection
-6.  The customer team gives feedback to the Microsoft team 
-7.  Tables switch roles and repeat Steps 2–6
+1.  Pair with another table.
+2.  One table is the Microsoft team and the other table is the customer.
+3.  The Microsoft team presents their proposed solution to the customer.
+4.  The customer makes one of the objections from the list of objections.
+5.  The Microsoft team responds to the objection.
+6.  The customer team gives feedback to the Microsoft team.
+7.  Tables switch roles and repeat Steps 2–6.
 
-## Wrap-up 
+## Wrap-up
 
 Timeframe: 15 minutes
 
@@ -238,7 +238,7 @@ Timeframe: 15 minutes
 
 ## Additional references
 |    |            |
-|----------|:-------------:|
+|----------|:-------------|
 | **Description** | **Links** |
 | GDPR Compliance | <https://gallery.technet.microsoft.com/How-Azure-Can-Help-788a4979> |
 | Azure Key Vault | <https://docs.microsoft.com/en-us/azure/key-vault/key-vault-whatis> |
@@ -252,6 +252,7 @@ Timeframe: 15 minutes
 | Azure Functions | <https://docs.microsoft.com/en-us/azure/azure-functions/> |
 | Azure Active Directory | <https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications> |
 | Visual Studio App Center | <https://docs.microsoft.com/en-us/appcenter/> |
-| Visual Studio Team Services | <https://docs.microsoft.com/en-us/vsts/> |
+| Azure DevOps Documentation | <https://docs.microsoft.com/en-us/azure/devops/> |
 | Azure App Service / Xamarin | <https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users> <https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-dotnet-backend-how-to-use-server-sdk#how-to-work-with-authentication> |
 | Cosmos DB | <https://docs.microsoft.com/en-us/azure/cosmos-db/online-backup-and-restore> |
+|

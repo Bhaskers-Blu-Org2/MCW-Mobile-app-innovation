@@ -25,7 +25,7 @@ In this whiteboard design session, you will work with a group to design an IoT s
 
 At the end of this whiteboard design session, you will be better able to design an IoT solution, including mobile apps, by leveraging cloud services.
 
-### Hands-on lab 
+### Hands-on lab
 
 In this hands-on lab, you will implement the steps to build an IoT solution for an end-to-end mobile baggage tracking system, that leverages cloud services and cross-platform mobile development.
 
@@ -41,7 +41,7 @@ At the end of this hands-on lab, you will discover how to leverage Azure service
 - Web APIs
 - PowerApps Data Gateway
 - Visual Studio App Center
-- Visual Studio Team Services
+- Azure DevOps
 
 ## Azure solutions
 
@@ -49,7 +49,5 @@ App Modernization
 
 ## Related references
 
-- [Azure application architecture guide](https://docs.microsoft.com/en-us/azure/architecture/guide/) 
+- [Azure application architecture guide](https://docs.microsoft.com/en-us/azure/architecture/guide/)
 - [MCW](https://github.com/Microsoft/MCW)
-
-
