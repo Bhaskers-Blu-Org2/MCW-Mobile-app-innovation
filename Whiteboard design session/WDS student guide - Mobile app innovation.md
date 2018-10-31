@@ -42,7 +42,6 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 # Mobile app innovation whiteboard design session student guide
 
-
 ## Abstract and learning objectives
 
 In this whiteboard design session, you will work with a group to design an IoT solution using data emitted from RFID tags attached to airline passengers' checked luggage, and mobile applications to allow employees and customers to track those bags from any device.
@@ -51,17 +50,19 @@ At the end of this whiteboard design session, you will be better able to design 
 
 ## Step 1: Review the customer case study 
 
-**Outcome** 
+**Outcome**
 
-Analyze your customer’s needs.
+Analyze your customer's needs.
 
 Timeframe: 15 minutes
 
-Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
+Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
 
-1.  Meet your table participants and trainer 
-2.  Read all of the directions for steps 1–3 in the student guide 
-3.  As a table team, review the following customer case study
+1.  Meet your table participants and trainer.
+
+2.  Read all of the directions for steps 1-3 in the student guide.
+
+3.  As a table team, review the following customer case study.
 
 ### Customer situation
 
@@ -73,21 +74,21 @@ Contoso has already recently migrated email, file sharing, collaboration, chat, 
 
 To remain competitive and improve their customer satisfaction ratings, Contoso Air wishes to modernize their baggage handling and tracking process. This includes the introduction of RFID luggage tags, equipping baggage handlers with mobile devices to perform luggage scans, a customer luggage tracking mobile application, and adding IoT enabled RFID antennas and scanners throughout the baggage handling process. Employees and customers alike will be able to track the exact position of a piece of luggage from the time that it leaves its owner's hands to the time that it returns to them at the baggage claim.
 
-At any given time, Contoso has an average of 120 active flights on the ground (processing baggage) at 60 locations worldwide. Each flight has an estimated 180 customers with an average of 360 checked bags -- it is beneficial that the handling and tracking of these bags is improved.
+At any given time, Contoso has an average of 120 active flights on the ground (processing baggage) at 60 locations worldwide. Each flight has an estimated 180 customers with an average of 360 checked bags, so it is beneficial that the handling and tracking of these bags is improved.
 
 By implementing this system, Contoso will be able to improve their metrics as it relates to lost luggage. At the same time, they will improve their satisfaction ratings by providing their customers with piece of mind by giving them visibility into exactly where their luggage is at all times. Even if luggage is lost, Contoso Air can start the search at the last known scan location, thus saving time and money.
 
 ### Customer needs
 
-1.  Low-latency data replication across geographical regions
+1.  Low-latency data replication across geographical regions.
 
-2.  Client applications for web, iOS, Android, and UWP
+2.  Client applications for web, iOS, Android, and UWP.
 
-3.  Real-time location data for baggage
+3.  Real-time location data for baggage.
 
-4.  RFID labels, antennas, scanners, and employee mobile application
+4.  RFID labels, antennas, scanners, and employee mobile application.
 
-5.  The ability to quickly innovate on new mobile application features with high quality
+5.  The ability to quickly innovate on new mobile application features with high quality:
 
 -   Automated Build, Test, and Deployment
 
@@ -97,9 +98,9 @@ By implementing this system, Contoso will be able to improve their metrics as it
 
 ### Customer objections
 
-1.  Contoso Air is worried about potential security-related disruptions to the system
+1.  Contoso Air is worried about potential security-related disruptions to the system.
 
-2.  There is concern over Azure's ability to communicate reliably with IoT RFID scanners
+2.  There is concern over Azure's ability to communicate reliably with IoT RFID scanners.
 
 3.  Is Xamarin the right solution for the customer mobile applications?
 
@@ -115,21 +116,23 @@ By implementing this system, Contoso will be able to improve their metrics as it
 
 ## Step 2: Design a proof of concept solution
 
-**Outcome** 
+**Outcome**
 
-Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format. 
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 60 minutes
 
 **Business needs**
 
-Directions: With all participants at your table, answer the following questions and list the answers on a flip chart.
+Directions:  With all participants at your table, answer the following questions and list the answers on a flip chart:
 
-1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers? 
+1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
+
 2.  What customer business needs do you need to address with your solution?
 
-**Design** 
-Directions: With all participants at your table, respond to the following questions on a flip chart.
+**Design**
+
+Directions: With all participants at your table, respond to the following questions on a flip chart:
 
 *High-level architecture*
 
@@ -153,17 +156,17 @@ Directions: With all participants at your table, respond to the following questi
 
 2.  Define the messages that need to be ingested:
 
-    -   Define the structure of the message sent from an employee checking in a bag for a customer
+    -   Define the structure of the message sent from an employee checking in a bag for a customer.
 
-    -   Define the structure of the message sent form the RFID scanners
+    -   Define the structure of the message sent form the RFID scanners.
 
-    -   Define the structure of the message sent from the baggage handler loading a bag into the plane
+    -   Define the structure of the message sent from the baggage handler loading a bag into the plane.
 
-    -   Define the structure of the message sent from the baggage handler, indicating that the last bag has been loaded into the plane
+    -   Define the structure of the message sent from the baggage handler, indicating that the last bag has been loaded into the plane.
 
-    -   Define the structure of the message sent from the baggage handler unloading a bag from the plane
+    -   Define the structure of the message sent from the baggage handler unloading a bag from the plane.
 
-    -   Define the structure of the message sent from the baggage handler, indicating that the last bag has been unloaded from the plane
+    -   Define the structure of the message sent from the baggage handler, indicating that the last bag has been unloaded from the plane.
 
 3.  What is the anticipated volume in messages expected from the RFID IoT solution that Contoso Air will need to support given their employee and customer base?
 
@@ -171,7 +174,7 @@ Directions: With all participants at your table, respond to the following questi
 
 5.  What protocol would they use in sending data to the service(s) used for message ingestion?
 
-6.  Define any endpoint(s) used for message ingestion
+6.  Define any endpoint(s) used for message ingestion.
 
 *Data Processing*
 
@@ -203,38 +206,47 @@ Directions: With all participants at your table, respond to the following questi
 
 **Prepare**
 
-Directions: With all participants at your table: 
+Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution
-2.  Identify the benefits of your solution
-3.  Determine how you will respond to the customer’s objections
+1.  Identify any customer needs that are not addressed with the proposed solution.
+
+2.  Identify the benefits of your solution.
+
+3.  Determine how you will respond to the customer's objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
 ## Step 3: Present the solution
 
 **Outcome**
- 
+
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 30 minutes
 
-**Presentation** 
+**Presentation**
 
 Directions:
-1.  Pair with another table
-2.  One table is the Microsoft team and the other table is the customer
-3.  The Microsoft team presents their proposed solution to the customer
-4.  The customer makes one of the objections from the list of objections
-5.  The Microsoft team responds to the objection
-6.  The customer team gives feedback to the Microsoft team 
-7.  Tables switch roles and repeat Steps 2–6
 
-## Wrap-up 
+1.  Pair with another table.
+
+2.  One table is the Microsoft team and the other table is the customer.
+
+3.  The Microsoft team presents their proposed solution to the customer.
+
+4.  The customer makes one of the objections from the list of objections.
+
+5.  The Microsoft team responds to the objection.
+
+6.  The customer team gives feedback to the Microsoft team.
+
+7.  Tables switch roles and repeat Steps 2-6.
+
+##  Wrap-up 
 
 Timeframe: 15 minutes
 
--   Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
+Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
 ## Additional references
 |    |            |
