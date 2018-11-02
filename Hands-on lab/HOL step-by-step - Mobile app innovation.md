@@ -21,7 +21,7 @@ The names of manufacturers, products, or URLs are provided for informational pur
 
 © 2018 Microsoft Corporation. All rights reserved.
 
-Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
+Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
 
 **Contents**
 
@@ -41,7 +41,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
         - [Task 3: Create new Android / Xamarin app in Mobile](#task-3-create-new-android--xamarin-app-in-mobile)
         - [Task 4: Connect Xamarin.Android app to Mobile Center](#task-4-connect-xamarinandroid-app-to-mobile-center)
         - [Task 5: Commit your changes to Azure DevOps](#task-5-commit-your-changes-to-azure-devops)
-        - [Task 6: Connect iOS & Android apps in App Center to Team Services and configure/launch build](#task-6-connect-ios--android-apps-in-app-center-to-team-services-and-configurelaunch-build)
+        - [Task 6: Connect iOS & Android apps in App Center to Azure DevOps and configure/launch build](#task-6-connect-ios--android-apps-in-app-center-to-azure-devops-and-configurelaunch-build)
         - [Task 7: Enable Telemetry (App Insights in App Center)](#task-7-enable-telemetry-app-insights-in-app-center)
     - [Exercise 3: Configure Azure Cosmos DB and Azure functions](#exercise-3-configure-azure-cosmos-db-and-azure-functions)
         - [Task 1: Configure your Cosmos DB instance](#task-1-configure-your-cosmos-db-instance)
@@ -70,9 +70,9 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 <!-- /TOC -->
 
-# Mobile app innovation hands-on lab step-by-step 
+# Mobile app innovation hands-on lab step-by-step
 
-## Abstract and learning objectives 
+## Abstract and learning objectives
 
 In this hands-on lab, you will implement the steps to build an IoT solution for an end-to-end mobile baggage tracking system, that leverages cloud services and cross-platform mobile development.
 
@@ -106,7 +106,7 @@ In the event that a piece of luggage has gone missing, due to the fact that its 
 
     -   Azure Subscription
 
-    -   Azure DevOps Subscription
+    -   Azure DevOps account
 
     -   Account in Mobile Center
 
@@ -140,7 +140,6 @@ In the event that a piece of luggage has gone missing, due to the fact that its 
 
     -   <https://www.microsoft.com/net/download/windows>
 
-
 ## Exercise 1: Set up your project in Azure DevOps
 
 **Duration**: 15 minutes
@@ -149,7 +148,7 @@ A robust DevOps chain is critical in being able to build, deploy, and monitor yo
 
 ### Task 1: Create your project in Azure DevOps
 
-1.  Browse to <https://azure.microsoft.com/en-us/services/devops/>, and sign in with the Microsoft account used in the Before the Hands-on lab setup.
+1.  Return to the instance of Azure DevOps you created at the start of this lab (e.g. <https://contosoair1234.visualstudio.com>).
 
 2.  On the right-hand side of the main landing page, choose the **New Project** button.
 
@@ -161,27 +160,27 @@ A robust DevOps chain is critical in being able to build, deploy, and monitor yo
 
     ![The information above is entered in the Create new project dialog box.](media/contoso-baggage-project-settings.png "Configure ContosoBaggage project settings")
 
-### Task 2: Commit starter project to your Azure DevOps project 
+### Task 2: Commit starter project to your Azure DevOps project
 
 1.  Download the starter code from <http://bit.ly/2F2JQTa>, and extract the project to a new folder.
 
-2.  Execute the following commands in PowerShell (or your favorite git client) to redirect the repository to your Azure DevOps project:
+2.  Execute the following commands in PowerShell (or your favorite git client) to redirect the repository to your Azure DevOps project. Replace the origin URL with the URL for your repo:
 
-    -   git remote remove origin
+    - git remote remove origin
 
     -   git remote add origin https://YOURACCOUNT@dev.azure.com/YOURACCOUNT/ContosoBaggage/_git/ContosoBaggage
 
     -   git add -A
 
-    -   git commit -m "Initial commit"
+    - git commit -m "Initial commit"
 
 If the above fails with a message like "Please tell me who you are", then execute the following. Once the following is executed, rerun the git commit command above:
 
-            1.  git config \--global user.email \"you\@example.com\"
+    - git config \--global user.email \"you\@example.com\"
 
-            2.  git config \--global user.name \"Your Name\"
+    - git config \--global user.name \"Your Name\"
 
-    -   git push -u origin --all
+    - git push -u origin --all
 
 >**Note**: Make sure to replace the URL in the sample above with the URL to your Git repository. If you are logged into Windows using the same Microsoft account that you're using in Azure and Azure DevOps, then the code will upload. If not, you may be prompted for credentials. If you need to create git credentials:
 
@@ -206,7 +205,7 @@ In this step, we'll explore how quick and easy it is to connect your mobile app 
 1.  Browse to <https://appcenter.ms/apps>.
 
 2.  In the top right corner, select **Add New**, and **Add new app**.
-    
+
     ![Add New is selected, and Add new app is highlighted in the submenu.](media/image15.png "Select Add new app")
 **Note:** If this is your first app in App Center, you may not see this option. Instead, select **Add new app** in the middle of the welcome screen.
 
@@ -294,7 +293,11 @@ App Center will now create a new instance of your app, including a new key that 
     
     ![The Sync button is highlighted under Synchronization in Azure DevOps.](media/image25.png "Select Sync")
 
-### Task 6: Connect iOS & Android apps in App Center to Team Services and configure/launch build
+5.  Select the **Sync** button under Synchronization to finish synchronizing your changes.
+
+    ![The Sync button is highlighted under Synchronization in Visual Studio.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image25.png "Select Sync")
+
+### Task 6: Connect iOS & Android apps in App Center to Azure DevOps and configure/launch build
 
 1.  Navigate to <https://appcenter.ms/apps>, and select the iOS app you created in the previous steps.
 
@@ -308,7 +311,7 @@ App Center will now create a new instance of your app, including a new key that 
     
     ![Accept is highlighted at the bottom of the prompt to grant Code (read, write, and manage) permissions to App Center.](media/image28.png "Grant Code permissions to App Center")
 
-5.  In the resulting dialog, enter **ContosoBaggage** to reduce the list of projects. Locate your projects and select it.
+5.  In the resulting dialog, enter **Contoso** to reduce the list of projects. Locate your projects and select it.
 
     ![ContosoBaggage is highlighted in the search box in the Azure DevOps Select project dialog box, and ContosoBaggage is highlighted in the search results.](media/search-for-contoso-project.png "Locate and select your project")
 
@@ -570,13 +573,13 @@ We are going to use Application Insights to monitor your backend project. In the
 
 7.  Repeat these steps to create 2 additional functions:
 
-    -   GetFlights.cs
+    - GetFlights.cs
 
-    -   ReadIoTScannerMessages.cs
+    - ReadIoTScannerMessages.cs
 
 8.  Open **GetBaggageForFlight.cs** and replace the contents with the following code:
 
-    ```
+    ```csharp
     using System;
     using System.Linq;
     using System.Net;
@@ -635,12 +638,11 @@ We are going to use Application Insights to monitor your backend project. In the
             }
         }
     }
-
     ```
 
 9.  Open **GetFlights.cs** and replace the contents with the following code:
 
-    ```
+    ```csharp
     using System;
     using System.Linq;
     using System.Net;
@@ -669,7 +671,7 @@ We are going to use Application Insights to monitor your backend project. In the
                     try
                     {
                         var flights = CosmosDataService.Instance("FlightCollection").GetFlights();
-                        
+
                         return req.CreateResponse(HttpStatusCode.OK, flights);
                     }
                     catch (Exception e)
@@ -682,12 +684,11 @@ We are going to use Application Insights to monitor your backend project. In the
             }
         }
     }
-
     ```
 
 10. Open **ReadIoTScannerMessages.cs** and replace the contents with the following code:
 
-    ```
+    ```csharp
     using ContosoBaggage.Backend.Functions.Services;
     using ContosoBaggage.Common.Models;
     using Microsoft.ApplicationInsights.DataContracts;
@@ -756,7 +757,6 @@ We are going to use Application Insights to monitor your backend project. In the
             }
         }
     }
-
     ```
 
 ### Task 8: Deploy your app to Azure
@@ -923,8 +923,8 @@ Part 2: Function URL
 
 4.  Copy and paste that value into the base URL (line 17). Be sure to keep the {0} on the end of the string.
 
-    ```
-    string _baseUrl = "https://your-function-url-here.azurewebsites.net{0}";
+    ```csharp
+    string _baseUrl = \"https://your-function-url-here.azurewebsites.net{0}\";
     ```
 
 ### Task 4: Set up the program to scan the bags
@@ -934,8 +934,8 @@ Part 2: Function URL
     -   Substitute {iot hub hostname} with the IoT hub host name you retrieved in the \"Create an IoT hub\" section.
 
     -   Substitute {device key} with the device key you retrieved in the \"Create a device identity\" section.
-    
-    ```
+
+    ```csharp
         static  DeviceClient  deviceClient;
 
         static  string  iotHubUri  =  "{iot hub hostname}";
@@ -949,9 +949,9 @@ Part 2: Function URL
 
 1.  Around line 35 enter in the Flight that you would like to update the bags for:
 
-```
-static string myFlightNumber = "FL1234";
-```
+    ```csharp
+    static string myFlightNumber = "FL1234";
+    ```
 
 2.  Run the **SimulatedDevice** project. You should see the bags updating in the Console app. The backend might take a few minutes to set up.
 
@@ -1001,8 +1001,7 @@ Now that we've configured the backend and populated it with data, we'll configur
 
 5.  Replace the contents of FlightListPage.xaml with the following:
 
-    ```
-        
+    ```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <pages:BaseContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
@@ -1068,7 +1067,6 @@ Now that we've configured the backend and populated it with data, we'll configur
 
     </pages:BaseContentPage.Content>
     </pages:BaseContentPage >
-
     ```
 
 ### Task 3: Create a Flight List View Model
@@ -1081,7 +1079,7 @@ Now that we've configured the backend and populated it with data, we'll configur
 
 3.  Replace the contents of the file with this code:
 
-    ```
+    ```csharp
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
@@ -1154,7 +1152,7 @@ Now that we've configured the backend and populated it with data, we'll configur
             {
                 if (IsBusy)
                     return;
-                
+
                 IsBusy = true;
                 GetFlightsCommand.ChangeCanExecute();
                 try
@@ -1192,7 +1190,6 @@ Now that we've configured the backend and populated it with data, we'll configur
             }
         }
     }
-
     ```
 
 ### Task 4: Connect the View Model to the page
@@ -1203,7 +1200,7 @@ Now that we've configured the backend and populated it with data, we'll configur
 
 2.  Replace the implementation of the FlightListPage class with the following code:
 
-    ```
+    ```csharp
     using ContosoBaggage.Controls;
     using ContosoBaggage.ViewModels;
     using System;
@@ -1235,7 +1232,6 @@ Now that we've configured the backend and populated it with data, we'll configur
             }
         }
     }
-
     ```
 
 ### Task 5: Add Flight List page to the navigation service
@@ -1246,7 +1242,7 @@ Now that we've configured the backend and populated it with data, we'll configur
 
 2.  Find the **GetPage** method and uncomment the **return new FlightListPage();** line. Final result should be:
 
-    ```
+    ```csharp
     private Page GetPage(PageNames page)
     {
         switch(page)
@@ -1263,7 +1259,6 @@ Now that we've configured the backend and populated it with data, we'll configur
                 return null;
         }
     }
-
     ```
 
 ### Task 6: Run the app and verify that it successfully retrieves flight data
@@ -1286,7 +1281,7 @@ Now that we've configured the backend and populated it with data, we'll configur
 
         ![This is a screenshot of the app running on a smartphone.](media/image85.png "App screenshot")
 
-## After the hands-on lab 
+## After the hands-on lab
 
 **Duration**: 10 minutes
 

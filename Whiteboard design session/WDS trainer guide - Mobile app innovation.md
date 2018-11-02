@@ -83,7 +83,7 @@ An amazing trainer:
 
 -   Effectively leads the feedback process.
 
-## Whiteboard design session flow 
+## Whiteboard design session flow
 
 Each whiteboard design session uses the following flow:
 
@@ -93,11 +93,11 @@ Each whiteboard design session uses the following flow:
 
 Analyze your customer's needs.
 
--   Customer's background, situation, needs and technical requirements
+-   Customer's background, situation, needs and technical requirements.
 
--   Current customer infrastructure and architecture
+-   Current customer infrastructure and architecture.
 
--   Potential issues, objectives and blockers
+-   Potential issues, objectives and blockers.
 
 **Step 2: Design a proof of concept solution (60 minutes)**
 
@@ -119,11 +119,11 @@ Design a solution and prepare to present the solution to the target customer aud
 
 Present solution to your customer:
 
--   Present solution
+-   Present solution.
 
--   Respond to customer objections
+-   Respond to customer objections.
 
--   Receive feedback
+-   Receive feedback.
 
 **Wrap-up (15 minutes)**
 
@@ -175,7 +175,7 @@ In this whiteboard design session, you will work with a group to design an IoT s
 
 At the end of this whiteboard design session, you will be better able to design an IoT solution, including mobile apps, by leveraging cloud services.
 
-## Step 1: Review the customer case study 
+## Step 1: Review the customer case study
 
 **Outcome** 
 
@@ -183,11 +183,11 @@ Analyze your customer’s needs.
 
 Timeframe: 15 minutes
 
-Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
+Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
 
-1.  Meet your table participants and trainer 
-2.  Read all of the directions for steps 1–3 in the student guide 
-3.  As a table team, review the following customer case study
+1.  Meet your table participants and trainer.
+2.  Read all of the directions for steps 1–3 in the student guide.
+3.  As a table team, review the following customer case study.
 
 ### Customer situation
 
@@ -215,11 +215,11 @@ By implementing this system, Contoso will be able to improve their metrics as it
 
 5.  The ability to quickly innovate on new mobile application features with high quality:
 
--   Automated Build, Test, and Deployment
+    - Automated Build, Test, and Deployment
 
--   Crash/Analytics
+    - Crash/Analytics
 
--   cDashboarding
+    - cDashboarding
 
 ### Customer objections
 
@@ -235,7 +235,7 @@ By implementing this system, Contoso will be able to improve their metrics as it
 
 6.  The new system may require querying data from on-premises data sources, how do you bridge that gap?
 
-### Infographic of common scenarios 
+### Infographic of common scenarios
 
 ![This data flow diagram illustrates how Microsoft Azure services like IoT Hub, Data Lake, and SQL Data Warehouse enable 'big data' solutions that can the handle high velocity data that is typical of IoT. Components in this diagram interact with each other between end users and the enterprise, and the components are organized in eight groups that flow in the following order: On Premises, Ingest, Stream Processing, Batch Storage, Speed Serving, Batch Processing, Batch View Serving, and Analytics Clients. At this time, we are unable to capture all of the information in the window. Future versions of this course should address this.](media/image2.png "Common Internet of Things (IoT) scenarios infographic")
 
@@ -376,7 +376,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ## Additional references
 |    |            |
-|----------|:-------------:|
+|----------|:-------------|
 | **Description** | **Links** |
 | GDPR Compliance | <https://gallery.technet.microsoft.com/How-Azure-Can-Help-788a4979> |
 | Azure Key Vault | <https://docs.microsoft.com/en-us/azure/key-vault/key-vault-whatis> |
@@ -393,7 +393,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | Azure DevOps | <https://docs.microsoft.com/en-us/azure/devops/> |
 | Azure App Service / Xamarin | <https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users> <https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-dotnet-backend-how-to-use-server-sdk#how-to-work-with-authentication> |
 | Cosmos DB | <https://docs.microsoft.com/en-us/azure/cosmos-db/online-backup-and-restore> |
-
+|
 
 # Mobile app innovation whiteboard design session trainer guide
 
@@ -418,7 +418,6 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 -   Provide feedback for their responses to the customer's objections.
 
     -   Try asking questions first that will lead the participants to discover the answers on their own.
-
 
 ## Step 3: Present the solution
 
@@ -497,9 +496,9 @@ The primary audience is the business and technology decision makers. Usually we 
 
 2.  Define the messages that need to be ingested.
 
-    -   Define the structure of the message sent from an employee checking in a bag for a customer.
-    
-    ```
+    - Define the structure of the message sent from an employee checking in a bag for a customer.
+
+    ```json
         {
 
         "baggageId": "value",
@@ -521,9 +520,9 @@ The primary audience is the business and technology decision makers. Usually we 
         }
     ```
 
-    -   Define the structure of the message sent from the RFID scanners.
-    
-    ```
+    - Define the structure of the message sent from the RFID scanners.
+
+    ```json
         {
         "baggageId": "value",
 
@@ -552,9 +551,9 @@ The primary audience is the business and technology decision makers. Usually we 
         }
     ```
 
-    -   Define the structure of the message sent from the baggage handler loading a bag into the plane.
-    
-    ```
+    - Define the structure of the message sent from the baggage handler loading a bag into the plane.
+
+    ```json
         {
 
         "baggageId": "value",
@@ -584,9 +583,9 @@ The primary audience is the business and technology decision makers. Usually we 
         }
     ```
 
-    -   Define the structure of the message sent from the baggage handler indicating that the last bag has been loaded into the plane.
-    
-    ```
+    - Define the structure of the message sent from the baggage handler indicating that the last bag has been loaded into the plane.
+
+    ```json
         {
 
         "scannerId": "value",
@@ -604,9 +603,9 @@ The primary audience is the business and technology decision makers. Usually we 
         }
     ```
 
-    -   Define the structure of the message sent from the baggage handler unloading a bag from the plane.
-    
-    ```
+    - Define the structure of the message sent from the baggage handler unloading a bag from the plane.
+
+    ```json
         {
 
         "baggageId": "value",
@@ -636,9 +635,9 @@ The primary audience is the business and technology decision makers. Usually we 
         }
     ```
 
-    -   Define the structure of the message sent from the baggage handler indicating that the last bag has been unloaded from the plane. 
-    
-    ```
+    - Define the structure of the message sent from the baggage handler indicating that the last bag has been unloaded from the plane.
+
+    ```json
         {
 
         "scannerId": "value",
@@ -656,9 +655,9 @@ The primary audience is the business and technology decision makers. Usually we 
         }
     ```
 
-    -   Define the structure of the message sent from the RFID scanner indicating that a bag has been scanned onto a carousel. 
-    
-    ```
+    - Define the structure of the message sent from the RFID scanner indicating that a bag has been scanned onto a carousel.
+
+    ```json
         {
 
         "baggageId": "value",
@@ -687,7 +686,7 @@ The primary audience is the business and technology decision makers. Usually we 
 
         }
     ```
-    
+
 3.  What is the anticipated volume in messages expected from the RFID IoT solution that Contoso Air will need to support given their employee and customer base?
 
     Contoso Air has distributed their Azure resources across 3 regions. At any given time, Contoso has an average of 120 active flights on the ground (processing baggage) at 60 locations worldwide. Each flight has an estimated 180 customers with an average of 360 checked bags. Each bag's location is recorded at minimum 5 times for each flight, 2 of which occur via RFID scanners. Assuming that it takes one hour to get bags from one location at an airport to another, at maximum, they can expect 120 (flights) x 360 (bags) x 2 (RFID checkpoints) messages per hour divided across their 3 Azure regions. (120 x 360 x 2)/3 = 28,800 messages per hour per region or 691,200 messages per day per region. As such, implementing an IoT hub in each region at the S2 level (unlimited devices, 6 million messages per day is required and provides much room for future growth). At the service bus level, approximately 22 million messages will be processed per month per region. This means the basic tier will suffice at \$0.05/million messages (\$1.10 per region per month).

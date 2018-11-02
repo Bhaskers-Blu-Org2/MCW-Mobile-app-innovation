@@ -32,10 +32,10 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 - [Solution architecture](#solution-architecture)
 - [Requirements](#requirements)
 - [Exercise 1: Azure data, storage, and serverless environment setup](#exercise-1-azure-data-storage-and-serverless-environment-setup)
-    - [Task 1: Create your project in Visual Studio Team Services](#task-1-create-your-project-in-visual-studio-team-services)
+    - [Task 1: Create your project in Azure DevOps](#task-1-create-your-project-in-azure-devops)
         - [Tasks to complete](#tasks-to-complete)
         - [Exit criteria](#exit-criteria)
-    - [Task 2: Commit starter project to your VSTS project](#task-2-commit-starter-project-to-your-vsts-project)
+    - [Task 2: Commit starter project to your Azure DevOps project](#task-2-commit-starter-project-to-your-azure-devops-project)
         - [Tasks to complete](#tasks-to-complete-1)
         - [Exit criteria](#exit-criteria-1)
 - [Exercise 2: Configure Visual Studio App Center](#exercise-2-configure-visual-studio-app-center)
@@ -52,10 +52,10 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
     - [Task 4: Connect Xamarin.Android app to App Center](#task-4-connect-xamarinandroid-app-to-app-center)
         - [Tasks to complete](#tasks-to-complete-5)
         - [Exit criteria](#exit-criteria-5)
-    - [Task 5: Commit your changes to Visual Studio Team Services](#task-5-commit-your-changes-to-visual-studio-team-services)
+    - [Task 5: Commit your changes to Azure DevOps](#task-5-commit-your-changes-to-azure-devops)
         - [Tasks to complete](#tasks-to-complete-6)
         - [Exit criteria](#exit-criteria-6)
-    - [Task 6: Connect iOS & Android apps in App Center to Team Services and configure/launch build](#task-6-connect-ios--android-apps-in-app-center-to-team-services-and-configurelaunch-build)
+    - [Task 6: Connect iOS & Android apps in App Center to Azure DevOps and configure/launch build](#task-6-connect-ios--android-apps-in-app-center-to-azure-devops-and-configurelaunch-build)
         - [Tasks to complete](#tasks-to-complete-7)
         - [Exit criteria](#exit-criteria-7)
     - [Task 7: Enable Telemetry (App Insights in App Center)](#task-7-enable-telemetry-app-insights-in-app-center)
@@ -162,7 +162,7 @@ In the event that a piece of luggage has gone missing, due to the fact that its 
 
     -   Azure Subscription
 
-    -   Visual Studio Team Services Subscription
+    -   Azure DevOps account
 
     -   Account in Mobile Center
 
@@ -202,9 +202,9 @@ In the event that a piece of luggage has gone missing, due to the fact that its 
 
 A robust DevOps chain is critical in being able to build, deploy, and monitor your app in the wild. This starts with strong source control, and a structured project management solution.
 
-### Task 1: Create your project in Visual Studio Team Services
+### Task 1: Create your project in Azure DevOps
 
-Create a new project in the Visual Studio Team Services instance you created at the start of this lab.
+Create a new project in the Azure DevOps account you created at the start of this lab.
 
 #### Tasks to complete
 
@@ -214,13 +214,13 @@ Create a new project in the Visual Studio Team Services instance you created at 
 
 -   You have a new project in which you can store your source code using git
 
-### Task 2: Commit starter project to your VSTS project
+### Task 2: Commit starter project to your Azure DevOps project
 
 #### Tasks to complete
 
 -   Download the starter code from <http://bit.ly/2F2JQTa>, and extract the project to a new folder
 
--   Add the new VSTS project git repository as a new origin, using PowerShell or your favorite git client
+-   Add the new Azure DevOps project git repository as a new origin, using PowerShell or your favorite git client
 
 -   Add all files to the local git repository (git add -A)
 
@@ -230,7 +230,7 @@ Create a new project in the Visual Studio Team Services instance you created at 
 
 #### Exit criteria
 
--   Browse to the Code page of your VSTS project. You should see the code you just pushed to the repository.
+-   Browse to the Code page of your Azure DevOps project. You should see the code you just pushed to the repository.
 
 ## Exercise 2: Configure Visual Studio App Center
 
@@ -240,10 +240,9 @@ In this step, we'll explore how quick and easy it is to connect your mobile app 
 
 ### Help references
 |    |            |
-|----------|:-------------:|
+|----------|:-------------|
 | **Description** | **Links** |
 | Visual Studio App Center | <https://docs.microsoft.com/en-us/appcenter/> |
-
 
 ### Task 1: Create a new iOS / Xamarin app
 
@@ -309,27 +308,27 @@ Add the App Secret key to the ContosoBaggage.Droid Xamarin project in Visual Stu
 
 -   You replaced the existing sample App Secret key within the MainActivity class of the ContosoBaggage.Android project with the key generated for your new Android app in App Center.
 
-### Task 5: Commit your changes to Visual Studio Team Services
+### Task 5: Commit your changes to Azure DevOps
 
-Update the git repository in your VSTS app with the changes you just made to your solution.
+Update the git repository in your Azure DevOps project with the changes you just made to your solution.
 
 #### Tasks to complete
 
 -   Using the Team Explorer in Visual Studio, enter comments for your commit, and then commit all changes
 
--   Sync your changes to the git repository in VSTS
+-   Sync your changes to the git repository in Azure DevOps
 
 #### Exit criteria
 
--   You can see your updated code changes in your VSTS project
+-   You can see your updated code changes in your Azure DevOps project
 
-### Task 6: Connect iOS & Android apps in App Center to Team Services and configure/launch build
+### Task 6: Connect iOS & Android apps in App Center to Azure DevOps and configure/launch build
 
-Link your iOS and Android apps in App Center to your Visual Studio Team Services project to use as the source for app builds.
+Link your iOS and Android apps in App Center to your Azure DevOps project to use as the source for app builds.
 
 #### Tasks to complete
 
--   Open your iOS app in App Center and link your ContosoBaggage VSTS project to it within the Build configuration
+-   Open your iOS app in App Center and link your ContosoBaggage Azure DevOps project to it within the Build configuration
 
 -   Configure build on the master branch
 
@@ -339,7 +338,7 @@ Link your iOS and Android apps in App Center to your Visual Studio Team Services
 
 #### Exit criteria
 
--   Both iOS and Android apps successfully build from the latest changes in your VSTS project git repository
+-   Both iOS and Android apps successfully build from the latest changes in your Azure DevOps project git repository.
 
 ### Task 7: Enable Telemetry (App Insights in App Center)
 
@@ -367,11 +366,11 @@ Now that we've configured source control, crash reporting, and build steps for o
 
 ### Help references
 |    |            |
-|----------|:-------------:|
+|----------|:-------------|
 | **Description** | **Links** |
 | Azure Functions | <https://docs.microsoft.com/en-us/azure/azure-functions/> |
 | Azure Cosmos DB | <https://docs.microsoft.com/en-us/azure/cosmos-db/introduction> |
-
+|
 
 ### Task 1: Configure your Cosmos DB instance
 
@@ -450,7 +449,8 @@ In this task, you will add three new functions to your Function App in Visual St
 -   With your ContosoBaggage.Backend.Functions solution still open in Visual Studio, add three new Azure Functions to the Functions folder: **GetBaggageForFlight**, **GetFlights**, and **ReadIoTScannerMessages**. All three should have an **Http trigger** and **Anonymous** access rights.
 
 -   Open **GetBaggageForFlight.cs** and replace the contents with the following code:
-    ```
+
+    ```csharp
     using System;
     using System.Linq;
     using System.Net;
@@ -509,11 +509,11 @@ In this task, you will add three new functions to your Function App in Visual St
             }
         }
     }
-
     ```
 
 -   Open **GetFlights.cs** and replace the contents with the following code:
-    ```
+
+    ```csharp
     using System;
     using System.Linq;
     using System.Net;
@@ -542,7 +542,7 @@ In this task, you will add three new functions to your Function App in Visual St
                     try
                     {
                         var flights = CosmosDataService.Instance("FlightCollection").GetFlights();
-                        
+
                         return req.CreateResponse(HttpStatusCode.OK, flights);
                     }
                     catch (Exception e)
@@ -555,11 +555,11 @@ In this task, you will add three new functions to your Function App in Visual St
             }
         }
     }
-
     ```
 
 -   Open **ReadIoTScannerMessages.cs** and replace the contents with the following code:
-    ```
+
+    ```csharp
     using ContosoBaggage.Backend.Functions.Services;
     using ContosoBaggage.Common.Models;
     using Microsoft.ApplicationInsights.DataContracts;
@@ -628,7 +628,6 @@ In this task, you will add three new functions to your Function App in Visual St
             }
         }
     }
-
     ```
 
 #### Exit criteria
@@ -677,11 +676,11 @@ In this task you will find three projects:
 
 ### Help references
 |    |            |
-|----------|:-------------:|
+|----------|:-------------|
 | **Description** | **Links** |
 | Routing messages from IoT hub to a queue | <https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-csharp-process-d2c> |
 | IoT Hub and the MQTT protocol | <https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-mqtt-support> |
-
+|
 
 ### Task 1: Create the IoT hub in Azure
 
@@ -753,7 +752,7 @@ In this task, you will create a .NET console app that creates a device identity 
 
 -   Around line 35, enter in the Flight that you would like to update the bags for
 
-```
+```csharp
 static string myFlightNumber = "FL1234";
 ```
 
@@ -794,7 +793,8 @@ Now that we've configured backend and populated it with data, we'll configure ou
 -   Add a new Xamarin.Forms \> Content Page item to the Pages folder of the ContosoBaggage project. Name it FlightListPage.xaml.
 
 -   Replace the contents of FlightListPage.xaml with the following:
-    ```
+
+    ```xml
      <?xml version="1.0" encoding="UTF-8"?>
     <pages:BaseContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
@@ -860,7 +860,6 @@ Now that we've configured backend and populated it with data, we'll configure ou
 
     </pages:BaseContentPage.Content>
     </pages:BaseContentPage >
-
     ```
 
 #### Exit criteria
@@ -874,7 +873,8 @@ Now that we've configured backend and populated it with data, we'll configure ou
 -   Add a new class named FlightListViewModel.cs to the ViewModels folder of the ContosoBaggage project
 
 -   Replace the contents of the file with this code:
-    ```
+
+    ```csharp
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
@@ -947,7 +947,7 @@ Now that we've configured backend and populated it with data, we'll configure ou
             {
                 if (IsBusy)
                     return;
-                
+
                 IsBusy = true;
                 GetFlightsCommand.ChangeCanExecute();
                 try
@@ -985,7 +985,6 @@ Now that we've configured backend and populated it with data, we'll configure ou
             }
         }
     }
-
     ```
 
 #### Exit criteria
@@ -999,7 +998,8 @@ Now that we've configured backend and populated it with data, we'll configure ou
 -   Open the FlightListPage.xaml.cs file
 
 -   Replace the implementation of the FlightListPage class with the following code:
-    ```
+
+    ```csharp
     using ContosoBaggage.Controls;
     using ContosoBaggage.ViewModels;
     using System;
@@ -1031,7 +1031,6 @@ Now that we've configured backend and populated it with data, we'll configure ou
             }
         }
     }
-
     ```
 
 #### Exit criteria
@@ -1064,7 +1063,7 @@ Now that we've configured backend and populated it with data, we'll configure ou
 
     ![This is a screenshot of the app running on a smartphone.](images/Hands-onlabunguided-Mobileappinnovationimages/media/image14.png "App screenshot")
 
-## After the hands-on lab 
+## After the hands-on lab
 
 **Duration**: 10 minutes
 

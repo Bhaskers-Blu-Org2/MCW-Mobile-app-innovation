@@ -48,7 +48,7 @@ In this whiteboard design session, you will work with a group to design an IoT s
 
 At the end of this whiteboard design session, you will be better able to design an IoT solution, including mobile apps, by leveraging cloud services.
 
-## Step 1: Review the customer case study 
+## Step 1: Review the customer case study
 
 **Outcome**
 
@@ -90,11 +90,11 @@ By implementing this system, Contoso will be able to improve their metrics as it
 
 5.  The ability to quickly innovate on new mobile application features with high quality:
 
--   Automated Build, Test, and Deployment
+    - Automated Build, Test, and Deployment
 
--   Crash/Analytics
+    - Crash/Analytics
 
--   cDashboarding
+    - cDashboarding
 
 ### Customer objections
 
@@ -110,7 +110,7 @@ By implementing this system, Contoso will be able to improve their metrics as it
 
 6.  The new system may require querying data from on-premises data sources, how do you bridge that gap?
 
-### Infographic of common scenarios 
+### Infographic of common scenarios
 
 ![This data flow diagram illustrates how Microsoft Azure services like IoT Hub, Data Lake, and SQL Data Warehouse enable 'big data' solutions that can the handle high velocity data that is typical of IoT. Components in this diagram interact with each other between end users and the enterprise, and the components are organized in eight groups that flow in the following order: On Premises, Ingest, Stream Processing, Batch Storage, Speed Serving, Batch Processing, Batch View Serving, and Analytics Clients. At this time, we are unable to capture all of the information in the window. Future versions of this course should address this.](media/image2.png "Common Internet of Things (IoT) scenarios infographic")
 
@@ -250,7 +250,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ## Additional references
 |    |            |
-|----------|:-------------:|
+|----------|:-------------|
 | **Description** | **Links** |
 | GDPR Compliance | <https://gallery.technet.microsoft.com/How-Azure-Can-Help-788a4979> |
 | Azure Key Vault | <https://docs.microsoft.com/en-us/azure/key-vault/key-vault-whatis> |
@@ -267,3 +267,4 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | Azure DevOps | <https://docs.microsoft.com/en-us/azure/devops/> |
 | Azure App Service / Xamarin | <https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users> <https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-dotnet-backend-how-to-use-server-sdk#how-to-work-with-authentication> |
 | Cosmos DB | <https://docs.microsoft.com/en-us/azure/cosmos-db/online-backup-and-restore> |
+|
