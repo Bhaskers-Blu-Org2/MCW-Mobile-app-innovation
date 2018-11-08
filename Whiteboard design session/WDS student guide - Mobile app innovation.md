@@ -10,7 +10,7 @@ Whiteboard design session student guide
 </div>
 
 <div class="MCWHeader3">
-June 2018
+September 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -42,7 +42,6 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 # Mobile app innovation whiteboard design session student guide
 
-
 ## Abstract and learning objectives
 
 In this whiteboard design session, you will work with a group to design an IoT solution using data emitted from RFID tags attached to airline passengers' checked luggage, and mobile applications to allow employees and customers to track those bags from any device.
@@ -51,16 +50,18 @@ At the end of this whiteboard design session, you will be better able to design 
 
 ## Step 1: Review the customer case study
 
-**Outcome** 
+**Outcome**
 
-Analyze your customer’s needs.
+Analyze your customer's needs.
 
 Timeframe: 15 minutes
 
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
 
 1.  Meet your table participants and trainer.
-2.  Read all of the directions for steps 1–3 in the student guide.
+
+2.  Read all of the directions for steps 1-3 in the student guide.
+
 3.  As a table team, review the following customer case study.
 
 ### Customer situation
@@ -73,7 +74,7 @@ Contoso has already recently migrated email, file sharing, collaboration, chat, 
 
 To remain competitive and improve their customer satisfaction ratings, Contoso Air wishes to modernize their baggage handling and tracking process. This includes the introduction of RFID luggage tags, equipping baggage handlers with mobile devices to perform luggage scans, a customer luggage tracking mobile application, and adding IoT enabled RFID antennas and scanners throughout the baggage handling process. Employees and customers alike will be able to track the exact position of a piece of luggage from the time that it leaves its owner's hands to the time that it returns to them at the baggage claim.
 
-At any given time, Contoso has an average of 120 active flights on the ground (processing baggage) at 60 locations worldwide. Each flight has an estimated 180 customers with an average of 360 checked bags -- it is beneficial that the handling and tracking of these bags is improved.
+At any given time, Contoso has an average of 120 active flights on the ground (processing baggage) at 60 locations worldwide. Each flight has an estimated 180 customers with an average of 360 checked bags, so it is beneficial that the handling and tracking of these bags is improved.
 
 By implementing this system, Contoso will be able to improve their metrics as it relates to lost luggage. At the same time, they will improve their satisfaction ratings by providing their customers with piece of mind by giving them visibility into exactly where their luggage is at all times. Even if luggage is lost, Contoso Air can start the search at the last known scan location, thus saving time and money.
 
@@ -87,7 +88,7 @@ By implementing this system, Contoso will be able to improve their metrics as it
 
 4.  RFID labels, antennas, scanners, and employee mobile application.
 
-5.  The ability to quickly innovate on new mobile application features with high quality.
+5.  The ability to quickly innovate on new mobile application features with high quality:
 
     - Automated Build, Test, and Deployment
 
@@ -111,11 +112,11 @@ By implementing this system, Contoso will be able to improve their metrics as it
 
 ### Infographic of common scenarios
 
-![This data flow diagram illustrates how Microsoft Azure services like IoT Hub, Data Lake, and SQL Data Warehouse enable 'big data' solutions that can the handle high velocity data that is typical of IoT. Components in this diagram interact with each other between end users and the enterprise, and the components are organized in eight groups that flow in the following order: On Premises, Ingest, Stream Processing, Batch Storage, Speed Serving, Batch Processing, Batch View Serving, and Analytics Clients. At this time, we are unable to capture all of the information in the window. Future versions of this course should address this.](images/WhiteboardDesignSessionTrainerGuide-Mobileappinnovationimages/media/image2.png "Common Internet of Things (IoT) scenarios infographic")
+![This data flow diagram illustrates how Microsoft Azure services like IoT Hub, Data Lake, and SQL Data Warehouse enable 'big data' solutions that can the handle high velocity data that is typical of IoT. Components in this diagram interact with each other between end users and the enterprise, and the components are organized in eight groups that flow in the following order: On Premises, Ingest, Stream Processing, Batch Storage, Speed Serving, Batch Processing, Batch View Serving, and Analytics Clients. At this time, we are unable to capture all of the information in the window. Future versions of this course should address this.](media/image2.png "Common Internet of Things (IoT) scenarios infographic")
 
 ## Step 2: Design a proof of concept solution
 
-**Outcome** 
+**Outcome**
 
 Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
@@ -123,13 +124,15 @@ Timeframe: 60 minutes
 
 **Business needs**
 
-Directions: With all participants at your table, answer the following questions and list the answers on a flip chart.
+Directions:  With all participants at your table, answer the following questions and list the answers on a flip chart:
 
 1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
+
 2.  What customer business needs do you need to address with your solution?
 
 **Design**
-Directions: With all participants at your table, respond to the following questions on a flip chart.
+
+Directions: With all participants at your table, respond to the following questions on a flip chart:
 
 *High-level architecture*
 
@@ -206,8 +209,10 @@ Directions: With all participants at your table, respond to the following questi
 Directions: With all participants at your table:
 
 1.  Identify any customer needs that are not addressed with the proposed solution.
+
 2.  Identify the benefits of your solution.
-3.  Determine how you will respond to the customer’s objections.
+
+3.  Determine how you will respond to the customer's objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
@@ -219,22 +224,29 @@ Present a solution to the target customer audience in a 15-minute chalk-talk for
 
 Timeframe: 30 minutes
 
-**Presentation** 
+**Presentation**
 
 Directions:
-1.  Pair with another table.
-2.  One table is the Microsoft team and the other table is the customer.
-3.  The Microsoft team presents their proposed solution to the customer.
-4.  The customer makes one of the objections from the list of objections.
-5.  The Microsoft team responds to the objection.
-6.  The customer team gives feedback to the Microsoft team.
-7.  Tables switch roles and repeat Steps 2–6.
 
-## Wrap-up
+1.  Pair with another table.
+
+2.  One table is the Microsoft team and the other table is the customer.
+
+3.  The Microsoft team presents their proposed solution to the customer.
+
+4.  The customer makes one of the objections from the list of objections.
+
+5.  The Microsoft team responds to the objection.
+
+6.  The customer team gives feedback to the Microsoft team.
+
+7.  Tables switch roles and repeat Steps 2-6.
+
+##  Wrap-up 
 
 Timeframe: 15 minutes
 
--   Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
+Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
 ## Additional references
 |    |            |
@@ -252,7 +264,7 @@ Timeframe: 15 minutes
 | Azure Functions | <https://docs.microsoft.com/en-us/azure/azure-functions/> |
 | Azure Active Directory | <https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications> |
 | Visual Studio App Center | <https://docs.microsoft.com/en-us/appcenter/> |
-| Azure DevOps Documentation | <https://docs.microsoft.com/en-us/azure/devops/> |
+| Azure DevOps | <https://docs.microsoft.com/en-us/azure/devops/> |
 | Azure App Service / Xamarin | <https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users> <https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-dotnet-backend-how-to-use-server-sdk#how-to-work-with-authentication> |
 | Cosmos DB | <https://docs.microsoft.com/en-us/azure/cosmos-db/online-backup-and-restore> |
 |

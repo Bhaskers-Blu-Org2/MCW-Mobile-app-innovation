@@ -10,7 +10,7 @@ Whiteboard design session trainer guide
 </div>
 
 <div class="MCWHeader3">
-June 2018
+September 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -55,7 +55,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 <!-- /TOC -->
 
-# Trainer Information
+# Trainer information
 
 Thank you for taking time to support the whiteboard design sessions as a trainer!
 
@@ -89,7 +89,9 @@ Each whiteboard design session uses the following flow:
 
 **Step 1: Review the customer case study (15 minutes)**
 
-Outcome: Analyze your customer's needs.
+**Outcome**
+
+Analyze your customer's needs.
 
 -   Customer's background, situation, needs and technical requirements.
 
@@ -99,7 +101,9 @@ Outcome: Analyze your customer's needs.
 
 **Step 2: Design a proof of concept solution (60 minutes)**
 
-Outcome: Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
+**Outcome**
+
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
 -   Determine your target customer audience.
 
@@ -111,7 +115,9 @@ Outcome: Design a solution and prepare to present the solution to the target cus
 
 **Step 3: Present the solution (30 minutes)**
 
-Outcome: Present solution to your customer.
+**Outcome**
+
+Present solution to your customer:
 
 -   Present solution.
 
@@ -121,13 +127,13 @@ Outcome: Present solution to your customer.
 
 **Wrap-up (15 minutes)**
 
-Review preferred solution.
+-   Review preferred solution
 
 ## Before the whiteboard design session: How to prepare
 
 Before conducting your first whiteboard design session:
 
--   Read the Attendee guide (including the case study) and Trainer guide.
+-   Read the Student guide (including the case study) and Trainer guide.
 
 -   Become familiar with all key points and activities.
 
@@ -145,17 +151,17 @@ Before conducting your first whiteboard design session:
 
 When participants are doing activities, you can **look ahead to refresh your memory**.
 
--   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing
+-   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing.
 
 -   **Add examples, points, and stories** from your own experience. Think about stories you can share that help you make your points clearly and effectively.
 
--   **Consider creating a "parking lot"** to record issues or questions raised that are outside the scope of the whiteboard design session or that can be answered later. Decide how you will address these issues, so you can acknowledge them without being derailed by them.
+-   **Consider creating a "parking lot"** to record issues or questions raised that are outside the scope of the whiteboard design session or can be answered later. Decide how you will address these issues, so you can acknowledge them without being derailed by them.
 
 ***Have fun**! Encourage participants to have fun and share!*
 
 **Involve your participants.** Talk and share your knowledge but always involve your participants, even while you are the one speaking.
 
-**Ask questions** and get them to share to fully involve your group in the learning process
+**Ask questions** and get them to share to fully involve your group in the learning process.
 
 **Ask first**, whenever possible. Before launching into a topic, learn your audience's opinions about it and experiences with it. Asking first enables you to assess their level of knowledge and experience, and leaves them more open to what you are presenting.
 
@@ -193,7 +199,7 @@ Contoso has already recently migrated email, file sharing, collaboration, chat, 
 
 To remain competitive and improve their customer satisfaction ratings, Contoso Air wishes to modernize their baggage handling and tracking process. This includes the introduction of RFID luggage tags, equipping baggage handlers with mobile devices to perform luggage scans, a customer luggage tracking mobile application, and adding IoT enabled RFID antennas and scanners throughout the baggage handling process. Employees and customers alike will be able to track the exact position of a piece of luggage from the time that it leaves its owner's hands to the time that it returns to them at the baggage claim.
 
-At any given time, Contoso has an average of 120 active flights on the ground (processing baggage) at 60 locations worldwide. Each flight has an estimated 180 customers with an average of 360 checked bags -- it is beneficial that the handling and tracking of these bags is improved.
+At any given time, Contoso has an average of 120 active flights on the ground (processing baggage) at 60 locations worldwide. Each flight has an estimated 180 customers with an average of 360 checked bags. so it is beneficial that the handling and tracking of these bags is improved.
 
 By implementing this system, Contoso will be able to improve their metrics as it relates to lost luggage. At the same time, they will improve their satisfaction ratings by providing their customers with piece of mind by giving them visibility into exactly where their luggage is at all times. Even if luggage is lost, Contoso Air can start the search at the last known scan location, thus saving time and money.
 
@@ -207,7 +213,7 @@ By implementing this system, Contoso will be able to improve their metrics as it
 
 4.  RFID labels, antennas, scanners, and employee mobile application.
 
-5.  The ability to quickly innovate on new mobile application features with high quality.
+5.  The ability to quickly innovate on new mobile application features with high quality:
 
     - Automated Build, Test, and Deployment
 
@@ -217,9 +223,9 @@ By implementing this system, Contoso will be able to improve their metrics as it
 
 ### Customer objections
 
-1.  Contoso Air is worried about potential security-related disruptions to the system
+1.  Contoso Air is worried about potential security-related disruptions to the system.
 
-2.  There is concern over Azure's ability to communicate reliably with IoT RFID scanners
+2.  There is concern over Azure's ability to communicate reliably with IoT RFID scanners.
 
 3.  Is Xamarin the right solution for the customer mobile applications?
 
@@ -231,11 +237,12 @@ By implementing this system, Contoso will be able to improve their metrics as it
 
 ### Infographic of common scenarios
 
-![This data flow diagram illustrates how Microsoft Azure services like IoT Hub, Data Lake, and SQL Data Warehouse enable 'big data' solutions that can the handle high velocity data that is typical of IoT. Components in this diagram interact with each other between end users and the enterprise, and the components are organized in eight groups that flow in the following order: On Premises, Ingest, Stream Processing, Batch Storage, Speed Serving, Batch Processing, Batch View Serving, and Analytics Clients. At this time, we are unable to capture all of the information in the window. Future versions of this course should address this.](images/WhiteboardDesignSessionTrainerGuide-Mobileappinnovationimages/media/image2.png "Common Internet of Things (IoT) scenarios infographic")
+![This data flow diagram illustrates how Microsoft Azure services like IoT Hub, Data Lake, and SQL Data Warehouse enable 'big data' solutions that can the handle high velocity data that is typical of IoT. Components in this diagram interact with each other between end users and the enterprise, and the components are organized in eight groups that flow in the following order: On Premises, Ingest, Stream Processing, Batch Storage, Speed Serving, Batch Processing, Batch View Serving, and Analytics Clients. At this time, we are unable to capture all of the information in the window. Future versions of this course should address this.](media/image2.png "Common Internet of Things (IoT) scenarios infographic")
+
 
 ## Step 2: Design a proof of concept solution
 
-**Outcome** 
+**Outcome**
 
 Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
@@ -243,13 +250,15 @@ Timeframe: 60 minutes
 
 **Business needs**
 
-Directions: With all participants at your table, answer the following questions and list the answers on a flip chart.
+Directions:  With all participants at your table, answer the following questions and list the answers on a flip chart:
 
 1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
+
 2.  What customer business needs do you need to address with your solution?
 
 **Design**
-Directions: With all participants at your table, respond to the following questions on a flip chart.
+
+Directions: With all participants at your table, respond to the following questions on a flip chart:
 
 *High-level architecture*
 
@@ -326,8 +335,10 @@ Directions: With all participants at your table, respond to the following questi
 Directions: With all participants at your table:
 
 1.  Identify any customer needs that are not addressed with the proposed solution.
+
 2.  Identify the benefits of your solution.
-3.  Determine how you will respond to the customer’s objections.
+
+3.  Determine how you will respond to the customer's objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
@@ -339,18 +350,25 @@ Present a solution to the target customer audience in a 15-minute chalk-talk for
 
 Timeframe: 30 minutes
 
-**Presentation** 
+**Presentation**
 
 Directions:
-1.  Pair with another table.
-2.  One table is the Microsoft team and the other table is the customer.
-3.  The Microsoft team presents their proposed solution to the customer.
-4.  The customer makes one of the objections from the list of objections.
-5.  The Microsoft team responds to the objection.
-6.  The customer team gives feedback to the Microsoft team.
-7.  Tables switch roles and repeat Steps 2–6.
 
-## Wrap-up
+1.  Pair with another table.
+
+2.  One table is the Microsoft team and the other table is the customer.
+
+3.  The Microsoft team presents their proposed solution to the customer.
+
+4.  The customer makes one of the objections from the list of objections.
+
+5.  The Microsoft team responds to the objection.
+
+6.  The customer team gives feedback to the Microsoft team.
+
+7.  Tables switch roles and repeat Steps 2-6.
+
+##  Wrap-up 
 
 Timeframe: 15 minutes
 
@@ -372,7 +390,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | Azure Functions | <https://docs.microsoft.com/en-us/azure/azure-functions/> |
 | Azure Active Directory | <https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications> |
 | Visual Studio App Center | <https://docs.microsoft.com/en-us/appcenter/> |
-| Azure DevOps Documentation | <https://docs.microsoft.com/en-us/azure/devops/> |
+| Azure DevOps | <https://docs.microsoft.com/en-us/azure/devops/> |
 | Azure App Service / Xamarin | <https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users> <https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-dotnet-backend-how-to-use-server-sdk#how-to-work-with-authentication> |
 | Cosmos DB | <https://docs.microsoft.com/en-us/azure/cosmos-db/online-backup-and-restore> |
 |
@@ -385,7 +403,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 -   Ask, "What questions do you have about the customer case study?"
 
--   Briefly review the steps and time frames of the whiteboard design session.
+-   Briefly review the steps and timeframes of the whiteboard design session.
 
 -   Ready, set, go! Let the table participants begin.
 
@@ -410,7 +428,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 -   Have the presenting team present their solution to the customer team.
 
     -   Have the customer team provide one objection for the presenting team to respond to.
-    
+
     -   The presentation, objections, and feedback should take no longer than 15 minutes.
 
     -   If needed, the trainer may also provide feedback.
@@ -431,9 +449,9 @@ The primary audience is the business and technology decision makers. Usually we 
 
 1.  Without getting into the details (the following sections will address the particular details), diagram your initial vision for handling the top-level requirements for data security, ingestion, processing, and exposure to the mobile applications. You will refine this diagram as you proceed.
 
-    The high-level view of the entire solution appears as follows.
+    The high-level view of the entire solution appears as follows:
 
-    ![Icons that are connected by arrows comprise this diagram, which is divided into three groups: Internal, Cloud, and Public. Azure Active Directory separates the Internal and Cloud groups, and SSL/JWT separates the Cloud and Public groups. At this time, we are unable to capture all of the information in the window. Future versions of this course should address this.](images/WhiteboardDesignSessionTrainerGuide-Mobileappinnovationimages/media/image3.png "Solution architecture diagram")
+    ![Icons that are connected by arrows comprise this diagram, which is divided into three groups: Internal, Cloud, and Public. Azure Active Directory separates the Internal and Cloud groups, and SSL/JWT separates the Cloud and Public groups. At this time, we are unable to capture all of the information in the window. Future versions of this course should address this.](media/image3.png "Solution architecture diagram")
 
     From a high-level, a customer arrives to the airport with a bag that needs to be checked. The customer is attended to by an employee of Contoso Air with a computer. The employee affixes an RFID tag to the luggage and associates it with the customer and flight information using a PowerApps application. The PowerApps application triggers this information to be stored in Cosmos DB via an HttpTrigger.
 
@@ -447,7 +465,7 @@ The primary audience is the business and technology decision makers. Usually we 
 
     In the event that a piece of luggage has gone missing, due to the fact that its location is updated often during the baggage handling process, the last known location of the bag will be utilized to begin the search. This system would also identify if a bag may have been inadvertently directed toward an incorrect flight or placed on an incorrect baggage claim conveyor.
 
-***NOTE: The preferred solution is only one of many possible, viable approaches.***
+>**Note**: The preferred solution is only one of many possible, viable approaches.
 
 *Data Security*
 
@@ -476,7 +494,7 @@ The primary audience is the business and technology decision makers. Usually we 
     JSON format as it is currently the most popular format for modern IoT and Web Systems.
     ```
 
-2.  Define the messages that need to be ingested
+2.  Define the messages that need to be ingested.
 
     - Define the structure of the message sent from an employee checking in a bag for a customer.
 
