@@ -12,12 +12,12 @@ namespace ContosoBaggage.Backend.Functions
         public static class Cosmos
         {
             public static string Url = @"https://app-innovation-db.documents.azure.com:443/";
-            public static string Key = "JTQXPzsec7F0ecOSFGcPZ7Hcu3vCEUf3fA5sS1GNxCNFfX6aJm67DVN7LYrd0OnoUfb8rAZ21nb16A1y9r1grQ==";
+            public static string Key = "";
         }
 
         public static class Analytics
         {
-            public static string Key = "d2zhoieuylkes47xah8axvf08d2eax1b3ui0bhwx";
+            public static string Key = "";
         }
     }
 
