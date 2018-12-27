@@ -267,4 +267,3 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | Azure DevOps | <https://docs.microsoft.com/en-us/azure/devops/> |
 | Azure App Service / Xamarin | <https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users> <https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-dotnet-backend-how-to-use-server-sdk#how-to-work-with-authentication> |
 | Cosmos DB | <https://docs.microsoft.com/en-us/azure/cosmos-db/online-backup-and-restore> |
-|
