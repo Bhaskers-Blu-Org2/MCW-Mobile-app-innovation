@@ -126,7 +126,7 @@ In the event that a piece of luggage has gone missing, due to the fact that its 
 
         - Windows 10 (Fall Creators Update recommended)
 
-        - Visual Studio 2017 (15.7.4 or greater Required)
+        - Visual Studio 2017 (15.7.4 or greater required)
 
     -   Mac
 
@@ -213,13 +213,13 @@ In this step, we'll explore how quick and easy it is to connect your mobile app 
 
 3.  Enter:
 
-    -   App name - A unique name for the app (e.g. **Contoso Baggage \[iOS\]**)
+    -   App name - A unique name for the app (e.g. **Contoso Baggage \[iOS\]**).
 
     -   OS - Choose **iOS**
 
     -   Platform - Choose **Xamarin**
 
-    -   Select the **Add new app** button
+    -   Select the **Add new app** button.
 
     ![The information above is entered in the Add new app dialog box, and Add new app is selected at the bottom.](media/image17.png "Configure Add new app settings")
 
@@ -257,7 +257,7 @@ App Center will now create a new instance of your app, including a new key that 
 
     -   Platform - Choose **Xamarin**
 
-    -   Select the **Add new app** button
+    -   Select the **Add new app** button.
 
 ![The information above is entered in the Add new app dialog box.](media/image20.png "Configure Add new app settings")
 
