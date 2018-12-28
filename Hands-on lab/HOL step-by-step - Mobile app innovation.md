@@ -10,7 +10,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-September 2018
+December 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -126,7 +126,7 @@ In the event that a piece of luggage has gone missing, due to the fact that its 
 
         - Windows 10 (Fall Creators Update recommended)
 
-        - Visual Studio 2017 (15.7.4 Required)
+        - Visual Studio 2017 (15.7.4 or greater required)
 
     -   Mac
 
@@ -162,7 +162,7 @@ A robust DevOps chain is critical in being able to build, deploy, and monitor yo
 
 ### Task 2: Commit starter project to your Azure DevOps project
 
-1.  Download the starter code from <http://bit.ly/2F2JQTa>, and extract the project to a new folder.
+1.  Download the starter code from <https://bit.ly/2LhJOrf>, and extract the project to a new folder.
 
 2.  Execute the following commands in PowerShell (or your favorite git client) to redirect the repository to your Azure DevOps project. Replace the origin URL with the URL for your repo:
 
@@ -174,14 +174,14 @@ A robust DevOps chain is critical in being able to build, deploy, and monitor yo
 
     - git commit -m "Initial commit"
 
+    - git push -u origin --all
+
 If the above fails with a message like "Please tell me who you are", then execute the following. Once the following is executed, rerun the git commit command above:
 
     - git config \--global user.email \"you\@example.com\"
 
     - git config \--global user.name \"Your Name\"
-
-    - git push -u origin --all
-
+    
 >**Note**: Make sure to replace the URL in the sample above with the URL to your Git repository. If you are logged into Windows using the same Microsoft account that you're using in Azure and Azure DevOps, then the code will upload. If not, you may be prompted for credentials. If you need to create git credentials:
 
 3.  Browse to the **Code** tab in your Azure DevOps project.
@@ -213,13 +213,13 @@ In this step, we'll explore how quick and easy it is to connect your mobile app 
 
 3.  Enter:
 
-    -   App name - A unique name for the app (e.g. **Contoso Baggage \[iOS\]**)
+    -   App name - A unique name for the app (e.g. **Contoso Baggage \[iOS\]**).
 
     -   OS - Choose **iOS**
 
     -   Platform - Choose **Xamarin**
 
-    -   Select the **Add new app** button
+    -   Select the **Add new app** button.
 
     ![The information above is entered in the Add new app dialog box, and Add new app is selected at the bottom.](media/image17.png "Configure Add new app settings")
 
@@ -257,7 +257,7 @@ App Center will now create a new instance of your app, including a new key that 
 
     -   Platform - Choose **Xamarin**
 
-    -   Select the **Add new app** button
+    -   Select the **Add new app** button.
 
 ![The information above is entered in the Add new app dialog box.](media/image20.png "Configure Add new app settings")
 
@@ -292,10 +292,6 @@ App Center will now create a new instance of your app, including a new key that 
 5.  Select the **Sync** button under Synchronization to finish synchronizing your changes.
     
     ![The Sync button is highlighted under Synchronization in Azure DevOps.](media/image25.png "Select Sync")
-
-5.  Select the **Sync** button under Synchronization to finish synchronizing your changes.
-
-    ![The Sync button is highlighted under Synchronization in Visual Studio.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image25.png "Select Sync")
 
 ### Task 6: Connect iOS & Android apps in App Center to Azure DevOps and configure/launch build
 
@@ -403,23 +399,25 @@ Now that we've configured source control, crash reporting, and build steps for o
 
 1.  Browse to [https://portal.azure.com](https://portal.azure.com/).
 
-2.  In the top left, select **Create Resource \> Databases \>** **Azure Cosmos DB**.
+2.  In the top left, select **Create a resource \> Databases \>** **Azure Cosmos DB**.
 
     ![Databases is selected under Azure Marketplace on the Azure portal, and Azure Cosmos DB is highlighted on the right.](media/image46.png "Select Azure Cosmos DB")
 
 3.  Complete the new resource.
 
-    -   Give the instance a unique name.
+    -   Give the instance a unique account name.
 
-    -   Choose the **SQL** from the **API** dropdown (this will use DocumentDB under the hood).
+    -   Resource Group: Select Create New and enter a unique name to create a resource group you will use throughout this lab.
 
-    -   Uncheck enable geo-redundancy.
+    -   Choose the **Core (SQL)** from the **API** dropdown (this will use DocumentDB under the hood).
 
-4.  Select **Create** to create the Cosmos DB instance.
+    -   Disable enable geo-redundancy.
 
-    ![The information above is entered in the Azure Cosmos DB dialog box.](media/image47.png "Configure Azure Cosmos DB settings")
+4.  Select **Review + create** to create the Cosmos DB instance.
 
-5.  It can take a few minutes before this process completes.
+    ![The information above is entered in the Azure Cosmos DB dialog box.](media/create-cosmos-db-settings.png "Configure Azure Cosmos DB settings")
+
+5.  After validation is successful, select **Create**. It can take a few minutes before this process completes.
 
 ### Task 2: Create collections in your Cosmos DB instance
 
@@ -437,11 +435,12 @@ Now that you've created your cosmos instance, we'll want to create collections f
 
     -   **Collection id**: FlightCollection
 
-    -   **Storage capacity**: Fixed (10 GB)
+    -   **Partition key**: /flightNumber
 
     -   **Throughput**: 500
 
-        ![The information above is entered in the Add Collection dialog box.](media/image48.png "Configure Add Collection settings")
+        ![The information above is entered in the Add Collection dialog box.](media/add-flight-collection.png "Configure Add Collection settings")
+
 
 5.  Select **OK**.
 
@@ -455,11 +454,11 @@ Now that you've created your cosmos instance, we'll want to create collections f
 
     -   **Collection id**: BagCollection
 
-    -   **Storage capacity**: Fixed (10 GB)
+    -   **Partition key**: baggageId
 
     -   **Throughput**: 500
 
-        ![The information above is entered in the Add Collection dialog box.](media/image49.png "Configure Add Collection settings")
+        ![The information above is entered in the Add Collection dialog box.](media/add-bag-collection.png "Configure Add Collection settings")
 
 8.  Select **OK**.
 
@@ -499,13 +498,13 @@ We are going to use Application Insights to monitor your backend project. In the
     
     ![A red arrow points at + Create a resource on the left side of the Azure portal, Compute is highlighted in the middle, and Function App is highlighted on the right.](media/image53.png "Select Function App")
 
-3.  Enter in a name for the app (e.g.**myfunctionsapp** - this must be unique but don't worry, the portal will tell you if it's not).
+3.  Enter in a name for the app (e.g.**ContosoBaggageFunctionApp** - this must be unique but don't worry, the portal will tell you if it's not).
 
 4.  Add the Function App to the resource group you have been using for this lab.
 
 5.  Complete the new resource.
     
-    ![The App name, Subscription, and Resource Group boxes are highlighted under Function App on the right side of the Azure portal.](media/image54.png "View Function App settings")
+    ![The App name, Subscription, and Resource Group boxes are highlighted under Function App on the right side of the Azure portal.](media/create-function-app.png "View Function App settings")
 
 6.  Leave the rest of the settings as default.
 
@@ -831,9 +830,9 @@ Create an IoT Hub for your simulated device app to connect to. The following ste
 
 1.  Sign in to the [Azure portal](https://portal.azure.com/).
 
-2.  Select **Create a resource \>** **Internet of Things \> IoT Hub**.
+2.  Select **Create a resource \>** in the Search box \>  enter **IoT Hub**.
 
-    ![+ New is highlighted on the left side of the Azure portal, Internet of Things is selected and highlighted under Azure Marketplace in the middle, and IoT Hub is highlighted on the right.](media/image67.png "Select IoT Hub")
+    ![Create a resource is highlighted on the left side of the Azure portal. IoT hub is entered into the Search box.](media/create-resource-iot-hub.png "Select IoT Hub")
 
 3.  In the **IoT hub** pane, enter the following information for your IoT hub:
 
@@ -846,8 +845,6 @@ Create an IoT Hub for your simulated device app to connect to. The following ste
     -   **Resource group**: Select the same resource group you have been using for this lab.
 
     -   **Location**: Select the closest location to you.
-
-    -   **Pin to dashboard**: Check this option for easy access to your IoT hub from the dashboard.
 
         ![The information above is entered in the IoT hub dialog box under the Basics tab.](media/image68.0.png "Configure IoT hub settings Basic Tab")
 
@@ -924,7 +921,7 @@ Part 2: Function URL
 4.  Copy and paste that value into the base URL (line 17). Be sure to keep the {0} on the end of the string.
 
     ```csharp
-    string _baseUrl = \"https://your-function-url-here.azurewebsites.net{0}\";
+    string _baseUrl = "https://your-function-url-here.azurewebsites.net{0}";
     ```
 
 ### Task 4: Set up the program to scan the bags

@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-September 2018
+December 2018
 </div>
 
 
@@ -31,7 +31,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Requirements](#requirements)
     - [Before the hands-on lab](#before-the-hands-on-lab)
         - [Task 1: Create an account, and sign into the Azure portal](#task-1-create-an-account-and-sign-into-the-azure-portal)
-        - [Task 2: Sign into Azure DevOps and create a new account](#task-2-sign-into-azure-devops-and-create-a-new-account)
+        - [Task 2: Sign into Azure DevOps, and create a new account](#task-2-sign-into-azure-devops-and-create-a-new-account)
         - [Task 3: Sign into Visual Studio App Center](#task-3-sign-into-visual-studio-app-center)
         - [Task 4: Update VS 2017 to 15.7.4](#task-4-update-vs-2017-to-1574)
         - [Task 5: Update Android SDKs](#task-5-update-android-sdks)
@@ -66,7 +66,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
         - Windows 10 (Fall Creators Update recommended)
 
-        - Visual Studio 2017 (15.7.4 Required)
+        - Visual Studio 2017 (15.7.4 or greater required)
 
     -   Mac
 
