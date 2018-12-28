@@ -66,7 +66,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
         - Windows 10 (Fall Creators Update recommended)
 
-        - Visual Studio 2017 (15.7.4 Required)
+        - Visual Studio 2017 (15.7.4 or greater required)
 
     -   Mac
 
