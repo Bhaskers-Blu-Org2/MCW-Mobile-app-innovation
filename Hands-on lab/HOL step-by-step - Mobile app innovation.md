@@ -293,10 +293,6 @@ App Center will now create a new instance of your app, including a new key that 
     
     ![The Sync button is highlighted under Synchronization in Azure DevOps.](media/image25.png "Select Sync")
 
-5.  Select the **Sync** button under Synchronization to finish synchronizing your changes.
-
-    ![The Sync button is highlighted under Synchronization in Visual Studio.](images/Hands-onlabstep-by-step-Mobileappinnovationimages/media/image25.png "Select Sync")
-
 ### Task 6: Connect iOS & Android apps in App Center to Azure DevOps and configure/launch build
 
 1.  Navigate to <https://appcenter.ms/apps>, and select the iOS app you created in the previous steps.
