@@ -1,6 +1,6 @@
 # Mobile app innovation
 
-[Download Cloud Workshop](https://github.com/Microsoft/MCW-Mobile-app-innovation/archive/master.zip)
+## This workshop is no longer being maintained and will be archived on June 28, 2019.
 
 Contoso Air, founded in 1932, is a leader in the air travel industry, with service to more than 70 different countries/regions around the globe. Contoso is currently modernizing their entire ticketing and operations platform. With its global workforce, there is a need to access data with extremely low latency thus requiring replication across geographical regions. Furthermore, employees are becoming increasingly mobile and digital savvy. They expect to be able to have access to their data in real time from any type of the common mobile platforms; be it Universal Windows Platform (UWP), iOS, or Android. Contoso's competitors are smaller and nimbler, and as such, they have been able to transform digitally much faster and provide employees and customers with a better experience.
 
